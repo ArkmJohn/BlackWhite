@@ -19,6 +19,7 @@ sysinfo.txt
 /*.suo
 /*.sln*
 /*.user
+/*.meta
 /*.unityproj
 /*.booproj
 /.idea*/
