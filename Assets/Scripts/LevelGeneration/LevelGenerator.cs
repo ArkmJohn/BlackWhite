@@ -39,14 +39,6 @@ public class LevelGenerator : MonoBehaviour
         GenerateMap();
     }
 
-    void Update()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            GenerateMap();
-        }
-    }
-
     [ContextMenu("Generate Map")]
     void GenerateMap()
     {
