@@ -27,11 +27,20 @@ public class CharacterControl : MonoBehaviour {
 
     void Walk()
     {
-        float horizontal = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
-        float vertical = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        if (vertical <= -0.5f)
+            vertical = -0.5f;
+
         anim.SetFloat("Speed", Input.GetAxis("Vertical"));
-        transform.Translate(0, 0, vertical);
-        transform.Rotate(0, horizontal, 0);
+
+        float x = horizontal * turnSpeed * Time.deltaTime;
+        float z = vertical * speed * Time.deltaTime;
+
+
+        transform.Translate(0, 0, z);
+        transform.Rotate(0, x, 0);
 
     }
 
