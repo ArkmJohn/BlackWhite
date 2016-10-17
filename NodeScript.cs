@@ -3,7 +3,7 @@ using System.Collections;
 
 public class NodeScript : MonoBehaviour 
 {
-
+	// ENUM States
 	public enum NodeStates
 	{
 		SUCCESS,
@@ -11,7 +11,10 @@ public class NodeScript : MonoBehaviour
 		RUNNING
 	}
 
+	// variable that stores the node states
 	public NodeStates currentState;
+
+	// boolean values for success, failure and running
 	protected bool successState;
 	protected bool failureState;
 	protected bool runningState;
@@ -22,10 +25,13 @@ public class NodeScript : MonoBehaviour
 		currentState = NodeStates.RUNNING;
 	}
 
+	// For Sequence Node
 	public void SequenceNode()
 	{
+		// If the state is running
 		if (currentState == NodeStates.RUNNING) 
 		{
+			// If the state is a success then change the current state value to 'SUCCESS'
 			if (successState) {
 				currentState = NodeStates.SUCCESS;
 			}
@@ -34,13 +40,16 @@ public class NodeScript : MonoBehaviour
 
 	public void SelectorNode()
 	{
+		// If the state is running
 		if (currentState == NodeStates.RUNNING) 
 		{
+			// If the state is a success or true, then change the state to 'SUCCESS'
 			if (successState) 
 			{
 				currentState = NodeStates.SUCCESS;
 			}
 
+			// If the state is a failure or false, then change the state to 'FAILURE'
 			else if(failureState)
 			{
 				currentState = NodeStates.FAILURE;
@@ -51,13 +60,16 @@ public class NodeScript : MonoBehaviour
 
 	public void InverterNode()
 	{
+		// IF the current state is running
 		if(currentState == NodeStates.RUNNING)
 		{
+			// If the state is true, then change the state to false
 			if (successState) 
 			{
 				currentState = NodeStates.FAILURE;
 			}
-
+				
+			// If the state is false, then change the current state value to true.
 			else if(failureState)
 			{
 				currentState = NodeStates.SUCCESS;
