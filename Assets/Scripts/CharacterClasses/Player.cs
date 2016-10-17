@@ -5,7 +5,7 @@ public class Player : MonoBehaviour {
  
     public GameObject inventoryObj;
     public GameObject equipedWeapon;
-    public int[] statistics;
+    public float[] statistics;
 
     void InStats(float Str,float Vit, float Dex, float End, float Res, float Intel )
     {
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour {
 
     void changeStat(int statID, float statVal)
     {
-        // hi
+        statistics[statID] += statVal;
     }
 
     void FixedUpdate () {

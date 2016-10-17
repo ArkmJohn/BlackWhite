@@ -4,6 +4,7 @@ using System.Collections;
 public abstract class Item : MonoBehaviour {
 
     public int id;
+    public Player myChar;
 
     public virtual void Pickup()
     {

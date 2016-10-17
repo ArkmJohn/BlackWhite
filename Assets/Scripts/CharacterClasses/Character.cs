@@ -5,7 +5,13 @@ public class Character : MonoBehaviour {
 
     public int Health;
     private bool isDead = false;
-	void Start () {
+
+    public BDType baseWeakness;
+    public BDType baseRes;
+    public SDType secWeakness;
+    public SDType secRes;
+
+    void Start () {
         isDead = true;
 	}
 
