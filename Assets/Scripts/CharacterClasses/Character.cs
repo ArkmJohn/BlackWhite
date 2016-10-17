@@ -25,7 +25,7 @@ public class Character : MonoBehaviour {
 
     public void Death()
     {
-
+        
 
     }
 }

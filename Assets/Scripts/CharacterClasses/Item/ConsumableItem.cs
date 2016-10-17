@@ -16,11 +16,11 @@ public class ConsumableItem : Item {
 
     public override void UseItem()
     {
-        changeStat(myChar);
+        ChangeStat(myChar);
     }
 
     // Call the function on the character using some stats
-    private void changeStat(Player target)
+    private void ChangeStat(Player target)
     {
     }
 }

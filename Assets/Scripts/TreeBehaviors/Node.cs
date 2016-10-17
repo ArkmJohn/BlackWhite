@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NodeScript : MonoBehaviour 
+public class Node : MonoBehaviour 
 {
 	// ENUM States
 	public enum NodeStates
