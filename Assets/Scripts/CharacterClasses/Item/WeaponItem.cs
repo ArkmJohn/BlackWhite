@@ -3,9 +3,9 @@ using System.Collections;
 
 public class WeaponItem : Item {
 
-    public BDType basic;
-    public SDType secondary;
-
+    public BDType basicDMGType;
+    public SDType secDMGType;
+    public float damageInc;
     // Swap Item from equip
     public override void UseItem()
     {

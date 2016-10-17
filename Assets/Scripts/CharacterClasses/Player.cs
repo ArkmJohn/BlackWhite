@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
+public class Player : Character {
  
     public GameObject inventoryObj;
     public GameObject equipedWeapon;
@@ -15,11 +15,18 @@ public class Player : MonoBehaviour {
         Dex = statistics[3];
         Res = statistics[4];
         Intel = statistics[5];
+        setBaseDmg();
     }
 
     void changeStat(int statID, float statVal)
     {
         statistics[statID] += statVal;
+        setBaseDmg();
+    }
+
+    void setBaseDmg()
+    {
+        baseDmg = statistics[2];
     }
 
     void FixedUpdate () {
