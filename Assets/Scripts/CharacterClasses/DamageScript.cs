@@ -4,6 +4,8 @@ using System.Collections;
 public class DamageScript : MonoBehaviour {
     
     public int damageType;
+    private float damage;
+    public float weaponDamage;
     private enum BDType
     {
         NULL,
@@ -23,5 +25,19 @@ public class DamageScript : MonoBehaviour {
 
 
 
-    public void Type() { }
+    public void CalculateDamage()
+    {
+       
+    }
+
+    public void GetDamage(int damaged)
+    {
+
+    }
+
+    public void SetDamage()
+    {
+
+
+    }
 }

@@ -9,6 +9,7 @@ public class playerScript : MonoBehaviour {
 
     void InStats(float Str,float Vit, float Dex, float End, float Res, float Intel )
     {
+        // the stats go in the same order as the stats in the statistics sheet
         Vit = statistics[0];
         End = statistics[1];
         Str = statistics[2];
