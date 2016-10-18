@@ -1,34 +1,49 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerClassSelectionScr : MonoBehaviour {
 
     private string[] PlayerClass;
     private Player myPlayer;
-	private void Tank()
+
+
+    private void Start()
     {
-       // myPlayer.statistics[0] 
+        myPlayer = FindObjectOfType<Player>();
+    }
+	public void Tank()
+    {
+        myPlayer.InStats(12,8,7,8,10,5);
+        Debug.Log(myPlayer.statistics);
+    }
+    public void DPSMele()
+    {
+        myPlayer.InStats(10,6,15,6,8,5);
+        Debug.Log("DPSmele");
 
     }
-    private void DPSMele()
+   public void DPSRange()
     {
-
+        myPlayer.InStats(8,8,12,10,7,5);
+        Debug.Log("DPSrange");
 
     }
-    private void DPSRange()
+    public void BalancedRanged()
     {
-
+        myPlayer.InStats(10,8,10,8,9,5);
+        Debug.Log("balancedR");
 
     }
-    private void BalancedRanged()
+    public void Balanced()
     {
-
+        myPlayer.InStats(5,5,5,5,0,15);
+        Debug.Log("balanced");
 
     }
-    private void Balanced()
+
+    public void EXBu(GameObject op)
     {
-
-
+        Debug.Log("balan");
     }
 
 }

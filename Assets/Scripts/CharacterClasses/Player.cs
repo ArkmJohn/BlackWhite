@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class Player : Character {
  
     public GameObject inventoryObj;
     public GameObject equipedWeapon;
-    public float[] statistics;
+    public List<float> statistics = new List<float>();
 
-    void InStats(float Str,float Vit, float Dex, float End, float Res, float Intel )
+    public void InStats(float Str,float Vit, float Dex, float End, float Res, float Intel )
     {
         Vit = statistics[0];
         End = statistics[1];
