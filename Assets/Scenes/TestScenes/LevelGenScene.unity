@@ -124,7 +124,7 @@ MonoBehaviour:
   roomThresholdSize: 50
   seed: 41234
   useRandomSeed: 0
-  testing: 1
+  testing: 0
   hasGenerated: 0
   enemyPrefabs: []
   playerPrefab: {fileID: 0}

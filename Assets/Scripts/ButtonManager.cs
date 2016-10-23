@@ -9,6 +9,11 @@ public class ButtonManager : MonoBehaviour {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
+    public void PlayGame()
+    {
+        FindObjectOfType<GameManager>().InitializeLevel();
+    }
+
     public void ChangeDifficulty(int difficultyID)
     {
         gameObject.GetComponent<GameManager>().difficulty = difficultyID;
