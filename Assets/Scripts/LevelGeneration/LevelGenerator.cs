@@ -17,7 +17,7 @@ public class LevelGenerator : MonoBehaviour
     public int roomThresholdSize = 50;
 
     public string seed;
-    public bool useRandomSeed;
+    public bool useRandomSeed, testing, hasGenerated = false;
 
     public GameObject[] enemyPrefabs;
     public GameObject playerPrefab;
@@ -31,11 +31,18 @@ public class LevelGenerator : MonoBehaviour
     int[,] map;
 
     List<GameObject> objectClones = new List<GameObject>();
-    GameObject myCamera;
+    //GameObject myCamera;
 
     void Start()
     {
-        myCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        if (testing == true)
+            InitLevel();
+    }
+
+
+    public void InitLevel()
+    {
+        //myCamera = GameObject.FindGameObjectWithTag("MainCamera");
         GenerateMap();
     }
 
@@ -75,6 +82,7 @@ public class LevelGenerator : MonoBehaviour
         meshGen.GenerateMesh(borderedMap, 1);
         // GetAllAvailableCoordinates(); //Already doing on smooth map
         // SpawnObjects();
+        hasGenerated = true;
     }
 
     void ProcessMap() // Removes unwanted clutter and finds rooms
@@ -107,6 +115,7 @@ public class LevelGenerator : MonoBehaviour
             else // Adds the surviving room to a list
             {
                 survivingRooms.Add(new Room(roomRegion, map));
+                Debug.Log("Added a Room");
             }
         }
         survivingRooms.Sort();
@@ -119,6 +128,7 @@ public class LevelGenerator : MonoBehaviour
     void CreateCaveRoom(List<Room> rooms)
     {
         GameObject roomList = new GameObject("RoomList");
+        roomList.AddComponent<Rooms>();
         foreach (Room a in rooms)
         {
             GameObject room = new GameObject("Room");
@@ -137,14 +147,15 @@ public class LevelGenerator : MonoBehaviour
                 int neighbouringTiles = GetSurroundingWallCount(x, y);
 
                 // For overhead of bigger objects
-                if (neighbouringTiles == 4)
+                if (neighbouringTiles < 1)
                     roomScript.addPosition(new Vector3(-width / 2 + 0.5f + x, 2, -height / 2 + 0.5f + y));
 
             }
-
+            roomList.GetComponent<Rooms>().FindRooms();
             room.transform.position = roomScript.findCenter();
             x = 0;
             y = 0;
+            
         }
     }
 

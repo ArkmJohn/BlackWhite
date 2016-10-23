@@ -2288,7 +2288,14 @@ MonoBehaviour:
   secRes: 0
   inventoryObj: {fileID: 0}
   equipedWeapon: {fileID: 0}
-  statistics: []
+  statistics:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!4 &1329172088
 Transform:
   m_ObjectHideFlags: 0

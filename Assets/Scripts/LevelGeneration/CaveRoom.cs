@@ -10,6 +10,17 @@ public class CaveRoom : MonoBehaviour
 
     int roomSize;
 
+    // ---- Testing Purpose ---- //
+    public void CreatePlaceHolder()
+    {
+        foreach (Vector3 a in AvailablePositions)
+        {
+            GameObject g = new GameObject("A Node");
+            g.transform.position = a;
+            g.AddComponent<TestNode>();
+        }
+    }
+
     public void addPosition(Vector3 roomPos)
     {
         AvailablePositions.Add(roomPos);
@@ -51,5 +62,17 @@ public class CaveRoom : MonoBehaviour
         else
             return null;
 
+    }
+
+    public void SpawnEnemyAtRandomPosition(GameObject enemy)
+    {
+        Vector3 randomPos = AvailablePositions[Random.Range(0, AvailablePositions.Count)];
+        GameObject enemyClone = Instantiate(enemy, randomPos, transform.rotation) as GameObject;
+        AvailablePositions.Remove(randomPos);
+        InitEnemy(enemyClone);
+    }
+
+    void InitEnemy(GameObject enemy)
+    {
     }
 }
