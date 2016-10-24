@@ -35,7 +35,7 @@ public class LevelGenerator : MonoBehaviour
 
     void Awake()
     {
-        FindObjectOfType<GameManager>().InitializeLevel();
+        //FindObjectOfType<GameManager>().InitializeLevel();
     }
     
     void Start()

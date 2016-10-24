@@ -7,6 +7,7 @@ public class ButtonManager : MonoBehaviour {
     public void LoadLevel(string sceneName)
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        //SceneManager.LoadScene(sceneName);
     }
 
     public void PlayGame()
