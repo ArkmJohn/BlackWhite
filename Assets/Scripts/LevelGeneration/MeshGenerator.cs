@@ -129,7 +129,7 @@ public class MeshGenerator : MonoBehaviour
             ground.transform.position = Vector3.zero;
             Destroy(walls.gameObject.GetComponent<MeshCollider>());
         }
-
+        walls.mesh.RecalculateNormals();
         ground.transform.position = new Vector3(gameObject.transform.position.x, -wallHeight, gameObject.transform.position.z);
         MeshCollider wallCollider = walls.gameObject.AddComponent<MeshCollider>();
         wallCollider.sharedMesh = wallMesh;
