@@ -9,12 +9,12 @@ public class Player : Character {
 
     public void InStats(float Str,float Vit, float Dex, float End, float Res, float Intel )
     {
-        Vit = statistics[0];
-        End = statistics[1];
-        Str = statistics[2];
-        Dex = statistics[3];
-        Res = statistics[4];
-        Intel = statistics[5];
+        statistics[0] = Vit;
+        statistics[1] = End;
+        statistics[2] = Str;
+        statistics[3] = Dex;
+        statistics[4] = Res;
+        statistics[5] = Intel;
         setBaseDmg();
     }
 
