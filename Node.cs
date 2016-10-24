@@ -14,45 +14,63 @@ public abstract class Node
 	// Variable that stores the node states
 	protected NodeStates currentState;
 
-	void Start()
+	public virtual void Start()
 	{
 		currentState = NodeStates.RUNNING;
 	}
 
-	//public abstract void reset ();
+	public abstract void Add (Node node);
+
+	public abstract void reset();
+
+	public abstract void act(SpawnEnemies enemy);
+
+	private static bool isSpecial;
+
+	public virtual bool IsSpecial { 
+		get 
+		{
+			return isSpecial;
+		} 
+		set 
+		{
+			isSpecial = value;
+		}
+	}
 
 	// If the state is a success, set the value of currentState to success
-	private void SuccessState()
+	protected void SuccessState()
 	{
 		currentState = NodeStates.SUCCESS;
 	}
 
 	// If the state is a failure, set the value of currentState to failure
-	private void FailureState()
+	protected void FailureState()
 	{
 		currentState = NodeStates.FAILURE;
 	}
 
 	// If the state is a running, set the value of currentState to running
-	private void RunningState()
+	protected void RunningState()
 	{
 		currentState = NodeStates.RUNNING;
 	}
 
-	public void isSuccess()
+	public bool isSuccess()
 	{
-		return this.currentState.Equals (NodeStates.SUCCESS);
+		return currentState.Equals (NodeStates.SUCCESS);
 	}
 
-	public void isFail()
+	public bool isFail()
 	{
-		return this.currentState.Equals (NodeStates.FAILURE);
+		 return currentState.Equals (NodeStates.FAILURE);
 	}
 
-	public void isRunning()
+	public bool isRunning()
 	{
-		return this.currentState.Equals (NodeStates.RUNNING);
+		 return currentState.Equals (NodeStates.RUNNING);
 	}
 
 }
+
 
