@@ -8,6 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScenes/TestMenu.unity
   - enabled: 1
-    path: Assets/Scenes/TestScenes/cHARACTERcLASS.unity
-  - enabled: 1
     path: Assets/Scenes/TestScenes/LevelGenScene.unity
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/CharacterSelection.unity

@@ -348,6 +348,8 @@ MonoBehaviour:
   rooms: {fileID: 0}
   enemyPrefabs:
   - {fileID: 1000011307236154, guid: 506b726eaff1a084c947a44891d5398e, type: 2}
+  playerPrefab: {fileID: 1000011795663826, guid: 18a1f08f8948d4b4b862abc32e6cf28d,
+    type: 2}
   level: 0
   difficulty: 1
 --- !u!4 &84971947
@@ -441,7 +443,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: COmmented Text based on the chosen difficulty
+  m_Text: The Cake is a LIE!
 --- !u!222 &138574879
 CanvasRenderer:
   m_ObjectHideFlags: 0

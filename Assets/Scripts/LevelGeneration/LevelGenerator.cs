@@ -43,8 +43,7 @@ public class LevelGenerator : MonoBehaviour
         if (testing == true)
             InitLevel();
     }
-
-
+    
     public void InitLevel()
     {
         //myCamera = GameObject.FindGameObjectWithTag("MainCamera");

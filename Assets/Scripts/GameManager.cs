@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
     public LevelGenerator levelGen = null;
     public Rooms rooms = null;
     public List<GameObject> enemyPrefabs;
+    public GameObject playerPrefab;
 
     public int level;
     public int difficulty;
@@ -27,12 +28,12 @@ public class GameManager : MonoBehaviour {
         levelGen = FindObjectOfType<LevelGenerator>();
         levelGen.InitLevel();
         rooms = FindObjectOfType<Rooms>();
-        rooms.SpawnEnemies(GetEnemyCount(), enemyPrefabs);
+        rooms.SpawnEnemies(GetEnemyCount(), enemyPrefabs, playerPrefab);
     }
 
     int GetEnemyCount()
     {
-        return level + difficulty * 2;
+        return level + 10 + difficulty * 2;
     }
 
     void FinishLevel()
