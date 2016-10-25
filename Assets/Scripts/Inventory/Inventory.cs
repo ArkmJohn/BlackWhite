@@ -104,7 +104,7 @@ public class Inventory : MonoBehaviour {
                 if (!tempSlot.isEmpty)
                 {
                     //if the item we collected is same as item in that slot
-                    if (tempSlot.currentItem.type == item.type && tempSlot.isAvailable)
+    
                     {
                         //add item collected to the slot stack
                         tempSlot.AddItem(item);
