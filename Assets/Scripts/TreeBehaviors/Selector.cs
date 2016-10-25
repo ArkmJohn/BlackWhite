@@ -5,11 +5,11 @@ using System;
 
 public class Selector : Node
 {
-//    public override bool isSpecial
-//    {
-//        get { return true; }
-//        set { }
-//    }
+    public override bool IsSpecial
+    {
+        get { return true; }
+        set { }
+    }
     public Selector()
     {
 		this.currentNode = null;
@@ -21,7 +21,7 @@ public class Selector : Node
 
 	public void addNode(Node node)
     {
-		Node.Add(node);
+        nodeList.Add(node);
     }
 
     public override void reset()
@@ -50,7 +50,7 @@ public class Selector : Node
 			currentNode.Start (); 
     }
 
-	public override void act(SpawnEnemies enemy)
+	public override void act(Enemy enemy)
     {
 		currentNode.act(enemy);
 

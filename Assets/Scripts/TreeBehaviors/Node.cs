@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Node : MonoBehaviour 
+public abstract class Node
 {
 	// ENUM States
 	public enum NodeStates
@@ -11,82 +11,67 @@ public class Node : MonoBehaviour
 		RUNNING
 	}
 
-	// variable that stores the node states
-	public NodeStates currentState;
+	// Variable that stores the node states
+	protected NodeStates currentState;
 
-	// boolean values for success, failure and running
-	protected bool successState;
-	protected bool failureState;
-	protected bool runningState;
-
-	void Start()
+	public virtual void Start()
 	{
-		// Setting the current state to running
 		currentState = NodeStates.RUNNING;
 	}
 
-	// For Sequence Node
-	public void SequenceNode()
-	{
-		// If the state is running
-		if (currentState == NodeStates.RUNNING) 
+    public virtual void Add(Node node)
+    { }
+
+	public abstract void reset();
+
+	public abstract void act(Enemy enemy);
+
+	//private static bool isSpecial;
+
+	public virtual bool IsSpecial { 
+		get 
 		{
-			// If the state is a success then change the current state value to 'SUCCESS'
-			if (successState) {
-				currentState = NodeStates.SUCCESS;
-			}
+			return IsSpecial;
+		} 
+		set 
+		{
+			IsSpecial = value;
 		}
 	}
 
-	public void SelectorNode()
+	// If the state is a success, set the value of currentState to success
+	protected void SuccessState()
 	{
-		// If the state is running
-		if (currentState == NodeStates.RUNNING) 
-		{
-			// If the state is a success or true, then change the state to 'SUCCESS'
-			if (successState) 
-			{
-				currentState = NodeStates.SUCCESS;
-			}
-
-			// If the state is a failure or false, then change the state to 'FAILURE'
-			else if(failureState)
-			{
-				currentState = NodeStates.FAILURE;
-			}
-		}
-
+		currentState = NodeStates.SUCCESS;
 	}
 
-	public void InverterNode()
+	// If the state is a failure, set the value of currentState to failure
+	protected void FailureState()
 	{
-		// IF the current state is running
-		if(currentState == NodeStates.RUNNING)
-		{
-			// If the state is true, then change the state to false
-			if (successState) 
-			{
-				currentState = NodeStates.FAILURE;
-			}
-				
-			// If the state is false, then change the current state value to true.
-			else if(failureState)
-			{
-				currentState = NodeStates.SUCCESS;
-			}
-		}
+		currentState = NodeStates.FAILURE;
 	}
 
-	public void Repeater()
+	// If the state is a running, set the value of currentState to running
+	protected void RunningState()
 	{
-		if(successState)
-		{
-			currentState = NodeStates.RUNNING;
-		}
-
-		else if(failureState)
-		{
-			currentState = NodeStates.RUNNING;
-		}
+		currentState = NodeStates.RUNNING;
 	}
+
+	public bool isSuccess()
+	{
+		return currentState.Equals (NodeStates.SUCCESS);
+	}
+
+	public bool isFail()
+	{
+		 return currentState.Equals (NodeStates.FAILURE);
+	}
+
+	public bool isRunning()
+	{
+		 return currentState.Equals (NodeStates.RUNNING);
+	}
+
 }
+
+

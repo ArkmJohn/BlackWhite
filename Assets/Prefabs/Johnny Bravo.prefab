@@ -352,10 +352,9 @@ GameObject:
   - 95: {fileID: 95000012012393930}
   - 54: {fileID: 54000013937744230}
   - 136: {fileID: 136000010179982610}
-  - 114: {fileID: 114000012757162808}
   m_Layer: 0
   m_Name: golem
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -458,8 +457,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011209212196}
+  - 114: {fileID: 114000011296377912}
+  - 114: {fileID: 114000011170988794}
+  - 114: {fileID: 114000011332949290}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Johnny Bravo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1878,12 +1880,37 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000012757162808
+--- !u!114 &114000011170988794
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011440941316}
+  m_GameObject: {fileID: 1000011795663826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417b308941d87384e9f3d7180253160e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
+  MaxHealth: 0
+  baseDmg: 0
+  _atkSpd: 0
+  _speed: 0
+  _def: 0
+  damage: {fileID: 0}
+  baseWeakness: 0
+  baseRes: 0
+  secWeakness: 0
+  secRes: 0
+  equipedWeapon: {fileID: 0}
+  statistics: []
+  _stam: 0
+--- !u!114 &114000011296377912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011795663826}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e03ad63ec01eb6844bab091ca9b6e9c1, type: 3}
@@ -1892,6 +1919,21 @@ MonoBehaviour:
   speed: 5
   turnSpeed: 50
   anim: {fileID: 95000012012393930}
+  inventory: {fileID: 0}
+--- !u!114 &114000011332949290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011795663826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d9d123658a93324db681efb8eddc7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageOut: 0
+  basicDmgType: 0
+  secondaryDmgType: 0
 --- !u!136 &136000010179982610
 CapsuleCollider:
   m_ObjectHideFlags: 1

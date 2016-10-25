@@ -5,9 +5,11 @@ public class CharacterControl : MonoBehaviour {
 
     public float speed = 5, turnSpeed = 20;
     public Animator anim;
+    public Inventory inventory;
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
 
     }
 
@@ -52,5 +54,21 @@ public class CharacterControl : MonoBehaviour {
     public void DisablePunch()
     {
         anim.SetLayerWeight(1, 0);
+    }
+
+    void OnTriggerEnter(Collider obj)
+    {
+        if (obj.gameObject.tag == "Item")
+        {
+            //Debug.Log(obj.name + " is Collected!");
+
+            inventory.AddItem(obj.gameObject);
+            //Debug.Log("Item added in Inventory");
+
+            //destroy item once collected
+            //Destroy(obj.gameObject);
+            obj.gameObject.SetActive(false);
+
+        }
     }
 }

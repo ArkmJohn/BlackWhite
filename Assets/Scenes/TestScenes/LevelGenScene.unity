@@ -124,7 +124,7 @@ MonoBehaviour:
   roomThresholdSize: 50
   seed: 41234
   useRandomSeed: 0
-  testing: 1
+  testing: 0
   hasGenerated: 0
   enemyPrefabs: []
   playerPrefab: {fileID: 0}
@@ -304,7 +304,6 @@ GameObject:
   - 92: {fileID: 658693801}
   - 124: {fileID: 658693800}
   - 81: {fileID: 658693799}
-  - 114: {fileID: 658693804}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -379,22 +378,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 45, y: 60, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!114 &658693804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 658693798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5714341b0cae1b41a19f03397ba2579, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  xDist: 10
-  yDist: 10
-  zDist: 10
+  m_RootOrder: 2
 --- !u!1 &1416340109
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,4 +599,4 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3

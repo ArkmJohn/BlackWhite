@@ -3,8 +3,17 @@ using System.Collections;
 
 public class Character : MonoBehaviour {
 
-    public int Health;
+    public float Health, MaxHealth;
     public float baseDmg;
+
+    // Char Hidden Stat
+    [SerializeField]
+    protected float _atkSpd = 0;
+    [SerializeField]
+    protected float _speed = 0;
+    [SerializeField]
+    protected float _def = 0;
+
     private bool isDead = false;
 
     public Damage damage;
@@ -15,12 +24,17 @@ public class Character : MonoBehaviour {
 
     void Start () {
         isDead = true;
+        Health = MaxHealth;
 	}
 
 
-    public void GetDamage(Damage dmg)
+    public void GetDamaged(Character attacker)
     {
+        float inc = attacker.damage.GetDamage(attacker, gameObject.GetComponent<Character>());
 
+        inc -= _def;
+
+        Health -= inc;
     }
 
     public void Death()

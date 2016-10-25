@@ -28,7 +28,17 @@ public class GameManager : MonoBehaviour {
         levelGen = FindObjectOfType<LevelGenerator>();
         levelGen.InitLevel();
         rooms = FindObjectOfType<Rooms>();
+
         rooms.SpawnEnemies(GetEnemyCount(), enemyPrefabs, playerPrefab);
+
+        Player playerScript = GetComponent<Player>();
+
+        playerPrefab.GetComponent<Player>().InStats(playerScript.statistics[2],
+            playerScript.statistics[0],
+            playerScript.statistics[3],
+            playerScript.statistics[1],
+            playerScript.statistics[4],
+            playerScript.statistics[5]);
     }
 
     int GetEnemyCount()

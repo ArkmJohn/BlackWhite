@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour {
 
+    public Sprite deleteS;
+    public Sprite deleteSelectedS;
+    public bool isDeleting = false;
+
     public GameObject slotPrefab;
     public float size; //size of the slot
     private List<GameObject> allSlots; //this list will contain all the slots in our inventory
@@ -33,7 +37,7 @@ public class Inventory : MonoBehaviour {
 
     private void CreateSlots()
     {
-        blankSlots = slots;
+        blankSlots = slots - 1;
 
         //instantiate the list of slots
         allSlots = new List<GameObject>();
@@ -77,19 +81,31 @@ public class Inventory : MonoBehaviour {
                 slotRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, size);
                 slotRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, size);
 
-                allSlots.Add(newSlot);
+                newSlot.transform.SetParent(this.gameObject.transform);
+
+                if (j + 1 == slots)
+                {
+                    newSlot.GetComponent<Slot>().UpdateSprite(deleteS, deleteSelectedS);
+                    newSlot.GetComponent<Slot>().deleteSlot = true;
+
+                    Debug.Log("isDeleteSlot");
+                }
+                else
+                    allSlots.Add(newSlot);
             }
         }
     }
 
 
-    public bool AddItem(Item item)
+    public bool AddItem(GameObject itemObject)
     {
+        Item itemScript = itemObject.GetComponent<Item>();
+
         //if the item we want to add has max stack size of 1
-        if (item.maxSize == 1)
+        if (itemScript.maxSize == 1)
         {
             //place in blank slot since it's not stackable
-            fillBlankSlot(item);
+            fillBlankSlot(itemObject);
             return true;
         }
 
@@ -104,17 +120,17 @@ public class Inventory : MonoBehaviour {
                 if (!tempSlot.isEmpty)
                 {
                     //if the item we collected is same as item in that slot
-    
+                    if (tempSlot.currentItem.id == itemScript.id && tempSlot.isAvailable)
                     {
                         //add item collected to the slot stack
-                        tempSlot.AddItem(item);
+                        tempSlot.AddItem(itemObject);
                         return true;
                     }
                 }
 
                 if (blankSlots > 0)
                 {
-                    fillBlankSlot(item);
+                    fillBlankSlot(itemObject);
                 }
             }
         }
@@ -122,8 +138,9 @@ public class Inventory : MonoBehaviour {
     }
 
     //run through every single slot in the collection to check for blank slot
-    private bool fillBlankSlot(Item item)
+    private bool fillBlankSlot(GameObject itemObject)
     {
+        Item item = itemObject.GetComponent<Item>();
         if (blankSlots > 0)
         {
             foreach (GameObject slot in allSlots)
@@ -132,7 +149,7 @@ public class Inventory : MonoBehaviour {
 
                 if (tempSlot.isEmpty)
                 {
-                    tempSlot.AddItem(item); //place item in slot 
+                    tempSlot.AddItem(itemObject); //place item in slot 
                     blankSlots--; //remove a blank slot
                     return true;
                 }
