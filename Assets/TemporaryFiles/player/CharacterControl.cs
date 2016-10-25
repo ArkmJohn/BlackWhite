@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharacterControl : MonoBehaviour {
 
-    public float speed = 5, turnSpeed = 20;
+    public float speed = 5, turnSpeed = 35;
     public Animator anim;
     public Inventory inventory;
 

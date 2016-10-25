@@ -349,7 +349,7 @@ MonoBehaviour:
   rooms: {fileID: 0}
   enemyPrefabs:
   - {fileID: 1000011307236154, guid: 506b726eaff1a084c947a44891d5398e, type: 2}
-  playerPrefab: {fileID: 1000011795663826, guid: 18a1f08f8948d4b4b862abc32e6cf28d,
+  playerPrefab: {fileID: 1000012002401972, guid: 3e4e56a697425874f9481e3bd302f2ec,
     type: 2}
   level: 0
   difficulty: 1
@@ -399,7 +399,6 @@ MonoBehaviour:
   baseRes: 0
   secWeakness: 0
   secRes: 0
-  inventoryObj: {fileID: 0}
   equipedWeapon: {fileID: 0}
   statistics:
   - 0
