@@ -33,13 +33,10 @@ public class LevelGenerator : MonoBehaviour
     List<GameObject> objectClones = new List<GameObject>();
     //GameObject myCamera;
 
-    void Awake()
-    {
-        FindObjectOfType<GameManager>().InitializeLevel();
-    }
     
     void Start()
     {
+        FindObjectOfType<GameManager>().InitializeLevel();
         if (testing == true)
             InitLevel();
     }

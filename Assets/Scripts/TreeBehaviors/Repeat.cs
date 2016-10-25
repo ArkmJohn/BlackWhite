@@ -40,7 +40,7 @@ public class Repeat : Node {
         this.times = originalTimes;
     }
 
-    public override void act(SpawnEnemies enemy)
+    public override void act(Enemy enemy)
     {
         // Checks if the Node fails
         if (node.isFail())

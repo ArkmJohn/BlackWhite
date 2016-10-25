@@ -4,7 +4,6 @@ using System.Collections;
 public class Enemy : Character
 {
     public Vector3 targetLocation;
-    public GameObject weapon;
     public Tree myAITree;
 
     // This is where the enemy should put all its ai

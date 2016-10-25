@@ -4,14 +4,17 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using System;
 
-public class Slot : MonoBehaviour, IPointerClickHandler 
+public class Slot : MonoBehaviour, IPointerClickHandler
 {
-
+    [SerializeField]
+    GameObject currentItemA;
+    public int itemStackCount;
     private Stack<Item> itemStack;
     public Text stackText; //text to display the number of the item collected 
-
+    public bool deleteSlot = false;
     public Sprite emptyS;
     public Sprite highlightS;
+
 
     // Use this for initialization
     void Start()
@@ -19,7 +22,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         //instantiating our items
         itemStack = new Stack<Item>();
 
-        SetSlot();       
+        SetSlot();
     }
 
     private void SetSlot()
@@ -41,7 +44,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     }
 
 
-    private void UpdateSprite(Sprite neutral, Sprite highlight)  
+    public void UpdateSprite(Sprite neutral, Sprite highlight)
     {
         //set the standard sprite
         GetComponent<Image>().sprite = neutral;
@@ -52,14 +55,15 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         //set highlighted and pressed sprite
         spriteState.highlightedSprite = highlight;
         spriteState.pressedSprite = neutral;
-       
+
         //change the button sprite
         GetComponent<Button>().spriteState = spriteState;
     }
 
 
-    public void AddItem(Item item)
+    public void AddItem(GameObject itemObject)
     {
+        Item item = itemObject.GetComponent<Item>();
         //adding items to the stack
         itemStack.Push(item);
         //Debug.Log("ITEM IS ADDED IN STACk");
@@ -75,9 +79,11 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         //update sprite when item is stacked
         UpdateSprite(item.sprNeutral, item.sprHighlighted);
         //Debug.Log("SPRITE UPDATED");
+        itemStackCount = itemStack.Count;
+        currentItemA = itemObject;
     }
 
-    
+
     private void UseItem()
     {
         //if item is in the slot
@@ -88,17 +94,17 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
             //if item number of items in one slot is greater than 1
             if (itemStack.Count > 1)
-            { 
+            {
                 //display number of items in the slot
                 stackText.text = itemStack.Count.ToString();
             }
 
-            else 
+            else
             {
                 // do not display number of items since it is 1
                 stackText.text = string.Empty;
             }
- 
+
 
             if (isEmpty)
             {
@@ -110,7 +116,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
             }
         }
     }
-    
+
 
     //using the interface IPointerClickHandler 
     // PointerEventData has data of the item we clicked on
@@ -119,10 +125,15 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         //if we right-click pointer button 
         if (eventData.button == PointerEventData.InputButton.Left)
         {
-            UseItem();
+            if (deleteSlot)
+                isDeleting();
+            else if (gameObject.GetComponentInParent<Inventory>().isDeleting)
+                RemoveItem();
+            else
+                UseItem();
         }
     }
-       
+
     //to check if item can stack on itself
     public Item currentItem
     {
@@ -140,5 +151,49 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public bool isAvailable
     {
         get { return currentItem.maxSize > itemStack.Count; }
+    }
+
+    private void RemoveItem()
+    {
+        //if item is in the slot
+        if (!isEmpty)
+        {
+            Debug.Log(itemStack.Peek().gameObject.name + " is being deleted");
+            //we discard the item by disassociating it on the stack
+            itemStack.Pop();
+
+            //if item number of items in one slot is greater than 1
+            if (itemStack.Count > 1)
+            {
+                //display number of items in the slot
+                stackText.text = itemStack.Count.ToString();
+            }
+
+            else
+            {
+                // do not display number of items since it is 1
+                stackText.text = string.Empty;
+            }
+
+
+            if (isEmpty)
+            {
+                //if we used the last item in inventory, we'll replace it with the standard slot Sprite
+                UpdateSprite(emptyS, highlightS);
+
+                //increase number of blankSlots
+                Inventory.BlankSlots++;
+            }
+        }
+
+        gameObject.GetComponentInParent<Inventory>().isDeleting = false;
+    }
+
+    private void isDeleting()
+    {
+        if (gameObject.GetComponentInParent<Inventory>().isDeleting == true)
+            gameObject.GetComponentInParent<Inventory>().isDeleting = false;
+        else
+            gameObject.GetComponentInParent<Inventory>().isDeleting = true;
     }
 }

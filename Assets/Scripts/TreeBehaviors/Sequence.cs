@@ -5,7 +5,7 @@ using System;
 
 public class Sequence : Node
 {
-    public override bool isSpecial
+    public override bool IsSpecial
     {
         get { return true; }
         set { }
@@ -35,7 +35,7 @@ public class Sequence : Node
     public override void Start()
     {
         // starts the current sequence
-        this.currentNode = NodeStates.RUNNING;
+        this.currentState = NodeStates.RUNNING;
         
         // reset the current queue
         NodeQueue.Clear();
@@ -44,7 +44,7 @@ public class Sequence : Node
             NodeQueue.Enqueue(Node);
 
             // To Queue all Nodes in special Nodes before the game starts
-            if (Node.isSpecial)
+            if (Node.IsSpecial)
             {
                 Node.Start();
             }
@@ -54,7 +54,7 @@ public class Sequence : Node
             currentNode.Start();
     }
 
-    public override void act(SpawnEnemies enemy)
+    public override void act(Enemy enemy)
     {
         currentNode.act(enemy);
         // if is still running then it will carry on

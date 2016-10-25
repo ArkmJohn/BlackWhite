@@ -24,15 +24,14 @@ public class tempPlayer : MonoBehaviour
     
     void OnTriggerEnter(Collider obj)
     {
-        if (obj.gameObject.tag == "Item")
+        if (obj.gameObject.GetComponent<Item>() != null)
         {
-            Debug.Log(obj.name + " is Collected!");
-
-            inventory.AddItem(obj.GetComponent<Item>());
+            inventory.AddItem(obj.gameObject);
             //Debug.Log("Item added in Inventory");
 
             //destroy item once collected
-            Destroy(obj.gameObject);
+            //Destroy(obj.gameObject);
+            obj.gameObject.SetActive(false);
 
         }
     }

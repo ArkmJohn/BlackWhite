@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000010123170196}
   - 114: {fileID: 114000012575264050}
   - 114: {fileID: 114000014129717530}
+  - 114: {fileID: 114000012232075882}
   m_Layer: 0
   m_Name: _SCRIPTS_
   m_TagString: Untagged
@@ -41,6 +42,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &114000012232075882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012131562706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417b308941d87384e9f3d7180253160e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
+  MaxHealth: 0
+  baseDmg: 0
+  damage: {fileID: 0}
+  baseWeakness: 0
+  baseRes: 0
+  secWeakness: 0
+  secRes: 0
+  inventoryObj: {fileID: 0}
+  equipedWeapon: {fileID: 0}
+  statistics: []
 --- !u!114 &114000012575264050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56,6 +79,7 @@ MonoBehaviour:
   rooms: {fileID: 0}
   enemyPrefabs:
   - {fileID: 1000011307236154, guid: 506b726eaff1a084c947a44891d5398e, type: 2}
+  playerPrefab: {fileID: 0}
   level: 0
   difficulty: 0
 --- !u!114 &114000014129717530

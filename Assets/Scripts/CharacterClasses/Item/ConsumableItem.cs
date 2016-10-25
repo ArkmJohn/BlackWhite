@@ -7,20 +7,15 @@ public class ConsumableItem : Item {
     [SerializeField]
     private int statID;
     [SerializeField]
-    public float statVal;
-    
-    public override void Pickup()
-    {
-        
-    }
+    private float statVal;
 
     public override void UseItem()
     {
-        ChangeStat(myChar);
-    }
+        Player p = FindObjectOfType<Player>();
 
-    // Call the function on the character using some stats
-    private void ChangeStat(Player target)
-    {
+        if (p != null)
+        {
+            p.changeStat(statID, statVal);
+        }
     }
 }
