@@ -6,25 +6,36 @@ public class CharacterControl : MonoBehaviour {
     public float speed = 5, turnSpeed = 35;
     public Animator anim;
     public Inventory inventory;
+    public GameObject weaponHolder;
+    Rigidbody rb;
+
+    public float gravity = 10.0f;
+    public float maxVelocityChange = 10.0f;
+    public bool canJump = true;
+    public float jumpHeight = 2.0f;
+    private bool grounded = false;
 
     // Use this for initialization
     void Start()
     {
-
+        weaponHolder = gameObject.GetComponentInChildren<WeaponHolder>().gameObject;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Walk();
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            GetComponent<Player>().Attack(GetComponent<Player>().range, GetComponent<Damage>());
             Punch();
         }
     }
 
     void FixedUpdate()
     {
+        Walk();
     }
 
     void Walk()
@@ -39,9 +50,8 @@ public class CharacterControl : MonoBehaviour {
 
         float x = horizontal * turnSpeed * Time.deltaTime;
         float z = vertical * speed * Time.deltaTime;
-
-
         transform.Translate(0, 0, z);
+
         transform.Rotate(0, x, 0);
 
     }
@@ -58,16 +68,20 @@ public class CharacterControl : MonoBehaviour {
 
     void OnTriggerEnter(Collider obj)
     {
-        if (obj.gameObject.tag == "Item")
+        if ((obj.gameObject.GetComponent<Item>() != null))
         {
-            //Debug.Log(obj.name + " is Collected!");
+            if (!obj.gameObject.GetComponent<Item>().isUsed)
+            {
+                //Debug.Log(obj.name + " is Collected!");
 
-            inventory.AddItem(obj.gameObject);
-            //Debug.Log("Item added in Inventory");
+                inventory.AddItem(obj.gameObject);
+                //Debug.Log("Item added in Inventory");
 
-            //destroy item once collected
-            //Destroy(obj.gameObject);
-            obj.gameObject.SetActive(false);
+                //destroy item once collected
+                //Destroy(obj.gameObject);
+                obj.gameObject.GetComponent<Item>().isUsed = true;
+                obj.gameObject.SetActive(false);
+            }
 
         }
     }

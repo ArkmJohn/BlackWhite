@@ -9,7 +9,7 @@ public class Enemy : Character
     // This is where the enemy should put all its ai
     protected void Act()
     {
-        myAITree.AIAct();
+        //myAITree.AIAct();
         // Do some other stuff
     }
 

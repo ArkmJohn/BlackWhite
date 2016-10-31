@@ -6,9 +6,9 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public LevelGenerator levelGen = null;
     public Rooms rooms = null;
-    public List<GameObject> enemyPrefabs;
-    public GameObject playerPrefab;
-
+    public List<GameObject> enemyPrefabs, itemPrefabs;
+    public GameObject playerPrefab, startWeaponPrefab;
+    public GameObject inventoryPrefab;
     public int level;
     public int difficulty;
 
@@ -29,8 +29,6 @@ public class GameManager : MonoBehaviour {
         levelGen.InitLevel();
         rooms = FindObjectOfType<Rooms>();
 
-        rooms.SpawnEnemies(GetEnemyCount(), enemyPrefabs, playerPrefab);
-
         Player playerScript = GetComponent<Player>();
 
         playerPrefab.GetComponent<Player>().InStats(playerScript.statistics[2],
@@ -39,6 +37,13 @@ public class GameManager : MonoBehaviour {
             playerScript.statistics[1],
             playerScript.statistics[4],
             playerScript.statistics[5]);
+
+        GameObject inv = Instantiate(inventoryPrefab);
+        Inventory myInv = inv.GetComponentInChildren<Inventory>();
+        playerPrefab.GetComponent<CharacterControl>().inventory = myInv;
+
+        rooms.SpawnEnemies(GetEnemyCount(), enemyPrefabs, playerPrefab, itemPrefabs, startWeaponPrefab);
+
     }
 
     int GetEnemyCount()

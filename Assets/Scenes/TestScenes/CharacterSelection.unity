@@ -196,6 +196,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111b818dffd8a6342877d749b7993b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipables:
+  - {fileID: 1000013880049804, guid: 4b33ead1eabb35b4e9c5aa487645b882, type: 2}
+  - {fileID: 1000013880049804, guid: 4b33ead1eabb35b4e9c5aa487645b882, type: 2}
+  - {fileID: 1000010287709388, guid: e37ee8cf36f1d014f98b4a49eb40f559, type: 2}
+  - {fileID: 1000010287709388, guid: e37ee8cf36f1d014f98b4a49eb40f559, type: 2}
+  - {fileID: 1000013880049804, guid: 4b33ead1eabb35b4e9c5aa487645b882, type: 2}
   myPlayer: {fileID: 0}
 --- !u!1 &106090972
 GameObject:

@@ -7,7 +7,7 @@ public class Item : MonoBehaviour
 {
     public int id;
     public Player myChar;
-    
+    public bool isUsed = false;
     //public ItemType type;
     public int maxSize; //max amount to stack an item
 

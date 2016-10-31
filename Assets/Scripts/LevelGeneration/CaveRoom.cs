@@ -64,14 +64,26 @@ public class CaveRoom : MonoBehaviour
 
     }
 
-    public void SpawnEnemyAtRandomPosition(GameObject enemy)
+    public void SpawnObjectAtRandomPosition(GameObject obj)
     {
         Vector3 randomPos = AvailablePositions[Random.Range(0, AvailablePositions.Count)];
-        GameObject enemyClone = Instantiate(enemy, randomPos, transform.rotation) as GameObject;
+        GameObject enemyClone = Instantiate(obj, randomPos, transform.rotation) as GameObject;
         AvailablePositions.Remove(randomPos);
-        InitEnemy(enemyClone);
-    }
 
+        if(enemyClone.GetComponent<Enemy>())
+          InitEnemy(enemyClone);
+    }
+    public void SpawnObjectAtRandomPosition(GameObject obj, GameObject obj2)
+    {
+        Vector3 randomPos = AvailablePositions[Random.Range(0, AvailablePositions.Count)];
+        Vector3 randPos2 = new Vector3(randomPos.x, randomPos.y + 5, randomPos.z);
+        GameObject enemyClone = Instantiate(obj, randomPos, transform.rotation) as GameObject;
+        GameObject itemClone = Instantiate(obj2, randPos2, transform.rotation) as GameObject;
+        AvailablePositions.Remove(randomPos);
+        
+
+
+    }
     void InitEnemy(GameObject enemy)
     {
     }

@@ -133,6 +133,9 @@ public class MeshGenerator : MonoBehaviour
         ground.transform.position = new Vector3(gameObject.transform.position.x, -wallHeight, gameObject.transform.position.z);
         MeshCollider wallCollider = walls.gameObject.AddComponent<MeshCollider>();
         wallCollider.sharedMesh = wallMesh;
+        wallCollider.material.dynamicFriction = 1;
+        wallCollider.material.staticFriction = 1;
+        wallCollider.material.bounciness = 1;
     }
 
     void TriangSquare(Square square) // Assigns Nodes from the square to a triangle to calulate

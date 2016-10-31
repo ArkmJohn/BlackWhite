@@ -25,6 +25,7 @@ public class Character : MonoBehaviour {
     void Start () {
         isDead = true;
         Health = MaxHealth;
+        damage = GetComponent<Damage>();
 	}
 
 
@@ -35,6 +36,9 @@ public class Character : MonoBehaviour {
         inc -= _def;
 
         Health -= inc;
+        Debug.Log(" Got hit with " + inc + " by " + attacker.gameObject.name);
+        if (Health <= 0)
+            gameObject.SetActive(false);
     }
 
     public void Death()

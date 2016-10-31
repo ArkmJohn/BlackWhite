@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class Rooms : MonoBehaviour {
 
     public CaveRoom[] rooms;
+    public GameObject[] missingPo;
 
     public void FindRooms()
     {
@@ -12,10 +13,10 @@ public class Rooms : MonoBehaviour {
 
     public void SpawnStairs(GameObject StairsPrefab)
     {
-        rooms[Random.Range(0, rooms.Length)].SpawnEnemyAtRandomPosition(StairsPrefab);
+        rooms[Random.Range(0, rooms.Length)].SpawnObjectAtRandomPosition(StairsPrefab);
     }
 
-    public void SpawnEnemies(int enemyCount, List<GameObject> enemyPrefabs, GameObject playerPrefab)
+    public void SpawnEnemies(int enemyCount, List<GameObject> enemyPrefabs, GameObject playerPrefab, List<GameObject> itemPrefabs, GameObject startWeapon)
     {
         // TODO: Choose a prefab based on percentage
 
@@ -23,20 +24,28 @@ public class Rooms : MonoBehaviour {
 
         while (x < enemyCount)
         {
-            SpawnAnEnemy(Random.Range(0, rooms.Length), enemyPrefabs[Random.Range(0, enemyPrefabs.Count)]);
+            SpawnAnObject(Random.Range(0, rooms.Length), enemyPrefabs[Random.Range(0, enemyPrefabs.Count)]);
             x++;
         }
-        SpawnPlayer(Random.Range(0, rooms.Length), playerPrefab);
+
+        int y = 0;
+        while (y <= enemyCount - 5)
+        {
+            SpawnAnObject(Random.Range(0, rooms.Length), itemPrefabs[Random.Range(0, enemyPrefabs.Count)]);
+            y++;
+        }
+
+        SpawnPlayer(Random.Range(0, rooms.Length), playerPrefab, startWeapon);
 
     }
 
-    void SpawnAnEnemy(int roomID, GameObject enemyObject)
+    void SpawnAnObject(int roomID, GameObject obj)
     {
-        rooms[roomID].SpawnEnemyAtRandomPosition(enemyObject);
+        rooms[roomID].SpawnObjectAtRandomPosition(obj);
     }
 
-    void SpawnPlayer(int roomID, GameObject playerPrefab)
+    void SpawnPlayer(int roomID, GameObject playerPrefab, GameObject weaponPrefab)
     {
-        rooms[roomID].SpawnEnemyAtRandomPosition(playerPrefab);
+        rooms[roomID].SpawnObjectAtRandomPosition(playerPrefab, weaponPrefab);
     }
 }
