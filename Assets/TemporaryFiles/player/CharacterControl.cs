@@ -85,4 +85,11 @@ public class CharacterControl : MonoBehaviour {
 
         }
     }
+
+    public void VoidHit()
+    {
+        Transform[] availablePositions = GameObject.Find("EmptyTileContainer").GetComponentsInChildren<Transform>();
+        Vector3 randPos = availablePositions[Random.Range(0, availablePositions.Length)].transform.position;
+        transform.position = Vector3.Lerp(transform.position, new Vector3(randPos.x, 5, randPos.z), 20 * Time.deltaTime);
+    }
 }

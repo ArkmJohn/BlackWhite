@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: 1bc7870c45351de47b774926d8612ea2
+timeCreated: 1478408179
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ' CTR l up thumb'
+    100002: ' CTR r down thumb'
+    100004: ' CTR r up thumb'
+    100006: arrow
+    100008: body
+    100010: Bone009
+    100012: Bone010
+    100014: Bone011
+    100016: bow
+    100018: chest
+    100020: cog
+    100022: CTR chest
+    100024: CTR cog
+    100026: CTR head
+    100028: CTR l down thumb
+    100030: CTR l feet
+    100032: CTR l wrist
+    100034: CTR main
+    100036: CTR neck
+    100038: CTR r feet
+    100040: CTR r wrist
+    100042: CTR waist
+    100044: EL
+    100046: EL001
+    100048: ER
+    100050: ER001
+    100052: hair
+    100054: IK Chain001
+    100056: IK Chain002
+    100058: IK l end
+    100060: IK l feet
+    100062: IK l toe
+    100064: IK r end
+    100066: IK r feet
+    100068: IK r toe
+    100070: l clavicle
+    100072: l down leg
+    100074: l end feet
+    100076: l feet
+    100078: l forearm
+    100080: l hand
+    100082: l hand end
+    100084: l thumb down
+    100086: l thumb end
+    100088: l thumb up
+    100090: l toe
+    100092: l up arm
+    100094: l up leg
+    100096: r down leg
+    100098: r end feet
+    100100: r feet
+    100102: r forearm
+    100104: r hand
+    100106: r hand end
+    100108: r l clavicle
+    100110: r thumb down
+    100112: r thumb end
+    100114: r thumb up
+    100116: r toe
+    100118: r up arm
+    100120: r up leg
+    100122: shoulder ctr l
+    100124: shoulder ctr r
+    100126: sword
+    100128: waist
+    100130: //RootNode
+    400000: ' CTR l up thumb'
+    400002: ' CTR r down thumb'
+    400004: ' CTR r up thumb'
+    400006: arrow
+    400008: body
+    400010: Bone009
+    400012: Bone010
+    400014: Bone011
+    400016: bow
+    400018: chest
+    400020: cog
+    400022: CTR chest
+    400024: CTR cog
+    400026: CTR head
+    400028: CTR l down thumb
+    400030: CTR l feet
+    400032: CTR l wrist
+    400034: CTR main
+    400036: CTR neck
+    400038: CTR r feet
+    400040: CTR r wrist
+    400042: CTR waist
+    400044: EL
+    400046: EL001
+    400048: ER
+    400050: ER001
+    400052: hair
+    400054: IK Chain001
+    400056: IK Chain002
+    400058: IK l end
+    400060: IK l feet
+    400062: IK l toe
+    400064: IK r end
+    400066: IK r feet
+    400068: IK r toe
+    400070: l clavicle
+    400072: l down leg
+    400074: l end feet
+    400076: l feet
+    400078: l forearm
+    400080: l hand
+    400082: l hand end
+    400084: l thumb down
+    400086: l thumb end
+    400088: l thumb up
+    400090: l toe
+    400092: l up arm
+    400094: l up leg
+    400096: r down leg
+    400098: r end feet
+    400100: r feet
+    400102: r forearm
+    400104: r hand
+    400106: r hand end
+    400108: r l clavicle
+    400110: r thumb down
+    400112: r thumb end
+    400114: r thumb up
+    400116: r toe
+    400118: r up arm
+    400120: r up leg
+    400122: shoulder ctr l
+    400124: shoulder ctr r
+    400126: sword
+    400128: waist
+    400130: //RootNode
+    2300000: arrow
+    2300002: bow
+    2300004: hair
+    2300006: sword
+    3300000: arrow
+    3300002: bow
+    3300004: hair
+    3300006: sword
+    4300000: body
+    4300002: hair
+    4300004: sword
+    4300006: bow
+    4300008: arrow
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 4
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

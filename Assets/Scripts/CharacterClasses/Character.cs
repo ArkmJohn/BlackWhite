@@ -9,8 +9,8 @@ public class Character : MonoBehaviour {
     // Char Hidden Stat
     [SerializeField]
     protected float _atkSpd = 0;
-    [SerializeField]
-    protected float _speed = 0;
+    //[SerializeField]
+    public float _speed = 0;
     [SerializeField]
     protected float _def = 0;
 

@@ -15,9 +15,9 @@ public class Selector : Node
 		this.currentNode = null;
     }
 
-    private Node currentNode;
-	List<Node> nodeList = new List<Node>();
-	Queue<Node> nodeQueue = new Queue<Node>();
+    public Node currentNode;
+	public List<Node> nodeList = new List<Node>();
+	public Queue<Node> nodeQueue = new Queue<Node>();
 
 	public void addNode(Node node)
     {
@@ -37,7 +37,7 @@ public class Selector : Node
         nodeQueue.Clear();
 
         // Moves the list to the queue and resets the nerve from setup
-		foreach (Node node in nodeQueue)
+		foreach (Node node in nodeList)
         {
 			nodeQueue.Enqueue(node);
 			if (node.IsSpecial)

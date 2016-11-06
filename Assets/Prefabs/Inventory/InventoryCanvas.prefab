@@ -186,14 +186,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.059}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a96a40b457340d2458badcc83277a55d, type: 3}
+  m_Sprite: {fileID: 21300102, guid: 7fd8a92c22076e847922a28d2b09b3d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -238,8 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1f515f4f220394e8418ba67d6e70cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteS: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  deleteSelectedS: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  deleteS: {fileID: 21300036, guid: 7fd8a92c22076e847922a28d2b09b3d8, type: 3}
+  deleteSelectedS: {fileID: 21300056, guid: 7fd8a92c22076e847922a28d2b09b3d8, type: 3}
   isDeleting: 0
   slotPrefab: {fileID: 1000012401970522, guid: e69990644731af942be0e38dbc36391a, type: 2}
   size: 50

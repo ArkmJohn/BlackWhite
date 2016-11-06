@@ -212,6 +212,14 @@ MonoBehaviour:
   secRes: 0
   targetLocation: {x: 0, y: 0, z: 0}
   myAITree: {fileID: 0}
+  target: {fileID: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  position: {x: 0, y: 0, z: 0}
+  linear: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0}
+  angular: 0
+  maxAccel: 0
+  isDummy: 1
 --- !u!114 &114000011932924876
 MonoBehaviour:
   m_ObjectHideFlags: 1

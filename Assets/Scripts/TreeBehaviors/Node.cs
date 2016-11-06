@@ -26,21 +26,11 @@ public abstract class Node
 
 	public abstract void act(Enemy enemy);
 
-	//private static bool isSpecial;
+    //private static bool isSpecial;
+    public virtual bool IsSpecial { get; set; }
 
-	public virtual bool IsSpecial { 
-		get 
-		{
-			return IsSpecial;
-		} 
-		set 
-		{
-			IsSpecial = value;
-		}
-	}
-
-	// If the state is a success, set the value of currentState to success
-	protected void SuccessState()
+    // If the state is a success, set the value of currentState to success
+    protected void SuccessState()
 	{
 		currentState = NodeStates.SUCCESS;
 	}
@@ -71,7 +61,6 @@ public abstract class Node
 	{
 		 return currentState.Equals (NodeStates.RUNNING);
 	}
-
 }
 
 

@@ -17,7 +17,7 @@ public class CaveRoom : MonoBehaviour
         {
             GameObject g = new GameObject("A Node");
             g.transform.position = a;
-            g.AddComponent<TestNode>();
+            //g.AddComponent<TestNode>();
         }
     }
 

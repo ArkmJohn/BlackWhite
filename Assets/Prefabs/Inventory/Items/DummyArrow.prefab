@@ -472,12 +472,14 @@ MonoBehaviour:
   myChar: {fileID: 0}
   isUsed: 0
   maxSize: 1
-  sprNeutral: {fileID: 21300432, guid: 667dfacfd2f18aa4c9c6788513f4ce86, type: 3}
-  sprHighlighted: {fileID: 21300434, guid: 667dfacfd2f18aa4c9c6788513f4ce86, type: 3}
+  sprNeutral: {fileID: 21300042, guid: 7fd8a92c22076e847922a28d2b09b3d8, type: 3}
+  sprHighlighted: {fileID: 21300062, guid: 7fd8a92c22076e847922a28d2b09b3d8, type: 3}
   basicDMGType: 3
   secDMGType: 0
-  damageInc: 5
+  damageInc: 3
   atkTypeID: 0
+  owner: {fileID: 0}
+  isEquiped: 0
 --- !u!136 &136000011518203018
 CapsuleCollider:
   m_ObjectHideFlags: 1

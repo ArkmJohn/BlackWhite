@@ -1,0 +1,885 @@
+fileFormatVersion: 2
+guid: 7fd8a92c22076e847922a28d2b09b3d8
+timeCreated: 1477908154
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: InvBlank1
+    21300002: InvWM1_1
+    21300004: InvWM2_1
+    21300006: InvWM3_1
+    21300008: InvWM4_1
+    21300010: InvWM5_1
+    21300012: UIPointU
+    21300014: UIPointL
+    21300016: UIPointR
+    21300018: UIVit
+    21300020: InvBlank2
+    21300022: InvWM1_2
+    21300024: InvWM2_2
+    21300026: InvWM3_2
+    21300028: InvWM4_2
+    21300030: InvWM5_2
+    21300032: UIPointD
+    21300034: UIEnd
+    21300036: InvDel1
+    21300038: InvWR1_1
+    21300040: InvWR2_1
+    21300042: InvWR3_1
+    21300044: InvWR4_1
+    21300046: InvWR5_1
+    21300048: UIBar1
+    21300050: UIStr
+    21300052: UIBar2
+    21300054: UIDex
+    21300056: InvDel2
+    21300058: InvWR1_2
+    21300060: InvWR2_2
+    21300062: InvWR3_2
+    21300064: InvWR4_2
+    21300066: InvWR5_2
+    21300068: UIBar3
+    21300070: UIRes
+    21300072: InvI1_1
+    21300074: InvI2_1
+    21300076: InvI3_1
+    21300078: InvI4_1
+    21300080: InvI5_1
+    21300082: InvI6_1
+    21300084: UIInt
+    21300086: InvI1_2
+    21300088: InvI2_2
+    21300090: InvI3_2
+    21300092: InvI4_2
+    21300094: InvI5_2
+    21300096: InvI6_2
+    21300098: UIStam
+    21300100: UIHealth
+    21300102: UIBig1
+    21300104: UIBig2
+    21300106: UIMed1
+    21300108: UIMed2
+    21300110: UIS1_1
+    21300112: UIS1_2
+    21300114: UIS2_1
+    21300116: UIS2_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 2
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1000
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: InvBlank1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2870
+        width: 286
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWM1_1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 2870
+        width: 284
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWM2_1
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 2870
+        width: 315
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWM3_1
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 2870
+        width: 287
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWM4_1
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 2853
+        width: 299
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWM5_1
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 2870
+        width: 297
+        height: 295
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIPointU
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 2942
+        width: 442
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIPointL
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 2714
+        width: 231
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIPointR
+      rect:
+        serializedVersion: 2
+        x: 2658
+        y: 2709
+        width: 231
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIVit
+      rect:
+        serializedVersion: 2
+        x: 3001
+        y: 2942
+        width: 205
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvBlank2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2560
+        width: 286
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWM1_2
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 2560
+        width: 284
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWM2_2
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 2560
+        width: 314
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWM3_2
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 2560
+        width: 290
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWM4_2
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 2547
+        width: 303
+        height: 299
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWM5_2
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 2560
+        width: 289
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIPointD
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 2685
+        width: 443
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIEnd
+      rect:
+        serializedVersion: 2
+        x: 3024
+        y: 2714
+        width: 163
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvDel1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 2249
+        width: 288
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWR1_1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 2249
+        width: 284
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWR2_1
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 2249
+        width: 286
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWR3_1
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 2249
+        width: 287
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWR4_1
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 2249
+        width: 287
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWR5_1
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 2249
+        width: 286
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIBar1
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 2424
+        width: 1070
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIStr
+      rect:
+        serializedVersion: 2
+        x: 3008
+        y: 2456
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIBar2
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 2240
+        width: 1070
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIDex
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 2152
+        width: 138
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvDel2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1939
+        width: 288
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWR1_2
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1939
+        width: 288
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWR2_2
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1939
+        width: 286
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWR3_2
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1939
+        width: 287
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWR4_2
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 1939
+        width: 287
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvWR5_2
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1929
+        width: 286
+        height: 295
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIBar3
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 2060
+        width: 1070
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIRes
+      rect:
+        serializedVersion: 2
+        x: 3023
+        y: 1867
+        width: 169
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI1_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1531
+        width: 366
+        height: 367
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI2_1
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1535
+        width: 366
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI3_1
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1528
+        width: 366
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI4_1
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 1528
+        width: 366
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI5_1
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1527
+        width: 366
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI6_1
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 1527
+        width: 365
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIInt
+      rect:
+        serializedVersion: 2
+        x: 3005
+        y: 1586
+        width: 255
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI1_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1130
+        width: 366
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI2_2
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 1130
+        width: 366
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI3_2
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1132
+        width: 367
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI4_2
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 1129
+        width: 365
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI5_2
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1122
+        width: 366
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: InvI6_2
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1130
+        width: 364
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIStam
+      rect:
+        serializedVersion: 2
+        x: 2507
+        y: 1141
+        width: 252
+        height: 421
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIHealth
+      rect:
+        serializedVersion: 2
+        x: 2833
+        y: 1191
+        width: 346
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIBig1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 169
+        width: 1070
+        height: 840
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIBig2
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 339
+        width: 973
+        height: 669
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIMed1
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 747
+        width: 964
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIMed2
+      rect:
+        serializedVersion: 2
+        x: 2146
+        y: 387
+        width: 1069
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIS1_1
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 0
+        width: 530
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIS1_2
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 13
+        width: 477
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIS2_1
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 14
+        width: 292
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIS2_2
+      rect:
+        serializedVersion: 2
+        x: 2583
+        y: 29
+        width: 262
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

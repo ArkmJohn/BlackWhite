@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public class Group : MonoBehaviour {
 
-    List<Character> members;
-    Character leader;
+    public List<Character> members;
+    public Character leader;
     public Node currentCommand;
 
     public void InitGroup(Character me)

@@ -36,9 +36,11 @@ public class LevelGenerator : MonoBehaviour
     
     void Start()
     {
-        FindObjectOfType<GameManager>().InitializeLevel();
+        
         if (testing == true)
             InitLevel();
+        else
+            FindObjectOfType<GameManager>().InitializeLevel();
     }
     
     public void InitLevel()
@@ -62,7 +64,14 @@ public class LevelGenerator : MonoBehaviour
 
         // Adds a border wall around the map
         int borderSize = 1;
-        int[,] borderedMap = new int[width + borderSize * 2, height + borderSize * 2];
+        int[,] borderedMap = new int[width + borderSize * 3, height + borderSize * 3];
+        GameObject tileContainer = new GameObject("TileContainer");
+        GameObject emptyTContainer = new GameObject("EmptyTileContainer");
+        emptyTContainer.transform.SetParent(tileContainer.transform);
+        GameObject voidContainer = new GameObject("VoidTileContainer");
+        voidContainer.transform.SetParent(tileContainer.transform);
+        GameObject wallContainer = new GameObject("WallTileContainer");
+        wallContainer.transform.SetParent(tileContainer.transform);
 
         for (int x = 0; x < borderedMap.GetLength(0); x++)
         {
@@ -71,11 +80,13 @@ public class LevelGenerator : MonoBehaviour
                 if (x >= borderSize && x < width + borderSize && y >= borderSize && y < height + borderSize)
                 {
                     borderedMap[x, y] = map[x - borderSize, y - borderSize];
+                    TileCreate(x, y, tileContainer,wallContainer,emptyTContainer, voidContainer);
                 }
                 else
                 {
                     borderedMap[x, y] = 1;
                 }
+                //TileCreate(x, y);
             }
         }
 
@@ -451,8 +462,24 @@ public class LevelGenerator : MonoBehaviour
                 else if (neighbourWallTiles < 4)
                     map[x, y] = 0;
 
+                
             }
         }
+    }
+
+    void TileCreate(int x , int y, GameObject parent, GameObject wallParent, GameObject emptyTParent, GameObject voidParent)
+    {
+        GameObject myTile = new GameObject("Tile " + x + " " + y);
+        myTile.transform.position = new Vector3( - width / 2 + 0.5f + x, -GetComponent<MeshGenerator>().wallHeight, -height / 2 + 0.5f + y);
+        int neighbours = GetSurroundingWallCount(x, y);
+        bool isWall = false;
+        if (neighbours == 0)
+            isWall = false;
+        else
+            isWall = true;
+        myTile.AddComponent<Tile>();
+        myTile.GetComponent<Tile>().setTile(neighbours, isWall, wallParent, emptyTParent, voidParent);
+
     }
 
     void GetAllAvailableCoordinates() // Adds vector3s to a list for potential object position spawns

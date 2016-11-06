@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: d32a6a75528501a4494ad2d1e4a1baca
+timeCreated: 1478407862
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ' CTR l up thumb'
+    100002: ' CTR r down thumb'
+    100004: ' CTR r up thumb'
+    100006: body
+    100008: Bone009
+    100010: Bone010
+    100012: Bone011
+    100014: chest
+    100016: cog
+    100018: CTR chest
+    100020: CTR cog
+    100022: CTR head
+    100024: CTR l down thumb
+    100026: CTR l feet
+    100028: CTR l wrist
+    100030: CTR main
+    100032: CTR neck
+    100034: CTR r feet
+    100036: CTR r wrist
+    100038: CTR waist
+    100040: EL
+    100042: EL001
+    100044: ER
+    100046: ER001
+    100048: hair
+    100050: IK Chain001
+    100052: IK Chain002
+    100054: IK l end
+    100056: IK l feet
+    100058: IK l toe
+    100060: IK r end
+    100062: IK r feet
+    100064: IK r toe
+    100066: l clavicle
+    100068: l down leg
+    100070: l end feet
+    100072: l feet
+    100074: l forearm
+    100076: l hand
+    100078: l hand end
+    100080: l thumb down
+    100082: l thumb end
+    100084: l thumb up
+    100086: l toe
+    100088: l up arm
+    100090: l up leg
+    100092: r down leg
+    100094: r end feet
+    100096: r feet
+    100098: r forearm
+    100100: r hand
+    100102: r hand end
+    100104: r l clavicle
+    100106: r thumb down
+    100108: r thumb end
+    100110: r thumb up
+    100112: r toe
+    100114: r up arm
+    100116: r up leg
+    100118: shoulder ctr l
+    100120: shoulder ctr r
+    100122: waist
+    100124: //RootNode
+    400000: ' CTR l up thumb'
+    400002: ' CTR r down thumb'
+    400004: ' CTR r up thumb'
+    400006: body
+    400008: Bone009
+    400010: Bone010
+    400012: Bone011
+    400014: chest
+    400016: cog
+    400018: CTR chest
+    400020: CTR cog
+    400022: CTR head
+    400024: CTR l down thumb
+    400026: CTR l feet
+    400028: CTR l wrist
+    400030: CTR main
+    400032: CTR neck
+    400034: CTR r feet
+    400036: CTR r wrist
+    400038: CTR waist
+    400040: EL
+    400042: EL001
+    400044: ER
+    400046: ER001
+    400048: hair
+    400050: IK Chain001
+    400052: IK Chain002
+    400054: IK l end
+    400056: IK l feet
+    400058: IK l toe
+    400060: IK r end
+    400062: IK r feet
+    400064: IK r toe
+    400066: l clavicle
+    400068: l down leg
+    400070: l end feet
+    400072: l feet
+    400074: l forearm
+    400076: l hand
+    400078: l hand end
+    400080: l thumb down
+    400082: l thumb end
+    400084: l thumb up
+    400086: l toe
+    400088: l up arm
+    400090: l up leg
+    400092: r down leg
+    400094: r end feet
+    400096: r feet
+    400098: r forearm
+    400100: r hand
+    400102: r hand end
+    400104: r l clavicle
+    400106: r thumb down
+    400108: r thumb end
+    400110: r thumb up
+    400112: r toe
+    400114: r up arm
+    400116: r up leg
+    400118: shoulder ctr l
+    400120: shoulder ctr r
+    400122: waist
+    400124: //RootNode
+    2300000: hair
+    3300000: hair
+    4300000: body
+    4300002: hair
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 4
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

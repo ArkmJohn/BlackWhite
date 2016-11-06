@@ -16,17 +16,17 @@ public class Sequence : Node
     }
 
     private Node currentNode;
-    List<Node> Nodes = new List<Node>();
+    List<Node> NodeList = new List<Node>();
     Queue<Node> NodeQueue = new Queue<Node>();
 
     public void addNode(Node Node)
     {
-        Nodes.Add(Node);
+        NodeList.Add(Node);
     }
 
     public override void reset()
     {
-        foreach (Node Node in Nodes)
+        foreach (Node Node in NodeList)
         {
             Node.reset();
         }
@@ -39,7 +39,7 @@ public class Sequence : Node
         
         // reset the current queue
         NodeQueue.Clear();
-        foreach (Node Node in Nodes)
+        foreach (Node Node in NodeList)
         {
             NodeQueue.Enqueue(Node);
 

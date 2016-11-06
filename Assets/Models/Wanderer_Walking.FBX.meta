@@ -1,0 +1,366 @@
+fileFormatVersion: 2
+guid: 464381be8199f364fb09c6a98b8e952f
+timeCreated: 1478363792
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ' CTR l up thumb'
+    100002: ' CTR r down thumb'
+    100004: ' CTR r up thumb'
+    100006: //RootNode
+    100008: body
+    100010: Bone009
+    100012: Bone010
+    100014: Bone011
+    100016: chest
+    100018: cog
+    100020: CTR chest
+    100022: CTR cog
+    100024: CTR head
+    100026: CTR l down thumb
+    100028: CTR l feet
+    100030: CTR l wrist
+    100032: CTR main
+    100034: CTR neck
+    100036: CTR r feet
+    100038: CTR r wrist
+    100040: CTR waist
+    100042: EL
+    100044: EL001
+    100046: ER
+    100048: ER001
+    100050: hair
+    100052: IK Chain001
+    100054: IK Chain002
+    100056: IK l end
+    100058: IK l feet
+    100060: IK l toe
+    100062: IK r end
+    100064: IK r feet
+    100066: IK r toe
+    100068: l clavicle
+    100070: l down leg
+    100072: l end feet
+    100074: l feet
+    100076: l forearm
+    100078: l hand
+    100080: l hand end
+    100082: l thumb down
+    100084: l thumb end
+    100086: l thumb up
+    100088: l toe
+    100090: l up arm
+    100092: l up leg
+    100094: r down leg
+    100096: r end feet
+    100098: r feet
+    100100: r forearm
+    100102: r hand
+    100104: r hand end
+    100106: r l clavicle
+    100108: r thumb down
+    100110: r thumb end
+    100112: r thumb up
+    100114: r toe
+    100116: r up arm
+    100118: r up leg
+    100120: shoulder ctr l
+    100122: shoulder ctr r
+    100124: waist
+    400000: ' CTR l up thumb'
+    400002: ' CTR r down thumb'
+    400004: ' CTR r up thumb'
+    400006: //RootNode
+    400008: body
+    400010: Bone009
+    400012: Bone010
+    400014: Bone011
+    400016: chest
+    400018: cog
+    400020: CTR chest
+    400022: CTR cog
+    400024: CTR head
+    400026: CTR l down thumb
+    400028: CTR l feet
+    400030: CTR l wrist
+    400032: CTR main
+    400034: CTR neck
+    400036: CTR r feet
+    400038: CTR r wrist
+    400040: CTR waist
+    400042: EL
+    400044: EL001
+    400046: ER
+    400048: ER001
+    400050: hair
+    400052: IK Chain001
+    400054: IK Chain002
+    400056: IK l end
+    400058: IK l feet
+    400060: IK l toe
+    400062: IK r end
+    400064: IK r feet
+    400066: IK r toe
+    400068: l clavicle
+    400070: l down leg
+    400072: l end feet
+    400074: l feet
+    400076: l forearm
+    400078: l hand
+    400080: l hand end
+    400082: l thumb down
+    400084: l thumb end
+    400086: l thumb up
+    400088: l toe
+    400090: l up arm
+    400092: l up leg
+    400094: r down leg
+    400096: r end feet
+    400098: r feet
+    400100: r forearm
+    400102: r hand
+    400104: r hand end
+    400106: r l clavicle
+    400108: r thumb down
+    400110: r thumb end
+    400112: r thumb up
+    400114: r toe
+    400116: r up arm
+    400118: r up leg
+    400120: shoulder ctr l
+    400122: shoulder ctr r
+    400124: waist
+    2300000: hair
+    3300000: hair
+    4300000: body
+    4300002: hair
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 33
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: CTR main
+        weight: 1
+      - path: CTR main/CTR cog
+        weight: 1
+      - path: CTR main/CTR cog/cog
+        weight: 1
+      - path: CTR main/CTR cog/cog/l up leg
+        weight: 1
+      - path: CTR main/CTR cog/cog/l up leg/l down leg
+        weight: 1
+      - path: CTR main/CTR cog/cog/l up leg/l down leg/l feet
+        weight: 1
+      - path: CTR main/CTR cog/cog/l up leg/l down leg/l feet/l toe
+        weight: 1
+      - path: CTR main/CTR cog/cog/l up leg/l down leg/l feet/l toe/l end feet
+        weight: 1
+      - path: CTR main/CTR cog/cog/r up leg
+        weight: 1
+      - path: CTR main/CTR cog/cog/r up leg/r down leg
+        weight: 1
+      - path: CTR main/CTR cog/cog/r up leg/r down leg/r feet
+        weight: 1
+      - path: CTR main/CTR cog/cog/r up leg/r down leg/r feet/r toe
+        weight: 1
+      - path: CTR main/CTR cog/cog/r up leg/r down leg/r feet/r toe/r end feet
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/Bone009
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/Bone009/Bone010
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/Bone009/Bone010/Bone011
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/l clavicle
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm/l hand
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm/l hand/l
+          hand end
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm/l hand/l
+          thumb up
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm/l hand/l
+          thumb up/l thumb down
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm/l hand/l
+          thumb up/l thumb down/l thumb end
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/r l clavicle
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm/r hand
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm/r hand/r
+          hand end
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm/r hand/r
+          thumb up
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm/r hand/r
+          thumb up/r thumb down
+        weight: 1
+      - path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm/r hand/r
+          thumb up/r thumb down/r thumb end
+        weight: 1
+      - path: CTR main/CTR cog/CTR l wrist
+        weight: 1
+      - path: CTR main/CTR cog/CTR l wrist/ CTR l up thumb
+        weight: 1
+      - path: CTR main/CTR cog/CTR l wrist/ CTR l up thumb/CTR l down thumb
+        weight: 1
+      - path: CTR main/CTR cog/CTR r wrist
+        weight: 1
+      - path: CTR main/CTR cog/CTR r wrist/ CTR r up thumb
+        weight: 1
+      - path: CTR main/CTR cog/CTR r wrist/ CTR r up thumb/ CTR r down thumb
+        weight: 1
+      - path: CTR main/CTR cog/CTR waist
+        weight: 1
+      - path: CTR main/CTR cog/CTR waist/CTR chest
+        weight: 1
+      - path: CTR main/CTR cog/CTR waist/CTR chest/CTR neck
+        weight: 1
+      - path: CTR main/CTR cog/CTR waist/CTR chest/CTR neck/CTR head
+        weight: 1
+      - path: CTR main/CTR cog/CTR waist/CTR chest/CTR neck/CTR head/hair
+        weight: 1
+      - path: CTR main/CTR cog/CTR waist/CTR chest/shoulder ctr l
+        weight: 1
+      - path: CTR main/CTR cog/CTR waist/CTR chest/shoulder ctr r
+        weight: 1
+      - path: CTR main/CTR cog/EL
+        weight: 1
+      - path: CTR main/CTR cog/ER
+        weight: 1
+      - path: CTR main/CTR l feet
+        weight: 1
+      - path: CTR main/CTR l feet/IK l end
+        weight: 1
+      - path: CTR main/CTR l feet/IK l end/IK l toe
+        weight: 1
+      - path: CTR main/CTR l feet/IK l end/IK l toe/IK l feet
+        weight: 1
+      - path: CTR main/CTR r feet
+        weight: 1
+      - path: CTR main/CTR r feet/IK r end
+        weight: 1
+      - path: CTR main/CTR r feet/IK r end/IK r toe
+        weight: 1
+      - path: CTR main/CTR r feet/IK r end/IK r toe/IK r feet
+        weight: 1
+      - path: CTR main/EL001
+        weight: 1
+      - path: CTR main/ER001
+        weight: 1
+      - path: IK Chain001
+        weight: 1
+      - path: IK Chain002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 4
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
