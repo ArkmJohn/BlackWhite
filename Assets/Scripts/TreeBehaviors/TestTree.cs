@@ -38,8 +38,8 @@ public class TestTree : Tree
         selector1 = new Selector();
         sequence1 = new Sequence();
 
-        //sequence1.addNode(new TestNode("I really Hate it but"));
-        //sequence1.addNode(new TestNode(" , its to late to change"));
+        sequence1.addNode(new TestNodeA("I really Hate it but"));
+        sequence1.addNode(new TestNodeA(" , its to late to change"));
         //selector1.addNode(new Seek());
         selector1.addNode(new Wander());
         brain = new Repeat(selector1);
