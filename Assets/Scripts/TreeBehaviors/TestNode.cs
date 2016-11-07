@@ -2,11 +2,11 @@
 using System.Collections;
 using System;
 
-public class TestNode : Node {
+public class TestNodeA : Node {
 
     public string Message;
 
-    public TestNode(string myMessage)
+    public TestNodeA(string myMessage)
     {
         Message = myMessage;
     }
