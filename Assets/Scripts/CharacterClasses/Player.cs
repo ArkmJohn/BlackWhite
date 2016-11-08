@@ -87,6 +87,7 @@ public class Player : Character {
             bowWeapon.SetActive(true);
             bowWeapon.transform.localPosition = new Vector3(0, 0, 0);
             equipedWeapon = weaponObj;
+            GetComponent<CharacterControl>().attackTypeID = 2;
         }
         else
         {
@@ -96,6 +97,8 @@ public class Player : Character {
             weaponObj.transform.SetParent(weaponHolder.transform);
             weaponObj.transform.localPosition = new Vector3(0, 0, 0);
             equipedWeapon = weaponObj;
+            GetComponent<CharacterControl>().attackTypeID = 1;
+
         }
 
         // then calculates and changes the damage

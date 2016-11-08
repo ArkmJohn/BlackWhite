@@ -7,4 +7,138 @@ AvatarMask:
   m_PrefabInternal: {fileID: 0}
   m_Name: AttackMask
   m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
-  m_Elements: []
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: body
+    m_Weight: 1
+  - m_Path: CTR main
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/l up leg
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/l up leg/l down leg
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/l up leg/l down leg/l feet
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/l up leg/l down leg/l feet/l toe
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/l up leg/l down leg/l feet/l toe/l end feet
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/r up leg
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/r up leg/r down leg
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/r up leg/r down leg/r feet
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/r up leg/r down leg/r feet/r toe
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/r up leg/r down leg/r feet/r toe/r end feet
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/Bone009
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/Bone009/Bone010
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/Bone009/Bone010/Bone011
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/l clavicle
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm/l hand
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm/l hand/l
+      hand end
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm/l hand/l
+      thumb up
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm/l hand/l
+      thumb up/l thumb down
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/l clavicle/l up arm/l forearm/l hand/l
+      thumb up/l thumb down/l thumb end
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/r l clavicle
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm/r hand
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm/r hand/r
+      hand end
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm/r hand/r
+      thumb up
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm/r hand/r
+      thumb up/r thumb down
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/cog/waist/chest/r l clavicle/r up arm/r forearm/r hand/r
+      thumb up/r thumb down/r thumb end
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR l wrist
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR l wrist/ CTR l up thumb
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR l wrist/ CTR l up thumb/CTR l down thumb
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR r wrist
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR r wrist/ CTR r up thumb
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR r wrist/ CTR r up thumb/ CTR r down thumb
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR waist
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR waist/CTR chest
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR waist/CTR chest/CTR neck
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR waist/CTR chest/CTR neck/CTR head
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR waist/CTR chest/CTR neck/CTR head/hair
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR waist/CTR chest/shoulder ctr l
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/CTR waist/CTR chest/shoulder ctr r
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/EL
+    m_Weight: 1
+  - m_Path: CTR main/CTR cog/ER
+    m_Weight: 1
+  - m_Path: CTR main/CTR l feet
+    m_Weight: 1
+  - m_Path: CTR main/CTR l feet/IK l end
+    m_Weight: 1
+  - m_Path: CTR main/CTR l feet/IK l end/IK l toe
+    m_Weight: 1
+  - m_Path: CTR main/CTR l feet/IK l end/IK l toe/IK l feet
+    m_Weight: 1
+  - m_Path: CTR main/CTR r feet
+    m_Weight: 1
+  - m_Path: CTR main/CTR r feet/IK r end
+    m_Weight: 1
+  - m_Path: CTR main/CTR r feet/IK r end/IK r toe
+    m_Weight: 1
+  - m_Path: CTR main/CTR r feet/IK r end/IK r toe/IK r feet
+    m_Weight: 1
+  - m_Path: CTR main/EL001
+    m_Weight: 1
+  - m_Path: CTR main/ER001
+    m_Weight: 1
+  - m_Path: IK Chain001
+    m_Weight: 1
+  - m_Path: IK Chain002
+    m_Weight: 1

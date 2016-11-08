@@ -1,0 +1,367 @@
+fileFormatVersion: 2
+guid: 44e1b94640493ef4bb81c2cb263ed9e7
+timeCreated: 1478603118
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: chest
+    100006: chest_c
+    100008: COG
+    100010: head
+    100012: head_c
+    100014: head_end
+    100016: IK Chain001
+    100018: IK Chain002
+    100020: IK Chain003
+    100022: IK Chain004
+    100024: IK Chain005
+    100026: IK Chain006
+    100028: IK Chain007
+    100030: IK Chain008
+    100032: L_arm
+    100034: L_claw
+    100036: L_claw_c
+    100038: L_claw_end
+    100040: L_Colar
+    100042: L_Feet
+    100044: L_Finger
+    100046: L_foot_c
+    100048: L_forehand
+    100050: L_leg
+    100052: L_palm
+    100054: L_shoulder_c
+    100056: L_Thigh
+    100058: L_toe_c
+    100060: L_Toes
+    100062: L_toes_end
+    100064: L_wrest_c
+    100066: LE
+    100068: LK
+    100070: master controller
+    100072: neck
+    100074: neck_c
+    100076: Particle View 001
+    100078: pelvis
+    100080: Plane001
+    100082: R_arm
+    100084: R_claw
+    100086: R_claw_c
+    100088: R_Claw_end
+    100090: R_colar
+    100092: R_Feet
+    100094: R_Finger
+    100096: R_Foot_c
+    100098: R_forehand
+    100100: R_leg
+    100102: R_palm
+    100104: R_shoulder_c
+    100106: R_thigh
+    100108: R_toe_c
+    100110: R_toes
+    100112: R_toes_end
+    100114: R_Wrest_c
+    100116: RE
+    100118: RK
+    100120: //RootNode
+    100122: Sphere001
+    100124: Sphere002
+    100126: stomach
+    100128: stomach_c
+    400000: Box001
+    400002: Box002
+    400004: chest
+    400006: chest_c
+    400008: COG
+    400010: head
+    400012: head_c
+    400014: head_end
+    400016: IK Chain001
+    400018: IK Chain002
+    400020: IK Chain003
+    400022: IK Chain004
+    400024: IK Chain005
+    400026: IK Chain006
+    400028: IK Chain007
+    400030: IK Chain008
+    400032: L_arm
+    400034: L_claw
+    400036: L_claw_c
+    400038: L_claw_end
+    400040: L_Colar
+    400042: L_Feet
+    400044: L_Finger
+    400046: L_foot_c
+    400048: L_forehand
+    400050: L_leg
+    400052: L_palm
+    400054: L_shoulder_c
+    400056: L_Thigh
+    400058: L_toe_c
+    400060: L_Toes
+    400062: L_toes_end
+    400064: L_wrest_c
+    400066: LE
+    400068: LK
+    400070: master controller
+    400072: neck
+    400074: neck_c
+    400076: Particle View 001
+    400078: pelvis
+    400080: Plane001
+    400082: R_arm
+    400084: R_claw
+    400086: R_claw_c
+    400088: R_Claw_end
+    400090: R_colar
+    400092: R_Feet
+    400094: R_Finger
+    400096: R_Foot_c
+    400098: R_forehand
+    400100: R_leg
+    400102: R_palm
+    400104: R_shoulder_c
+    400106: R_thigh
+    400108: R_toe_c
+    400110: R_toes
+    400112: R_toes_end
+    400114: R_Wrest_c
+    400116: RE
+    400118: RK
+    400120: //RootNode
+    400122: Sphere001
+    400124: Sphere002
+    400126: stomach
+    400128: stomach_c
+    2300000: Box002
+    2300002: Plane001
+    2300004: Sphere001
+    2300006: Sphere002
+    3300000: Box002
+    3300002: Plane001
+    3300004: Sphere001
+    3300006: Sphere002
+    4300000: Plane001
+    4300002: Box001
+    4300004: Box002
+    4300006: Sphere001
+    4300008: Sphere002
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Box001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box001
+        weight: 1
+      - path: IK Chain007
+        weight: 1
+      - path: IK Chain008
+        weight: 1
+      - path: master controller
+        weight: 1
+      - path: master controller/COG
+        weight: 1
+      - path: master controller/COG/L_wrest_c
+        weight: 1
+      - path: master controller/COG/L_wrest_c/L_toe_c
+        weight: 1
+      - path: master controller/COG/L_wrest_c/L_toe_c/L_claw_c
+        weight: 1
+      - path: master controller/COG/LE
+        weight: 1
+      - path: master controller/COG/pelvis
+        weight: 1
+      - path: master controller/COG/pelvis/L_Thigh
+        weight: 1
+      - path: master controller/COG/pelvis/L_Thigh/L_leg
+        weight: 1
+      - path: master controller/COG/pelvis/L_Thigh/L_leg/L_Feet
+        weight: 1
+      - path: master controller/COG/pelvis/L_Thigh/L_leg/L_Feet/L_Toes
+        weight: 1
+      - path: master controller/COG/pelvis/L_Thigh/L_leg/L_Feet/L_Toes/L_toes_end
+        weight: 1
+      - path: master controller/COG/pelvis/R_thigh
+        weight: 1
+      - path: master controller/COG/pelvis/R_thigh/R_leg
+        weight: 1
+      - path: master controller/COG/pelvis/R_thigh/R_leg/R_Feet
+        weight: 1
+      - path: master controller/COG/pelvis/R_thigh/R_leg/R_Feet/R_toes
+        weight: 1
+      - path: master controller/COG/pelvis/R_thigh/R_leg/R_Feet/R_toes/R_toes_end
+        weight: 1
+      - path: master controller/COG/pelvis/stomach
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm/L_forehand
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm/L_forehand/L_palm
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm/L_forehand/L_palm/L_Finger
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm/L_forehand/L_palm/L_Finger/L_claw
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm/L_forehand/L_palm/L_Finger/L_claw/L_claw_end
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/neck
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/neck/head
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/neck/head/head_end
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm/R_forehand
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm/R_forehand/R_palm
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm/R_forehand/R_palm/R_Finger
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm/R_forehand/R_palm/R_Finger/R_claw
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm/R_forehand/R_palm/R_Finger/R_claw/R_Claw_end
+        weight: 1
+      - path: master controller/COG/R_Wrest_c
+        weight: 1
+      - path: master controller/COG/R_Wrest_c/R_toe_c
+        weight: 1
+      - path: master controller/COG/R_Wrest_c/R_toe_c/R_claw_c
+        weight: 1
+      - path: master controller/COG/RE
+        weight: 1
+      - path: master controller/COG/stomach_c
+        weight: 1
+      - path: master controller/COG/stomach_c/chest_c
+        weight: 1
+      - path: master controller/COG/stomach_c/chest_c/L_shoulder_c
+        weight: 1
+      - path: master controller/COG/stomach_c/chest_c/neck_c
+        weight: 1
+      - path: master controller/COG/stomach_c/chest_c/neck_c/head_c
+        weight: 1
+      - path: master controller/COG/stomach_c/chest_c/R_shoulder_c
+        weight: 1
+      - path: master controller/L_foot_c
+        weight: 1
+      - path: master controller/L_foot_c/IK Chain005
+        weight: 1
+      - path: master controller/L_foot_c/IK Chain005/IK Chain003
+        weight: 1
+      - path: master controller/L_foot_c/IK Chain005/IK Chain003/IK Chain001
+        weight: 1
+      - path: master controller/LK
+        weight: 1
+      - path: master controller/R_Foot_c
+        weight: 1
+      - path: master controller/R_Foot_c/IK Chain006
+        weight: 1
+      - path: master controller/R_Foot_c/IK Chain006/IK Chain004
+        weight: 1
+      - path: master controller/R_Foot_c/IK Chain006/IK Chain004/IK Chain002
+        weight: 1
+      - path: master controller/RK
+        weight: 1
+      - path: Particle View 001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

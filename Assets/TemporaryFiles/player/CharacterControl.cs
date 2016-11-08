@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterControl : MonoBehaviour {
+public class CharacterControl : MonoBehaviour
+{
 
     public float speed = 5, turnSpeed = 35;
     public Animator anim;
@@ -9,6 +10,7 @@ public class CharacterControl : MonoBehaviour {
     public GameObject weaponHolder;
     Rigidbody rb;
 
+    public int attackTypeID = 1;
     public float gravity = 10.0f;
     public float maxVelocityChange = 10.0f;
     public bool canJump = true;
@@ -58,12 +60,13 @@ public class CharacterControl : MonoBehaviour {
 
     void Punch()
     {
-        anim.SetLayerWeight(1, 1);
+        anim.SetLayerWeight(attackTypeID, 1);
+        anim.SetTrigger("Attack");
     }
 
     public void DisablePunch()
     {
-        anim.SetLayerWeight(1, 0);
+        anim.SetLayerWeight(attackTypeID, 0);
     }
 
     void OnTriggerEnter(Collider obj)

@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 8323b8406a7bfc34f99a299a78eb829a
+timeCreated: 1478603351
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box001
+    100002: chest
+    100004: chest_c
+    100006: COG
+    100008: head
+    100010: head_c
+    100012: head_end
+    100014: IK Chain001
+    100016: IK Chain002
+    100018: IK Chain003
+    100020: IK Chain004
+    100022: IK Chain005
+    100024: IK Chain006
+    100026: IK Chain007
+    100028: IK Chain008
+    100030: L_arm
+    100032: L_claw
+    100034: L_claw_c
+    100036: L_claw_end
+    100038: L_Colar
+    100040: L_Feet
+    100042: L_Finger
+    100044: L_foot_c
+    100046: L_forehand
+    100048: L_leg
+    100050: L_palm
+    100052: L_shoulder_c
+    100054: L_Thigh
+    100056: L_toe_c
+    100058: L_Toes
+    100060: L_toes_end
+    100062: L_wrest_c
+    100064: LE
+    100066: LK
+    100068: master controller
+    100070: neck
+    100072: neck_c
+    100074: Particle View 001
+    100076: pelvis
+    100078: R_arm
+    100080: R_claw
+    100082: R_claw_c
+    100084: R_Claw_end
+    100086: R_colar
+    100088: R_Feet
+    100090: R_Finger
+    100092: R_Foot_c
+    100094: R_forehand
+    100096: R_leg
+    100098: R_palm
+    100100: R_shoulder_c
+    100102: R_thigh
+    100104: R_toe_c
+    100106: R_toes
+    100108: R_toes_end
+    100110: R_Wrest_c
+    100112: RE
+    100114: RK
+    100116: //RootNode
+    100118: stomach
+    100120: stomach_c
+    400000: Box001
+    400002: chest
+    400004: chest_c
+    400006: COG
+    400008: head
+    400010: head_c
+    400012: head_end
+    400014: IK Chain001
+    400016: IK Chain002
+    400018: IK Chain003
+    400020: IK Chain004
+    400022: IK Chain005
+    400024: IK Chain006
+    400026: IK Chain007
+    400028: IK Chain008
+    400030: L_arm
+    400032: L_claw
+    400034: L_claw_c
+    400036: L_claw_end
+    400038: L_Colar
+    400040: L_Feet
+    400042: L_Finger
+    400044: L_foot_c
+    400046: L_forehand
+    400048: L_leg
+    400050: L_palm
+    400052: L_shoulder_c
+    400054: L_Thigh
+    400056: L_toe_c
+    400058: L_Toes
+    400060: L_toes_end
+    400062: L_wrest_c
+    400064: LE
+    400066: LK
+    400068: master controller
+    400070: neck
+    400072: neck_c
+    400074: Particle View 001
+    400076: pelvis
+    400078: R_arm
+    400080: R_claw
+    400082: R_claw_c
+    400084: R_Claw_end
+    400086: R_colar
+    400088: R_Feet
+    400090: R_Finger
+    400092: R_Foot_c
+    400094: R_forehand
+    400096: R_leg
+    400098: R_palm
+    400100: R_shoulder_c
+    400102: R_thigh
+    400104: R_toe_c
+    400106: R_toes
+    400108: R_toes_end
+    400110: R_Wrest_c
+    400112: RE
+    400114: RK
+    400116: //RootNode
+    400118: stomach
+    400120: stomach_c
+    4300000: Box001
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Box001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
