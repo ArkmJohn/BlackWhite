@@ -1109,10 +1109,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012939995930}
-  m_LocalRotation: {x: 0.06645227, y: -0.16042998, z: 0.90984374, w: 0.3768696}
-  m_LocalPosition: {x: -0, y: -0.16, z: -0.15}
-  m_LocalScale: {x: 3, y: 3, z: 3}
-  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 135}
+  m_LocalRotation: {x: 0.9532176, y: -0.038560294, z: -0.26982608, w: 0.13070272}
+  m_LocalPosition: {x: 0.07464169, y: 0.056663956, z: 0.04406087}
+  m_LocalScale: {x: 0.29332775, y: 0.5757532, z: 0.5757532}
+  m_LocalEulerAnglesHint: {x: 166.854, y: 32.719986, z: 8.2829895}
   m_Children:
   - {fileID: 4000011159469566}
   - {fileID: 4000011998223514}
@@ -2405,11 +2405,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45135f3ab96c3cf4daa1c80af4a101b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sendTriggerMessage: 0
+  sendTrigMsg: 0
+  skinWidth: 0.1
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  skinWidth: 0.1
 --- !u!114 &114000011722371868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2460,9 +2460,13 @@ MonoBehaviour:
   anim: {fileID: 95000013855498600}
   inventory: {fileID: 0}
   weaponHolder: {fileID: 1000011451142110}
+  hairPr: {fileID: 0}
+  hair: []
+  attackTypeID: 1
   gravity: 10
   maxVelocityChange: 10
   canJump: 1
+  isRBC: 1
   jumpHeight: 2
 --- !u!114 &114000013251757264
 MonoBehaviour:

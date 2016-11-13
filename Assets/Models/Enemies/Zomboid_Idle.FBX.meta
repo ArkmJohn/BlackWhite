@@ -257,7 +257,309 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: character
+        weight: 1
+      - path: Master Controllers
+        weight: 1
+      - path: Master Controllers/L_Elbow
+        weight: 1
+      - path: Master Controllers/L_Foot
+        weight: 1
+      - path: Master Controllers/L_Foot/IK Chain006
+        weight: 1
+      - path: Master Controllers/L_Foot/IK Chain006/IK Chain004
+        weight: 1
+      - path: Master Controllers/L_Knee
+        weight: 1
+      - path: Master Controllers/L_Wrist
+        weight: 1
+      - path: Master Controllers/L_Wrist/IK Chain001
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Index1
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Index1/L_Index2
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Index1/L_Index2/L_Index3
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Middle1
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Middle1/L_Middle2
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Middle1/L_Middle2/L_Middle3
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Pinky1
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Pinky1/L_Pinky2
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Pinky1/L_Pinky2/L_Pinky3
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Ring1
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Ring1/L_Ring2
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Ring1/L_Ring2/L_Ring3
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Thumb1
+        weight: 1
+      - path: Master Controllers/L_Wrist/L_Thumb1/L_Thumb2
+        weight: 1
+      - path: Master Controllers/Pelvis
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/L_Thigh
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/L_Thigh/L_Knee 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/L_Thigh/L_Knee 1/L_Foot 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/L_Thigh/L_Knee 1/L_Foot 1/L_FootEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/R_Thigh
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/R_Thigh/R_Knee 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/R_Thigh/R_Knee 1/R_Foot 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/R_Thigh/R_Knee 1/R_Foot 1/R_FootEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Index1 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Index1 1/L_Index2 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Index1 1/L_Index2 1/L_Index3 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Index1 1/L_Index2 1/L_Index3 1/L_IndexEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Middle1 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Middle1 1/L_Middle2 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Middle1 1/L_Middle2 1/L_Middle3 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Middle1 1/L_Middle2 1/L_Middle3 1/L_MiddleEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_PalmEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Pinky1 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Pinky1 1/L_Pinky2 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Pinky1 1/L_Pinky2 1/L_Pinky3 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Pinky1 1/L_Pinky2 1/L_Pinky3 1/L_PinkyEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Ring1 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Ring1 1/L_Ring2 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Ring1 1/L_Ring2 1/L_Ring3 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Ring1 1/L_Ring2 1/L_Ring3 1/L_RingEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Thumb1 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Thumb1 1/L_Thumb2 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/L_Clavicle/L_Shoulder
+          1/L_Elbow 1/L_Palm/L_Thumb1 1/L_Thumb2 1/L_ThumbEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/Neck 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/Neck 1/Head 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/Neck 1/Head 1/Head_END
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Index1 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Index1 1/R_Index2 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Index1 1/R_Index2 1/R_Index3 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Index1 1/R_Index2 1/R_Index3 1/R_IndexEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Middle1 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Middle1 1/R_Middle2 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Middle1 1/R_Middle2 1/R_Middle3 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Middle1 1/R_Middle2 1/R_Middle3 1/R_MiddleEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_PalmEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Pinky1 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Pinky1 1/R_Pinky2 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Pinky1 1/R_Pinky2 1/R_Pinky3 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Pinky1 1/R_Pinky2 1/R_Pinky3 1/R_PinkyEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Ring1 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Ring1 1/R_Ring2 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Ring1 1/R_Ring2 1/R_Ring3 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Ring1 1/R_Ring2 1/R_Ring3 1/R_RingEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Thumb1 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Thumb1 1/R_Thumb2 1
+        weight: 1
+      - path: Master Controllers/Pelvis/Pelvis 1/Stomach 1/Chest 1/R_Clavicle/R_Shoulder
+          1/R_Elbow 1/R_Palm/R_Thumb1 1/R_Thumb2 1/R_ThumbEND
+        weight: 1
+      - path: Master Controllers/Pelvis/Stomach
+        weight: 1
+      - path: Master Controllers/Pelvis/Stomach/Chest
+        weight: 1
+      - path: Master Controllers/Pelvis/Stomach/Chest/L_Shoulder
+        weight: 1
+      - path: Master Controllers/Pelvis/Stomach/Chest/Neck
+        weight: 1
+      - path: Master Controllers/Pelvis/Stomach/Chest/Neck/Head
+        weight: 1
+      - path: Master Controllers/Pelvis/Stomach/Chest/R_Shoulder
+        weight: 1
+      - path: Master Controllers/R_Elbow
+        weight: 1
+      - path: Master Controllers/R_Foot
+        weight: 1
+      - path: Master Controllers/R_Foot/IK Chain005
+        weight: 1
+      - path: Master Controllers/R_Foot/IK Chain005/IK Chain003
+        weight: 1
+      - path: Master Controllers/R_Knee
+        weight: 1
+      - path: Master Controllers/R_Wrist
+        weight: 1
+      - path: Master Controllers/R_Wrist/IK Chain002
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Index1
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Index1/R_Index2
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Index1/R_Index2/R_Index3
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Middle1
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Middle1/R_Middle2
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Middle1/R_Middle2/R_Middle3
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Pinky1
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Pinky1/R_Pinky2
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Pinky1/R_Pinky2/R_Pinky3
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Ring1
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Ring1/R_Ring2
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Ring1/R_Ring2/R_Ring3
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Thumb1
+        weight: 1
+      - path: Master Controllers/R_Wrist/R_Thumb1/R_Thumb2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

@@ -15,7 +15,7 @@ public class Enemy : Character
     public float angular;
     public float maxAccel;
     public bool isDummy;
-
+    public GameObject myNode;
     public void Init()
     {
         routine.Start();
@@ -46,6 +46,7 @@ public class Enemy : Character
 
             transform.Translate(displacement, Space.World);
             transform.rotation = Quaternion.LookRotation(rotation);
+            //myNode = NearestNode();
         }
     }
 
@@ -67,6 +68,26 @@ public class Enemy : Character
         }
     }
 
+    public GameObject NearestNode()
+    {
+        Debug.Log("WTF");
+
+        GameObject cNode = null;
+        float shortestDistance = Mathf.Infinity;
+        TileAI[] tileAI = FindObjectsOfType<TileAI>();
+        foreach (TileAI obj in tileAI)
+        {
+            float dist = (obj.gameObject.transform.position - transform.position).magnitude;
+            Debug.Log("Hello!");
+            if (dist < shortestDistance)
+            {
+                shortestDistance = dist;
+                cNode = obj.gameObject;
+            }
+        }
+        return cNode;
+    }
+
     // TODO: Set animations and stuff
     public void AttackAnim()
     { }
@@ -76,4 +97,5 @@ public class Enemy : Character
     { }
     public void DieAnim()
     { }
+
 }

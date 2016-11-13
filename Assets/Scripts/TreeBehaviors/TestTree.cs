@@ -8,6 +8,7 @@ public class TestTree : Tree
     Repeat brain;
     public Selector selector1;
     public Sequence sequence1;
+    public GameObject target;
 
     void Awake()
     {
@@ -38,10 +39,13 @@ public class TestTree : Tree
         selector1 = new Selector();
         sequence1 = new Sequence();
 
-        sequence1.addNode(new TestNodeA("I really Hate it but"));
-        sequence1.addNode(new TestNodeA(" , its to late to change"));
+        //sequence1.addNode(new TestNodeA("I really Hate it but"));
+        //sequence1.addNode(new TestNodeA(" , its to late to change"));
+        sequence1.addNode(new MoveTo(target));
+        sequence1.addNode(new TestNodeA("-.- success"));
         //selector1.addNode(new Seek());
-        selector1.addNode(new Wander());
+        //selector1.addNode(new MoveTo(target));
+        selector1.addNode(sequence1);
         brain = new Repeat(selector1);
     }
 

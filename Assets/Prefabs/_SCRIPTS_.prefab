@@ -9,19 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000012131562706}
+  m_RootGameObject: {fileID: 1000012123605078}
   m_IsPrefabParent: 1
---- !u!1 &1000012131562706
+--- !u!1 &1000012123605078
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000010123170196}
-  - 114: {fileID: 114000012575264050}
-  - 114: {fileID: 114000014129717530}
-  - 114: {fileID: 114000012232075882}
+  - 4: {fileID: 4000014293893148}
+  - 114: {fileID: 114000010267720524}
+  - 114: {fileID: 114000012451237768}
+  - 114: {fileID: 114000011984149608}
   m_Layer: 0
   m_Name: _SCRIPTS_
   m_TagString: Untagged
@@ -29,12 +29,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000010123170196
+--- !u!4 &4000014293893148
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012131562706}
+  m_GameObject: {fileID: 1000012123605078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 556.4951, y: 494.5036, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,34 +42,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &114000012232075882
+--- !u!114 &114000010267720524
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012131562706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417b308941d87384e9f3d7180253160e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 0
-  MaxHealth: 0
-  baseDmg: 0
-  damage: {fileID: 0}
-  baseWeakness: 0
-  baseRes: 0
-  secWeakness: 0
-  secRes: 0
-  inventoryObj: {fileID: 0}
-  equipedWeapon: {fileID: 0}
-  statistics: []
---- !u!114 &114000012575264050
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012131562706}
+  m_GameObject: {fileID: 1000012123605078}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c153c8294c8bbc4e898d5ef07262ae3, type: 3}
@@ -79,15 +57,63 @@ MonoBehaviour:
   rooms: {fileID: 0}
   enemyPrefabs:
   - {fileID: 1000011307236154, guid: 506b726eaff1a084c947a44891d5398e, type: 2}
-  playerPrefab: {fileID: 0}
+  itemPrefabs:
+  - {fileID: 1000013880049804, guid: 4b33ead1eabb35b4e9c5aa487645b882, type: 2}
+  - {fileID: 1000010287709388, guid: e37ee8cf36f1d014f98b4a49eb40f559, type: 2}
+  - {fileID: 1000013238758274, guid: 17ce2634eeeac2c49b08a3af3fb86b9a, type: 2}
+  - {fileID: 1000013211134690, guid: ebb23d0c05e337049a5a1954c35b03e6, type: 2}
+  - {fileID: 1000010400649338, guid: ca9dc6f371e800e40a36adeb998c37d0, type: 2}
+  - {fileID: 1000010096245766, guid: 8e773c2fb26ccd14eb051a4722475b37, type: 2}
+  - {fileID: 1000012190474634, guid: 1728549aef6cc9943b61953d54230ee7, type: 2}
+  - {fileID: 1000010928501214, guid: 1f859a1c70c2efc4ab43f6083a894122, type: 2}
+  playerPrefab: {fileID: 1000013020441244, guid: e0a20292f7817e9438d6f9e5f222c205,
+    type: 2}
+  startWeaponPrefab: {fileID: 0}
+  inventoryPrefab: {fileID: 1000011658731218, guid: 2adf6988559c28a4dbcd1b62270a181a,
+    type: 2}
   level: 0
-  difficulty: 0
---- !u!114 &114000014129717530
+  hairColorIndex: 0
+  difficulty: 1
+--- !u!114 &114000011984149608
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012131562706}
+  m_GameObject: {fileID: 1000012123605078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417b308941d87384e9f3d7180253160e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
+  MaxHealth: 0
+  baseDmg: 0
+  _atkSpd: 0
+  _speed: 0
+  _def: 0
+  damage: {fileID: 0}
+  baseWeakness: 0
+  baseRes: 0
+  secWeakness: 0
+  secRes: 0
+  equipedWeapon: {fileID: 0}
+  bowWeapon: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  statistics:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  _stam: 0
+  range: 5
+--- !u!114 &114000012451237768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012123605078}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c592ca6c637ac804d83e44d33b0a6269, type: 3}
