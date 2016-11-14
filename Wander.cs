@@ -1,69 +1,143 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
+using System;
 
-public class Wander : MonoBehaviour 
+public class Wander : Node
 {
-	// Variable for the enemy's speed
-	public float enemySpeed;
 
-	// Boolean values
-	public bool hasSpawned;
-	public bool isWandering = false;
+    Vector3 targetPosition;
+    Vector3 desiredVelocity;
+    Enemy me;
+    List<GameObject> points;
 
-	// Reference variable to the NavMeshAgent 
-	public NavMeshAgent enemyAgent;
+    float targetRadius = 1;
+    float slowRadius = 3;
+    float time, myTime;
+    bool isUsingPoints = false;
 
-	// Vector3 variable that stores the target position and player position
-	public Vector3 targetPos;
-	public Vector3 enemyPos;
+    public Wander(List<GameObject> points, float timer)
+    {
+        this.points = points;
+        isUsingPoints = true;
+        time = timer;
+    }
 
-	// Use this for initialization
-	void Start () 
-	{
-		// Getting the NavMeshAgent component and storing it in a variable
-		enemyAgent = GetComponent <NavMeshAgent> ();
+    public Wander(float timer)
+    {
+        isUsingPoints = false;
+        time = timer;
 
-		// Setting the NavMeshAgent speed to enemy speed
-		enemyAgent.speed = enemySpeed;
+    }
 
-		// Go to SetTargetPosition function
-		SetTargetPosition ();
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		// Check if the enemy has started wandering
-		if (isWandering) 
-		{
-			// Assigning the current enemy position value
-			enemyPos = this.gameObject.transform.position;
+    public Wander(List<GameObject> points)
+    {
+        this.points = points;
+        isUsingPoints = true;
+        time = 3;
+    }
 
-			// If the enemy position and the target position are not equal then proceed
-			if (enemyPos != targetPos)
-			{
-				// Sets or updates the destination thus triggering the calculation for a new path (https://docs.unity3d.com/ScriptReference/NavMeshAgent.SetDestination.html)
-				enemyAgent.SetDestination (targetPos);
+    public Wander()
+    {
+        isUsingPoints = false;
+        time = 0.1f;
+    }
 
-				// Check if the x and z axis of the enemy and target are equal
-				if(enemyPos.x == targetPos.x && enemyPos.z == targetPos.z)
-				{
-					// If the above condition is true then set isWandering to false
-					isWandering = false;
-					// Call the SetTargetPostion() to set a new target position
-					SetTargetPosition ();
-				}
-			} 
-		} 
-	}
+    public override void Start()
+    {
+        currentState = NodeStates.RUNNING;
+        myTime = time;
+    }
 
-	// Function to set the new target position
-	void SetTargetPosition()
-	{
-		// Assigning a random Vector3 value to the target position
-		targetPos = new Vector3 (Random.Range(-4,14), 0.5f, Random.Range(-4,4));
+    public override void reset()
+    {
+        Start();
+    }
 
-		isWandering = true;
-	}
-		
+    public override void act(Enemy enemy)
+    {
+
+        me = enemy;
+        if (targetPosition == Vector3.zero)
+            targetPosition = findTarget();
+        else
+        {
+            myTime -= Time.deltaTime;
+            if (myTime <= 0)
+            {
+                targetPosition = findTarget();
+                myTime = time;
+            }
+        }
+
+        me.linear = CalculateDesiredVelocity(enemy.gameObject.transform.position);
+		me.angular = GetDir(enemy.gameObject.transform.position);
+
+        SuccessState();
+    }
+
+    Vector3 findTarget()
+    {
+        if (!isUsingPoints)
+        {
+            float x = UnityEngine.Random.Range(-50, 50);
+            float z = UnityEngine.Random.Range(-50, 50);
+            return new Vector3(x, 0, z);
+        }
+        else
+        {
+            int index = UnityEngine.Random.Range(0, points.Count);
+            return points[index].transform.position;
+        }
+
+
+    }
+
+    Vector3 CalculateDesiredVelocity(Vector3 myPos)
+    {
+        Vector3 linear = Vector3.zero;
+        linear = targetPosition - me.gameObject.transform.position;
+        float distanceToTarget = linear.magnitude;
+        float targetSpeed;
+
+        // checks if near
+        if (distanceToTarget < targetRadius)
+        {
+            return Vector3.zero;
+        }
+
+        // Calculates the speed based on where the character is
+        if (distanceToTarget > slowRadius)
+        {
+            targetSpeed = me._speed;
+        }
+        else
+            targetSpeed = me._speed * distanceToTarget / slowRadius;
+
+        Vector3 desiredVel = linear;
+
+        // Calculates the speed that the desired velocity should be stepping
+        desiredVel.Normalize();
+        desiredVel *= targetSpeed;
+        desiredVel -= me.velocity;
+        desiredVel /= 0.1f;
+
+        // Make sure that the desired velocity does not exceed the maxximum acceleration
+        if (desiredVel.magnitude > me.maxAccel)
+        {
+            desiredVel.Normalize();
+            desiredVel *= me.maxAccel;
+
+        }
+        return desiredVel;
+
+    }
+
+    Vector3 GetDir(Vector3 myPos)
+    {
+        Vector3 targetDir = targetPosition - myPos;
+        //float stepTimes = me._speed * Time.deltaTime + 2;
+		//Vector3 myDir = Vector3.RotateTowards(me.gameObject.transform.position, targetDir, stepTimes, 0);
+
+		return targetDir;
+    }
 }
