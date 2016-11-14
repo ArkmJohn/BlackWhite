@@ -25,6 +25,7 @@ public class WeaponItem : Item {
             Destroy(GetComponent<Rigidbody>());
 
         isEquiped = true;
+        FindObjectOfType<FloatUI>().UseIText("Used " + itemName);
     }
 
     void OnTriggerEnter(Collider col)

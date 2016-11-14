@@ -156,6 +156,8 @@ MonoBehaviour:
   myChar: {fileID: 0}
   isUsed: 0
   maxSize: 1
+  itemName: DexUp1
+  flavorText: I feel pumped up!
   sprNeutral: {fileID: 21300078, guid: 7fd8a92c22076e847922a28d2b09b3d8, type: 3}
   sprHighlighted: {fileID: 21300092, guid: 7fd8a92c22076e847922a28d2b09b3d8, type: 3}
   statID: 3

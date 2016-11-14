@@ -285,6 +285,8 @@ MonoBehaviour:
   myChar: {fileID: 0}
   isUsed: 0
   maxSize: 1
+  itemName: Glass Arrow
+  flavorText: A Very Glassy Arrow
   sprNeutral: {fileID: 21300042, guid: 7fd8a92c22076e847922a28d2b09b3d8, type: 3}
   sprHighlighted: {fileID: 21300062, guid: 7fd8a92c22076e847922a28d2b09b3d8, type: 3}
   basicDMGType: 3
