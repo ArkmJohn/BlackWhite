@@ -19,9 +19,12 @@ public class CharacterControl : MonoBehaviour
     public float jumpHeight = 2.0f;
     private bool grounded = false;
 
+    private WalkingAudio audioRelated;
+
     // Use this for initialization
     void Start()
     {
+        audioRelated = GameObject.FindObjectOfType<WalkingAudio>();
         weaponHolder = gameObject.GetComponentInChildren<WeaponHolder>().gameObject;
         rb = GetComponent<Rigidbody>();
     }
@@ -58,7 +61,18 @@ public class CharacterControl : MonoBehaviour
         transform.Translate(0, 0, z);
 
         transform.Rotate(0, x, 0);
-
+        if (vertical != 0)
+        {
+            
+            audioRelated.WalkingAudioScr();
+            audioRelated.playsound = true;
+        }
+        else
+        {
+            
+            audioRelated.WalkingAudioScrStop();
+            audioRelated.playsound = false;
+        }
     }
 
 
