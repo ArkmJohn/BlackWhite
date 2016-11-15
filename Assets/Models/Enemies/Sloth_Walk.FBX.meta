@@ -151,11 +151,161 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 160
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box001
+        weight: 1
+      - path: IK Chain007
+        weight: 1
+      - path: IK Chain008
+        weight: 1
+      - path: master controller
+        weight: 1
+      - path: master controller/COG
+        weight: 1
+      - path: master controller/COG/L_wrest_c
+        weight: 1
+      - path: master controller/COG/L_wrest_c/L_toe_c
+        weight: 1
+      - path: master controller/COG/L_wrest_c/L_toe_c/L_claw_c
+        weight: 1
+      - path: master controller/COG/LE
+        weight: 1
+      - path: master controller/COG/pelvis
+        weight: 1
+      - path: master controller/COG/pelvis/L_Thigh
+        weight: 1
+      - path: master controller/COG/pelvis/L_Thigh/L_leg
+        weight: 1
+      - path: master controller/COG/pelvis/L_Thigh/L_leg/L_Feet
+        weight: 1
+      - path: master controller/COG/pelvis/L_Thigh/L_leg/L_Feet/L_Toes
+        weight: 1
+      - path: master controller/COG/pelvis/L_Thigh/L_leg/L_Feet/L_Toes/L_toes_end
+        weight: 1
+      - path: master controller/COG/pelvis/R_thigh
+        weight: 1
+      - path: master controller/COG/pelvis/R_thigh/R_leg
+        weight: 1
+      - path: master controller/COG/pelvis/R_thigh/R_leg/R_Feet
+        weight: 1
+      - path: master controller/COG/pelvis/R_thigh/R_leg/R_Feet/R_toes
+        weight: 1
+      - path: master controller/COG/pelvis/R_thigh/R_leg/R_Feet/R_toes/R_toes_end
+        weight: 1
+      - path: master controller/COG/pelvis/stomach
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm/L_forehand
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm/L_forehand/L_palm
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm/L_forehand/L_palm/L_Finger
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm/L_forehand/L_palm/L_Finger/L_claw
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/L_Colar/L_arm/L_forehand/L_palm/L_Finger/L_claw/L_claw_end
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/neck
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/neck/head
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/neck/head/head_end
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm/R_forehand
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm/R_forehand/R_palm
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm/R_forehand/R_palm/R_Finger
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm/R_forehand/R_palm/R_Finger/R_claw
+        weight: 1
+      - path: master controller/COG/pelvis/stomach/chest/R_colar/R_arm/R_forehand/R_palm/R_Finger/R_claw/R_Claw_end
+        weight: 1
+      - path: master controller/COG/R_Wrest_c
+        weight: 1
+      - path: master controller/COG/R_Wrest_c/R_toe_c
+        weight: 1
+      - path: master controller/COG/R_Wrest_c/R_toe_c/R_claw_c
+        weight: 1
+      - path: master controller/COG/RE
+        weight: 1
+      - path: master controller/COG/stomach_c
+        weight: 1
+      - path: master controller/COG/stomach_c/chest_c
+        weight: 1
+      - path: master controller/COG/stomach_c/chest_c/L_shoulder_c
+        weight: 1
+      - path: master controller/COG/stomach_c/chest_c/neck_c
+        weight: 1
+      - path: master controller/COG/stomach_c/chest_c/neck_c/head_c
+        weight: 1
+      - path: master controller/COG/stomach_c/chest_c/R_shoulder_c
+        weight: 1
+      - path: master controller/L_foot_c
+        weight: 1
+      - path: master controller/L_foot_c/IK Chain005
+        weight: 1
+      - path: master controller/L_foot_c/IK Chain005/IK Chain003
+        weight: 1
+      - path: master controller/L_foot_c/IK Chain005/IK Chain003/IK Chain001
+        weight: 1
+      - path: master controller/LK
+        weight: 1
+      - path: master controller/R_Foot_c
+        weight: 1
+      - path: master controller/R_Foot_c/IK Chain006
+        weight: 1
+      - path: master controller/R_Foot_c/IK Chain006/IK Chain004
+        weight: 1
+      - path: master controller/R_Foot_c/IK Chain006/IK Chain004/IK Chain002
+        weight: 1
+      - path: master controller/RK
+        weight: 1
+      - path: Particle View 001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 5
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

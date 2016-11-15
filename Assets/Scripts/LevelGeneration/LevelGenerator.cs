@@ -10,17 +10,16 @@ using System;
 
 public class LevelGenerator : MonoBehaviour
 {
-
+    public float inc = 0.5f , div = 2, incrementOfMap = 1;
     public int width;
     public int height;
     public int wallThresholdSize = 50;
     public int roomThresholdSize = 50;
 
     public string seed;
-    public bool useRandomSeed, testing, hasGenerated = false;
+    public bool useRandomSeed, testing, hasGenerated = false, isTreeLevel = false;
 
-    public GameObject[] enemyPrefabs;
-    public GameObject playerPrefab;
+    public List<GameObject> emptyTiles = new List<GameObject>();
     public List<Vector3> availablePositions;
 
     [Range(0, 100)]
@@ -90,11 +89,24 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
-        MeshGenerator meshGen = GetComponent<MeshGenerator>();
-        meshGen.GenerateMesh(borderedMap, 1);
+        TileInitializeNeighbours();
+
+        if (!isTreeLevel)
+        {
+            MeshGenerator meshGen = GetComponent<MeshGenerator>();
+            meshGen.GenerateMesh(borderedMap, 1);
+        }
         // GetAllAvailableCoordinates(); //Already doing on smooth map
         // SpawnObjects();
         hasGenerated = true;
+    }
+
+    void TileInitializeNeighbours()
+    {
+        foreach (GameObject tile in emptyTiles)
+        {
+            tile.GetComponent<Tile>().FindNeighbours();
+        }
     }
 
     void ProcessMap() // Removes unwanted clutter and finds rooms
@@ -160,7 +172,7 @@ public class LevelGenerator : MonoBehaviour
 
                 // For overhead of bigger objects
                 if (neighbouringTiles < 1)
-                    roomScript.addPosition(new Vector3(-width / 2 + 0.5f + x, 2, -height / 2 + 0.5f + y));
+                    roomScript.addPosition(CoordToWorldPoint(width, x, 2, height, y));  //new Vector3(-width / div + inc + x, 2, -height / div + inc + y));
 
             }
             roomList.GetComponent<Rooms>().FindRooms();
@@ -351,9 +363,9 @@ public class LevelGenerator : MonoBehaviour
         return line;
     }
 
-    Vector3 CoordToWorldPoint(Coord tile) // Gets a vector conversion from the points
+    Vector3 CoordToWorldPoint(float width, float x, float y, float height, float z) // Gets a vector conversion from the points
     {
-        return new Vector3(-width / 2 + .5f + tile.tileX, 2, -height / 2 + .5f + tile.tileY);
+        return new Vector3((-width / div + inc + x) * incrementOfMap, y, (-height / div + inc + z) * incrementOfMap);
     }
 
     List<List<Coord>> GetRegions(int tileType) // Find all big groups of points
@@ -455,7 +467,7 @@ public class LevelGenerator : MonoBehaviour
                 int neighbourWallTiles = GetSurroundingWallCount(x, y);
 
                 if (neighbourWallTiles == 0)
-                    availablePositions.Add(new Vector3(-width / 2 + .5f + x, 0, -height / 2 + .5f + y));
+                    availablePositions.Add(CoordToWorldPoint(width, x, 0, height, y));  // new Vector3(-width / div + inc + x, 0, -height / div + inc + y));
 
                 if (neighbourWallTiles > 4)
                     map[x, y] = 1;
@@ -470,7 +482,7 @@ public class LevelGenerator : MonoBehaviour
     void TileCreate(int x , int y, GameObject parent, GameObject wallParent, GameObject emptyTParent, GameObject voidParent)
     {
         GameObject myTile = new GameObject("Tile " + x + " " + y);
-        myTile.transform.position = new Vector3( - width / 2 + 0.5f + x, -GetComponent<MeshGenerator>().wallHeight, -height / 2 + 0.5f + y);
+        myTile.transform.position = CoordToWorldPoint(width, x, -GetComponent<MeshGenerator>().wallHeight, height, y);  // -width / div + inc + x, -GetComponent<MeshGenerator>().wallHeight, -height / div + inc + y);
         int neighbours = GetSurroundingWallCount(x, y);
         bool isWall = false;
         if (neighbours == 0)
@@ -478,7 +490,9 @@ public class LevelGenerator : MonoBehaviour
         else
             isWall = true;
         myTile.AddComponent<Tile>();
-        myTile.GetComponent<Tile>().setTile(neighbours, isWall, wallParent, emptyTParent, voidParent);
+        myTile.GetComponent<Tile>().setTile(neighbours, isWall, wallParent, emptyTParent, voidParent, isTreeLevel);
+        if (myTile.GetComponent<Tile>().neighbourTileCount == 0)
+            emptyTiles.Add(myTile);
 
     }
 
@@ -491,7 +505,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 if (map[x, y] == 0)
                 {
-                    availablePositions.Add(new Vector3(-width / 2 + .5f + x, 0, -height / 2 + .5f + y));
+                    availablePositions.Add(CoordToWorldPoint(width, x, 0, height, y)); //new Vector3(-width / div + inc + x, 0, -height / div + inc + y));
                 }
             }
         }
