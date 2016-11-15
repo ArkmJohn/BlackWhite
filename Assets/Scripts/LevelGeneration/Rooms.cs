@@ -31,7 +31,7 @@ public class Rooms : MonoBehaviour {
         int y = 0;
         while (y <= enemyCount - 5)
         {
-            SpawnAnObject(Random.Range(0, rooms.Length), itemPrefabs[Random.Range(0, itemPrefabs.Count)]);
+            SpawnAnObject(Random.Range(0, rooms.Length), itemPrefabs[Random.Range(0, enemyPrefabs.Count)]);
             y++;
         }
 
