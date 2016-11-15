@@ -21,7 +21,7 @@ public class Player : Character {
     public float range = 2;
     GameObject weaponHolder;
 
-    public void InStats(float Str,float Vit, float Dex, float End, float Res, float Intel )
+    public void InStats(float Vit, float End, float Str, float Dex, float Res, float Intel )
     {
         statistics[0] = Vit;
         statistics[1] = End;
@@ -86,17 +86,21 @@ public class Player : Character {
         {
             myAtkMode = AttackMode.RANGE;
             bowWeapon.SetActive(true);
-            bowWeapon.transform.localPosition = new Vector3(0, 0, 0);
+            //bowWeapon.transform.localPosition = new Vector3(0, 0, 0);
             equipedWeapon = weaponObj;
             GetComponent<CharacterControl>().attackTypeID = 2;
         }
         else
         {
             myAtkMode = AttackMode.MELEE;
+            bowWeapon.SetActive(false);
+
             // Sets the weapon object as a child
             weaponObj.SetActive(true);
             weaponObj.transform.SetParent(weaponHolder.transform);
             weaponObj.transform.localPosition = new Vector3(0, 0, 0);
+            weaponObj.transform.localEulerAngles = new Vector3(0, 45, 0);
+            weaponObj.GetComponent<Collider>().enabled = false;
             equipedWeapon = weaponObj;
             GetComponent<CharacterControl>().attackTypeID = 1;
 
@@ -141,6 +145,29 @@ public class Player : Character {
                     targetHit.GetComponent<Character>().GetDamaged(gameObject.GetComponent<Character>());
             }
         }
+    }
+
+    public void FireArrow()
+    {
+        if (myAtkMode == AttackMode.RANGE)
+        {
+            Debug.Log("Arrow Fired");
+            GameObject arrow = Instantiate(equipedWeapon, spawnPoint.transform.position, transform.rotation) as GameObject;
+            Physics.IgnoreCollision(arrow.GetComponent<Collider>(), GetComponent<Collider>());
+            arrow.SetActive(true);
+            arrow.GetComponent<Collider>().enabled = true;
+            arrow.GetComponent<Rigidbody>().AddForce(spawnPoint.transform.position + spawnPoint.transform.forward * 2000);
+
+        }
+    }
+
+    public void ActivateMeleeWeapon()
+    {
+        if (myAtkMode == AttackMode.MELEE)
+        {
+            equipedWeapon.GetComponent<Collider>().enabled = true;
+        }
+
     }
 
     void FixedUpdate () {

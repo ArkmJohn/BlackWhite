@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
     public GameObject playerPrefab, startWeaponPrefab;
     public GameObject inventoryPrefab;
     public int level;
+    public int hairColorIndex;
     public int difficulty;
 
     void Awake()
@@ -21,6 +22,11 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void SetHairIndex(int index)
+    {
+        hairColorIndex = index;
     }
 
     public void InitializeLevel()
@@ -41,7 +47,7 @@ public class GameManager : MonoBehaviour {
         GameObject inv = Instantiate(inventoryPrefab);
         Inventory myInv = inv.GetComponentInChildren<Inventory>();
         playerPrefab.GetComponent<CharacterControl>().inventory = myInv;
-
+        playerPrefab.GetComponent<CharacterControl>().SetHair(hairColorIndex - 1);
         rooms.SpawnEnemies(GetEnemyCount(), enemyPrefabs, playerPrefab, itemPrefabs, startWeaponPrefab);
 
     }
