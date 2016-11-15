@@ -57,8 +57,15 @@ public class GameManager : MonoBehaviour {
         return level + 10 + difficulty * 2;
     }
 
-    void FinishLevel()
+    public void AdvanceNextLevel()
     {
-        level++;
+        
+
+
+    }
+
+    public void FinishLevel()
+    {
+        level++; 
     }
 }

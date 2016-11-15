@@ -29,6 +29,7 @@ public class Player : Character {
         statistics[3] = Dex;
         statistics[4] = Res;
         statistics[5] = Intel;
+        Health = statistics[0] + 10;
         setBaseStat();
     }
 
@@ -41,7 +42,7 @@ public class Player : Character {
     void setBaseStat()
     {
         MaxHealth = statistics[0] + 10;
-        Health = MaxHealth;
+        //Health = MaxHealth;
 
         _stam = statistics[1] + 5;
 

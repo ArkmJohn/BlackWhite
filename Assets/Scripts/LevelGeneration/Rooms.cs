@@ -48,4 +48,9 @@ public class Rooms : MonoBehaviour {
     {
         rooms[roomID].SpawnObjectAtRandomPosition(playerPrefab, weaponPrefab);
     }
+
+    public void SpawnEndGoal(int roomID, GameObject exitPrefab)
+    {
+        rooms[roomID].SpawnObjectAtRandomPosition(exitPrefab);
+    }
 }

@@ -181,6 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afce351e026edb740918523341fdff15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inc: 0.5
+  div: 2
+  incrementOfMap: 1
   width: 150
   height: 150
   wallThresholdSize: 50
@@ -189,11 +192,11 @@ MonoBehaviour:
   useRandomSeed: 1
   testing: 0
   hasGenerated: 0
-  enemyPrefabs: []
-  playerPrefab: {fileID: 0}
+  isTreeLevel: 0
+  emptyTiles: []
   availablePositions: []
   enemyCount: 0
-  randomFillPercent: 50
+  randomFillPercent: 55
 --- !u!114 &16798948
 MonoBehaviour:
   m_ObjectHideFlags: 0

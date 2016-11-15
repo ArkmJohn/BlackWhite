@@ -10,7 +10,7 @@ public class Item : MonoBehaviour
     public bool isUsed = false;
     //public ItemType type;
     public int maxSize; //max amount to stack an item
-
+    public string itemName, flavorText;
     public Sprite sprNeutral, sprHighlighted;
 
 

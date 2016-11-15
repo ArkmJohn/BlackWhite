@@ -146,7 +146,7 @@ MonoBehaviour:
   - {fileID: 1000011307236154, guid: 506b726eaff1a084c947a44891d5398e, type: 2}
   itemPrefabs:
   - {fileID: 1000013880049804, guid: 4b33ead1eabb35b4e9c5aa487645b882, type: 2}
-  - {fileID: 1000010287709388, guid: e37ee8cf36f1d014f98b4a49eb40f559, type: 2}
+  - {fileID: 1000010385325076, guid: 382955356ccb89048a3611ab406b548c, type: 2}
   - {fileID: 1000013238758274, guid: 17ce2634eeeac2c49b08a3af3fb86b9a, type: 2}
   - {fileID: 1000013211134690, guid: ebb23d0c05e337049a5a1954c35b03e6, type: 2}
   - {fileID: 1000010400649338, guid: ca9dc6f371e800e40a36adeb998c37d0, type: 2}
