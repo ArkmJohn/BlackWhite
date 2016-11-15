@@ -156,6 +156,8 @@ MonoBehaviour:
   myChar: {fileID: 0}
   isUsed: 0
   maxSize: 1
+  itemName: VitUp!
+  flavorText: Bigger I Grow!
   sprNeutral: {fileID: 21300072, guid: 7fd8a92c22076e847922a28d2b09b3d8, type: 3}
   sprHighlighted: {fileID: 21300086, guid: 7fd8a92c22076e847922a28d2b09b3d8, type: 3}
   statID: 0

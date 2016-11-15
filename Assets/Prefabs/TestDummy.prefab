@@ -430,7 +430,6 @@ GameObject:
   - 114: {fileID: 114000014060058898}
   - 114: {fileID: 114000014053444818}
   - 54: {fileID: 54000012726451584}
-  - 114: {fileID: 114000010526176948}
   m_Layer: 0
   m_Name: TestDummy
   m_TagString: Untagged
@@ -922,19 +921,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000010526176948
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013836393154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4285ac9480abb445a3d98cb96498e35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  me: {fileID: 114000014053444818}
-  target: {fileID: 0}
 --- !u!114 &114000014053444818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -958,16 +944,9 @@ MonoBehaviour:
   secWeakness: 0
   secRes: 0
   targetLocation: {x: 0, y: 0, z: 0}
-  myAITree: {fileID: 114000010526176948}
-  target: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
-  position: {x: 0, y: 0, z: 0}
-  linear: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  angular: 0
-  maxAccel: 24
-  isDummy: 0
-  myNode: {fileID: 0}
+  myAITree: {fileID: 0}
+  ID: 0
 --- !u!114 &114000014060058898
 MonoBehaviour:
   m_ObjectHideFlags: 1
