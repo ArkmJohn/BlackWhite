@@ -30,20 +30,13 @@ public class WeaponItem : Item {
 
     void OnTriggerEnter(Collider col)
     {
-        
+        Debug.Log("Collided!");
         if (atkTypeID == 0 && isUsed && isEquiped)
         {
-            Debug.Log("Arrow Collided!");
             if (col.gameObject.GetComponent<Character>())
                 col.gameObject.GetComponent<Character>().GetDamaged(owner);
 
             Destroy(gameObject);
-        }
-        if (atkTypeID == 1 && isUsed && isEquiped)
-        {
-            Debug.Log("Melee Weapon Collided!");
-            if (col.gameObject.GetComponent<Character>())
-                col.gameObject.GetComponent<Character>().GetDamaged(owner);
         }
     }
 }

@@ -7,15 +7,13 @@ public class CharacterControl : MonoBehaviour
     public float speed = 5, turnSpeed = 35;
     public Animator anim;
     public Inventory inventory;
-    public GameObject weaponHolder, hairPr;
-    public Material[] hair;
-    
+    public GameObject weaponHolder;
     Rigidbody rb;
 
     public int attackTypeID = 1;
     public float gravity = 10.0f;
     public float maxVelocityChange = 10.0f;
-    public bool canJump = true, isRBC = true;
+    public bool canJump = true;
     public float jumpHeight = 2.0f;
     private bool grounded = false;
 
@@ -32,10 +30,10 @@ public class CharacterControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Walk();
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //GetComponent<Player>().Attack(GetComponent<Player>().range, GetComponent<Damage>());
+            GetComponent<Player>().Attack(GetComponent<Player>().range, GetComponent<Damage>());
             Punch();
         }
 
@@ -52,7 +50,6 @@ public class CharacterControl : MonoBehaviour
 
     void Walk()
     {
-        
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -78,12 +75,6 @@ public class CharacterControl : MonoBehaviour
         //    audioRelated.WalkingAudioScrStop();
         //    audioRelated.playsound = false;
         //}
-    }
-
-
-    public void SetHair(int index)
-    {
-        hairPr.GetComponent<Renderer>().material = hair[index];
     }
 
     void Punch()
