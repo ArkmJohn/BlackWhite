@@ -38,6 +38,11 @@ public class CharacterControl : MonoBehaviour
             //GetComponent<Player>().Attack(GetComponent<Player>().range, GetComponent<Damage>());
             Punch();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GetComponent<PauseManager>().Paused();
+        }
     }
 
     void FixedUpdate()
@@ -61,18 +66,18 @@ public class CharacterControl : MonoBehaviour
         transform.Translate(0, 0, z);
 
         transform.Rotate(0, x, 0);
-        if (vertical != 0)
-        {
+        //if (vertical != 0)
+        //{
             
-            audioRelated.WalkingAudioScr();
-            audioRelated.playsound = true;
-        }
-        else
-        {
+        //    audioRelated.WalkingAudioScr();
+        //    audioRelated.playsound = true;
+        //}
+        //else
+        //{
             
-            audioRelated.WalkingAudioScrStop();
-            audioRelated.playsound = false;
-        }
+        //    audioRelated.WalkingAudioScrStop();
+        //    audioRelated.playsound = false;
+        //}
     }
 
 
@@ -106,6 +111,7 @@ public class CharacterControl : MonoBehaviour
                 //destroy item once collected
                 //Destroy(obj.gameObject);
                 obj.gameObject.GetComponent<Item>().isUsed = true;
+                obj.gameObject.transform.SetParent(gameObject.transform);
                 obj.gameObject.SetActive(false);
             }
 
