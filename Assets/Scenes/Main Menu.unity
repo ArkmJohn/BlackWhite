@@ -8102,41 +8102,6 @@ SkinnedMeshRenderer:
   m_PrefabParentObject: {fileID: 13700002, guid: 0b5e2e2687ef321458ec2ad722852908,
     type: 3}
   m_PrefabInternal: {fileID: 1402623880}
---- !u!1 &518936540 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012123605078, guid: 605e56cd0080fc146b34fbd286bbb55b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1532782990}
---- !u!114 &518936543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 518936540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e37205577cc0b61468f06c0004c147b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioFiles:
-  - {fileID: 8300000, guid: 39477151679b3ef4aa67beb568e46135, type: 3}
-  - {fileID: 8300000, guid: 1d9f94b1726ec1f44a86bb0b9a49b863, type: 3}
-  - {fileID: 8300000, guid: 4b78f40236a1d4d448c4dc49c9f31479, type: 3}
-  - {fileID: 8300000, guid: 4eb4af026e7285b42b43f15cce0453d2, type: 3}
-  - {fileID: 8300000, guid: 0395515491f6dd940b8b5473e63584df, type: 3}
-  - {fileID: 8300000, guid: 33f4ef25ebfd62f46934fb696c620275, type: 3}
-  - {fileID: 8300000, guid: 8cb640659d5e8e54da24b54fc87883fb, type: 3}
-  - {fileID: 8300000, guid: f7eed87508e23de458c879a969a0775a, type: 3}
-  - {fileID: 8300000, guid: 1060d1d5c2266f04fbcf387848149060, type: 3}
-  - {fileID: 8300000, guid: 4aff29c84905c7d43b2f7be029a0c2ef, type: 3}
-  - {fileID: 8300000, guid: f0c62db9291b562428091e6eac2c5acf, type: 3}
-  - {fileID: 8300000, guid: aa44090ad6405b74bae0f0d2712a42a2, type: 3}
-  - {fileID: 8300000, guid: 91f76e0a3ef360a4f996efc41ac48618, type: 3}
-  - {fileID: 8300000, guid: ff984f9cf8702e046a529569bdc4720d, type: 3}
-  - {fileID: 8300000, guid: 1e84143e07518c348abe909718358740, type: 3}
-  - {fileID: 8300000, guid: 20d7427e06436f545bec9525a6ba2799, type: 3}
-  - {fileID: 8300000, guid: 0baa7e9f58f822f4fbd144fdb7c56d44, type: 3}
-  volume: 0
 --- !u!1 &560166362
 GameObject:
   m_ObjectHideFlags: 0
