@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
     public GameObject inventoryPrefab;
     public int level;
     public int hairColorIndex;
-    public int difficulty;
+    public int difficulty, enemyCountInc = 2, difficultyMult = 2;
 
     void Awake()
     {
@@ -54,12 +54,15 @@ public class GameManager : MonoBehaviour {
 
     int GetEnemyCount()
     {
-        return level + 10 + difficulty * 2;
+        return level + enemyCountInc + difficulty * difficultyMult;
     }
 
     public void AdvanceNextLevel()
     {
-        
+        FinishLevel();
+        levelGen = FindObjectOfType<LevelGenerator>();
+        levelGen.InitLevel();
+        rooms = FindObjectOfType<Rooms>();
 
 
     }
