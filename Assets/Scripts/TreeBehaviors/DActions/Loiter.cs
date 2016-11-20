@@ -22,7 +22,7 @@ public class Loiter : Node
     public override void act(Enemy enemy)
     {
         me = enemy;
-        targetPosition = findNextPos();
+        //targetPosition = findNextPos();
 
         if (isOnTarget())
             SuccessState();
@@ -47,20 +47,20 @@ public class Loiter : Node
     }
 
 
-    public Vector3 findNextPos()
-    {
-        Vector3 myNextPos = Vector3.zero;
+    //public Vector3 findNextPos()
+    //{
+    //    Vector3 myNextPos = Vector3.zero;
 
-        Stack<GameObject> path = Dikstras.dijkstra(GameObject.FindGameObjectsWithTag("TileAI"), me.NearestNode(), targetObj);
-        if (path.Peek() != null)
-            myNextPos = path.Peek().gameObject.transform.position;
-        else
-            myNextPos = me.transform.position;
-        Debug.Log(path.Peek().gameObject.name + path.Peek().gameObject.transform.position);
+    //    Stack<GameObject> path = Dikstras.dijkstra(GameObject.FindGameObjectsWithTag("TileAI"), me.NearestNode(), targetObj);
+    //    if (path.Peek() != null)
+    //        myNextPos = path.Peek().gameObject.transform.position;
+    //    else
+    //        myNextPos = me.transform.position;
+    //    Debug.Log(path.Peek().gameObject.name + path.Peek().gameObject.transform.position);
 
 
-        return myNextPos;
-    }
+    //    return myNextPos;
+    //}
     Vector3 CalculateDesiredVelocity(Vector3 myPos)
     {
         Vector3 linear = Vector3.zero;

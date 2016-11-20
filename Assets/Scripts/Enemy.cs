@@ -57,7 +57,15 @@ public class Enemy : Character
 */
 			transform.rotation = Quaternion.LookRotation (rotation);
         }
-	}
+        else
+        {
+            float Dist = Vector3.Distance(transform.position, FindObjectOfType<CharacterControl>().gameObject.transform.position);
+            if (Dist < 5)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, FindObjectOfType<CharacterControl>().gameObject.transform.position, _speed * Time.deltaTime);
+            }
+        }
+    }
 
     public void LateUpdate()
     {
