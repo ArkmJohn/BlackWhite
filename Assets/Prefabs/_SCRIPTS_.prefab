@@ -156,11 +156,16 @@ MonoBehaviour:
   playerPrefab: {fileID: 1000013020441244, guid: e0a20292f7817e9438d6f9e5f222c205,
     type: 2}
   startWeaponPrefab: {fileID: 0}
+  endGoal: {fileID: 1000010019990800, guid: ff0d33fb6d9041448943c5ac3620f99b, type: 2}
   inventoryPrefab: {fileID: 1000011658731218, guid: 2adf6988559c28a4dbcd1b62270a181a,
     type: 2}
-  level: 0
+  actPlayerObj: {fileID: 0}
+  actInventObj: {fileID: 0}
+  level: 1
   hairColorIndex: 0
   difficulty: 1
+  enemyCountInc: 2
+  difficultyMult: 2
 --- !u!114 &114000011984149608
 MonoBehaviour:
   m_ObjectHideFlags: 1

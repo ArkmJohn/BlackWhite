@@ -27,6 +27,7 @@ public class CharacterControl : MonoBehaviour
         audioRelated = GameObject.FindObjectOfType<WalkingAudio>();
         weaponHolder = gameObject.GetComponentInChildren<WeaponHolder>().gameObject;
         rb = GetComponent<Rigidbody>();
+        FindObjectOfType<GameManager>().actPlayerObj = this.gameObject;
     }
 
     // Update is called once per frame
@@ -115,6 +116,11 @@ public class CharacterControl : MonoBehaviour
                 obj.gameObject.SetActive(false);
             }
 
+        }
+        if ((obj.gameObject.GetComponent<EndGoal>() != null))
+        {
+            Destroy(obj.gameObject);
+            GetComponent<EndGameManager>().WinGame();
         }
     }
 

@@ -3182,7 +3182,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011864997954}
-  m_LocalRotation: {x: 0.70707595, y: -0.006548192, z: 0.7070771, w: -0.006548192}
+  m_LocalRotation: {x: 0.7070759, y: -0.006548187, z: 0.707077, w: -0.006548187}
   m_LocalPosition: {x: 0.33317393, y: -0.6270763, z: 1.6259227}
   m_LocalScale: {x: 0.10710244, y: 0.10710244, z: 0.10710244}
   m_LocalEulerAnglesHint: {x: 0.0000008537736, y: 89.9999, z: -178.93878}
@@ -4429,9 +4429,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadLevel
-        m_Mode: 5
+      - m_Target: {fileID: 114000012556616570}
+        m_MethodName: GoHome
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5380,9 +5380,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadLevel
-        m_Mode: 5
+      - m_Target: {fileID: 114000012556616570}
+        m_MethodName: GoHome
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6623,8 +6623,10 @@ MonoBehaviour:
   EndWinCamera: {fileID: 1000010880082768}
   EndLostCamera: {fileID: 1000014270806174}
   MainCamera: {fileID: 1000013195013114}
+  inventory: {fileID: 0}
   level: {fileID: 114000010095317950}
   gm: {fileID: 0}
+  bm: {fileID: 0}
 --- !u!114 &114000012576026536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7698,15 +7700,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadLevel
-        m_Mode: 5
+      - m_Target: {fileID: 114000012556616570}
+        m_MethodName: AdvanceToNextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114000010657557290}
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Loading Next Scene...
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -8489,7 +8502,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!223 &223000013493249902
 Canvas:
@@ -8527,7 +8540,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!223 &223000014284237114
 Canvas:
@@ -8546,7 +8559,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &224000010062473682
 RectTransform:

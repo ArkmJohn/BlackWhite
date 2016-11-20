@@ -7,8 +7,9 @@ public class GameManager : MonoBehaviour {
     public LevelGenerator levelGen = null;
     public Rooms rooms = null;
     public List<GameObject> enemyPrefabs, itemPrefabs;
-    public GameObject playerPrefab, startWeaponPrefab;
+    public GameObject playerPrefab, startWeaponPrefab, endGoal;
     public GameObject inventoryPrefab;
+    public GameObject actPlayerObj, actInventObj;
     public int level;
     public int hairColorIndex;
     public int difficulty, enemyCountInc = 2, difficultyMult = 2;
@@ -49,7 +50,8 @@ public class GameManager : MonoBehaviour {
         playerPrefab.GetComponent<CharacterControl>().inventory = myInv;
         playerPrefab.GetComponent<CharacterControl>().SetHair(hairColorIndex - 1);
         rooms.SpawnEnemies(GetEnemyCount(), enemyPrefabs, playerPrefab, itemPrefabs, startWeaponPrefab);
-
+        actInventObj = inv;
+        rooms.SpawnEndGoal(endGoal);
     }
 
     int GetEnemyCount()
@@ -63,7 +65,12 @@ public class GameManager : MonoBehaviour {
         levelGen = FindObjectOfType<LevelGenerator>();
         levelGen.InitLevel();
         rooms = FindObjectOfType<Rooms>();
+        rooms.SpawnEnemiesO(GetEnemyCount(), enemyPrefabs, itemPrefabs);
 
+        Player playerScript = actPlayerObj.GetComponent<Player>();
+        CharacterControl playerCharacter = actPlayerObj.GetComponent<CharacterControl>();
+        actInventObj.transform.parent = null;
+        actPlayerObj.transform.parent = null;
 
     }
 

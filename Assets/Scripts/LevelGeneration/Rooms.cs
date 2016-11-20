@@ -39,18 +39,39 @@ public class Rooms : MonoBehaviour {
 
     }
 
+    public void SpawnEnemiesO(int enemyCount, List<GameObject> enemyPrefabs, List<GameObject> itemPrefabs)
+    {
+        int x = 0;
+
+        while (x < enemyCount)
+        {
+            SpawnAnObject(Random.Range(0, rooms.Length), enemyPrefabs[Random.Range(0, enemyPrefabs.Count)]);
+            x++;
+        }
+
+        int y = 0;
+        while (y <= enemyCount - 5)
+        {
+            SpawnAnObject(Random.Range(0, rooms.Length), itemPrefabs[Random.Range(0, itemPrefabs.Count)]);
+            y++;
+        }
+    }
+
     void SpawnAnObject(int roomID, GameObject obj)
     {
+
         rooms[roomID].SpawnObjectAtRandomPosition(obj);
     }
 
     void SpawnPlayer(int roomID, GameObject playerPrefab, GameObject weaponPrefab)
     {
         rooms[roomID].SpawnObjectAtRandomPosition(playerPrefab, weaponPrefab);
+
     }
 
-    public void SpawnEndGoal(int roomID, GameObject exitPrefab)
+    public void SpawnEndGoal( GameObject exitPrefab)
     {
-        rooms[roomID].SpawnObjectAtRandomPosition(exitPrefab);
+        int roomId = Random.Range(0, rooms.Length);
+        rooms[roomId].SpawnObjectAtRandomPosition(exitPrefab);
     }
 }
