@@ -9,18 +9,19 @@ public class IsPlayerInRange : Node
     Vector3 desiredVelocity;
     Enemy me;
 
-	public override void reset()
-	{
-		Start();
-	}
-
-	public IsPlayerInRange(GameObject target, float range)
+    public IsPlayerInRange(GameObject target)
     {
         targetObject = target;
     }
 
+    public override void reset()
+    {
+        Start();
+    }
+
     public override void act(Enemy enemy)
     {
+
         if (isPlayerInRange(targetObject))
             SuccessState();
         else
@@ -31,5 +32,7 @@ public class IsPlayerInRange : Node
     {
         bool a = false;
         return a;
+        
+
     }
 }

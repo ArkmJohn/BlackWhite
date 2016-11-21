@@ -7,14 +7,14 @@ using System;
 public class Slot : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
-    GameObject currentItemA;
+    public GameObject currentItemA;
     public int itemStackCount;
     private Stack<Item> itemStack;
     public Text stackText; //text to display the number of the item collected 
     public bool deleteSlot = false;
     public Sprite emptyS;
     public Sprite highlightS;
-
+    public Item SlotItem;
 
     // Use this for initialization
     void Start()

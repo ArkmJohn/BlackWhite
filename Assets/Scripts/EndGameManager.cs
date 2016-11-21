@@ -4,17 +4,15 @@ using System.Collections;
 
 public class EndGameManager : MonoBehaviour {
 
-    public GameObject EndWCanvas, EndLCanvas;
+    public GameObject EndWinCamera, EndLostCamera, MainCamera;
     public GameObject inventory;
     public Text level;
     public GameManager gm;
     public ButtonManager bm;
-    public CameraManager cm;
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
         bm = FindObjectOfType<ButtonManager>();
-        cm = FindObjectOfType<CameraManager>();
     }
 
     public void LoseGame()
@@ -23,10 +21,8 @@ public class EndGameManager : MonoBehaviour {
         Time.timeScale = 0;
 
         // Load Camera
-        cm.switchCamPos(3);
-
-        // Turn On Canvas
-        EndLCanvas.SetActive(true);
+        EndLostCamera.SetActive(true);
+        MainCamera.SetActive(false);
     }
 
     public void WinGame()
@@ -37,19 +33,18 @@ public class EndGameManager : MonoBehaviour {
         // Stop The Time
         Time.timeScale = 0;
 
-        // Turn On panel
-        EndWCanvas.SetActive(true);
-
         // Change the text
+        EndWinCamera.SetActive(true);
+        MainCamera.SetActive(false);
         level.text = "Lvl " + gm.level + " Passed!";
-        gm.FinishLevel();
     }
 
     public void AdvanceToNextLevel()
     {
         Time.timeScale = 1;
+        Debug.Log("Hello!");
         bm.LoadLevel("LevelScene");
-        //gm.AdvanceNextLevel();
+        gm.AdvanceNextLevel();
     }
 
     public void GoHome()

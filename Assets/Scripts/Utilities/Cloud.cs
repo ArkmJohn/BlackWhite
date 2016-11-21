@@ -4,7 +4,7 @@ using System.Collections;
 public class Cloud : MonoBehaviour {
 
     public GameObject spawner;
-    public float minSpeed, maxSpeed, finalXPos = -160, minY = -30, minZ = -30, maxY = 30, maxZ = 30;
+    public float minSpeed, maxSpeed, finalXPos = -160;
     float speed;
 
 	// Use this for initialization

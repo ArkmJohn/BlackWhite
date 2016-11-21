@@ -21,7 +21,6 @@ public class Rooms : MonoBehaviour {
         // TODO: Choose a prefab based on percentage
 
         int x = 0;
-        Debug.Log("Spawned " + enemyCount + " enemies");
 
         while (x < enemyCount)
         {
@@ -40,10 +39,10 @@ public class Rooms : MonoBehaviour {
 
     }
 
-    public void SpawnEnemiesO(int enemyCount, List<GameObject> enemyPrefabs, List<GameObject> itemPrefabs, GameObject player)
+    public void SpawnEnemiesO(int enemyCount, List<GameObject> enemyPrefabs, List<GameObject> itemPrefabs)
     {
         int x = 0;
-        Debug.Log("Spawned " + enemyCount + " enemies");
+
         while (x < enemyCount)
         {
             SpawnAnObject(Random.Range(0, rooms.Length), enemyPrefabs[Random.Range(0, enemyPrefabs.Count)]);
@@ -56,16 +55,6 @@ public class Rooms : MonoBehaviour {
             SpawnAnObject(Random.Range(0, rooms.Length), itemPrefabs[Random.Range(0, itemPrefabs.Count)]);
             y++;
         }
-        PlaceObject(Random.Range(0, rooms.Length), player);
-        foreach (float a in player.GetComponent<Player>().statistics)
-        {
-            Debug.Log(a);
-        }
-    }
-
-    void PlaceObject(int roomID, GameObject obj)
-    {
-        rooms[roomID].PlaceObject(obj);
     }
 
     void SpawnAnObject(int roomID, GameObject obj)

@@ -13,13 +13,12 @@ public class ButtonManager : MonoBehaviour {
     {
         FindObjectOfType<GameManager>().InitializeLevel();
     }
-    void Update()
-    {
-    }
+
     public void ChangeDifficulty(int difficultyID)
     {
         gameObject.GetComponent<GameManager>().difficulty = difficultyID;
     }
+
     public void ExitGame()
     {
         #if UNITY_EDITOR
