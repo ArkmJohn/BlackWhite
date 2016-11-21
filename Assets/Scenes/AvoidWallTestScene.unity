@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.5750856, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692558, g: 0.49678743, b: 0.57508624, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -268,10 +268,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 216893670}
-  - 114: {fileID: 216893669}
   - 114: {fileID: 216893668}
   - 114: {fileID: 216893667}
   - 114: {fileID: 216893671}
+  - 114: {fileID: 216893669}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -313,15 +313,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 216893666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196914c2509dfd241aa1b8ec3f476c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 767c1e371fba1284db24a21d540049ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
-  MaxHealth: 10
-  baseDmg: 5
+  Health: 0
+  MaxHealth: 0
+  baseDmg: 0
   _atkSpd: 0
-  _speed: 5
+  _speed: 0
   _def: 0
+  particleDamaged: {fileID: 0}
   damage: {fileID: 0}
   baseWeakness: 0
   baseRes: 0
@@ -329,13 +330,13 @@ MonoBehaviour:
   secRes: 0
   targetLocation: {x: 0, y: 0, z: 0}
   myAITree: {fileID: 0}
-  target: {fileID: 1961282875}
+  target: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   linear: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
   angular: {x: 0, y: 0, z: 0}
-  maxAccel: 24
+  maxAccel: 0
   isDummy: 0
   isAvoidWall: 0
   tempRotation: {x: 0, y: 0, z: 0}
@@ -362,9 +363,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 216893666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5ae77040575b4a52b650b5dbe165f7b, type: 3}
+  m_Script: {fileID: 11500000, guid: f065b048f91ae354e9782b587723a5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  avoidWall: 1
 --- !u!1 &293654461
 GameObject:
   m_ObjectHideFlags: 0
