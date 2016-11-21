@@ -3407,7 +3407,8 @@ MonoBehaviour:
   _atkSpd: 2.7
   _speed: 3.5
   _def: 0
-  particleDamaged: {fileID: 0}
+  particleDamaged: {fileID: 1000010499063188, guid: 62a1dbfd76f32d0459d40c5d42085fd8,
+    type: 2}
   damage: {fileID: 0}
   baseWeakness: 0
   baseRes: 0
