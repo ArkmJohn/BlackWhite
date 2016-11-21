@@ -16,6 +16,7 @@ public class Character : MonoBehaviour {
 
     private bool isDead = false;
 
+    public GameObject particleDamaged;
     public Damage damage;
     public BDType baseWeakness;
     public BDType baseRes;

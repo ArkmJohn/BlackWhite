@@ -42,7 +42,7 @@ public class CharacterControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GetComponent<PauseManager>().Paused();
+            FindObjectOfType<PauseManager>().Paused();
         }
     }
 
@@ -119,8 +119,12 @@ public class CharacterControl : MonoBehaviour
         }
         if ((obj.gameObject.GetComponent<EndGoal>() != null))
         {
+            //FindObjectOfType<GameManager>().inventoryPrefab = inventory.gameObject;
+            FindObjectOfType<GameManager>().SaveStat(this.GetComponent<Player>());
+            //FindObjectOfType<GameManager>().playerPrefab = gameObject;
             Destroy(obj.gameObject);
-            GetComponent<EndGameManager>().WinGame();
+            FindObjectOfType<CameraManager>().switchCamPos(4);
+            GameObject.FindObjectOfType<EndGameManager>().WinGame();
         }
     }
 

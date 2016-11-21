@@ -125,11 +125,9 @@ public class Tile : MonoBehaviour {
 
                 if (hit.transform != null)
                 {
-                    Debug.Log("hit not null");
                     if (hit.transform.gameObject == collidedTile.gameObject)
                     {
                         neighbours.Add(collidedTile.gameObject);
-                        Debug.Log("Added");
                     }
 
                 }

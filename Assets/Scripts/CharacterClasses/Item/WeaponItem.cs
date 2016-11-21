@@ -43,7 +43,10 @@ public class WeaponItem : Item {
         {
             Debug.Log("Melee Weapon Collided!");
             if (col.gameObject.GetComponent<Character>())
+            {
                 col.gameObject.GetComponent<Character>().GetDamaged(owner);
+                
+            }
         }
     }
 }

@@ -12,7 +12,6 @@ public class FadeText : MonoBehaviour {
     {
         isActive = true;
         fadeDuration = maxFadeDuration; // Resets the timer
-        print("script was enabled");
     }
 
     void Update()
