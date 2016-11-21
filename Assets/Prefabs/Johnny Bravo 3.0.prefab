@@ -1888,7 +1888,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011864997954}
-  m_LocalRotation: {x: 0.7070759, y: -0.006548181, z: 0.707077, w: -0.006548181}
+  m_LocalRotation: {x: 0.70707595, y: -0.0065481807, z: 0.7070771, w: -0.0065481807}
   m_LocalPosition: {x: 0.33317393, y: -0.6270763, z: 1.6259227}
   m_LocalScale: {x: 0.10710244, y: 0.10710244, z: 0.10710244}
   m_LocalEulerAnglesHint: {x: 0.0000008537736, y: 89.9999, z: -178.93878}
@@ -2778,11 +2778,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000014270806174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84db997bf2f31d94abaee9bf5a253361, type: 3}
+  m_Script: {fileID: 11500000, guid: 019ab0acbecd24e4ba0310f1d42f72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  isPLayCam: 1
+  isPlayCam: 1
+  isMoving: 0
+  speed: 30
 --- !u!114 &114000010451758006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2971,11 +2972,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011477260836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84db997bf2f31d94abaee9bf5a253361, type: 3}
+  m_Script: {fileID: 11500000, guid: 019ab0acbecd24e4ba0310f1d42f72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  isPLayCam: 1
+  isPlayCam: 1
+  isMoving: 0
+  speed: 30
 --- !u!114 &114000011044130144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2984,11 +2986,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013195013114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84db997bf2f31d94abaee9bf5a253361, type: 3}
+  m_Script: {fileID: 11500000, guid: 019ab0acbecd24e4ba0310f1d42f72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  isPLayCam: 1
+  isPlayCam: 1
+  isMoving: 0
+  speed: 30
 --- !u!114 &114000011117567146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3050,7 +3053,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013020441244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e081c44caf8469b4389fbf25c4818b83, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ef698825d11e3e458e0b1f49c501684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playCamPos: {fileID: 1000013195013114}
@@ -3123,11 +3126,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010880082768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84db997bf2f31d94abaee9bf5a253361, type: 3}
+  m_Script: {fileID: 11500000, guid: 019ab0acbecd24e4ba0310f1d42f72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  isPLayCam: 1
+  isPlayCam: 1
+  isMoving: 0
+  speed: 30
 --- !u!114 &114000012427016764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3407,7 +3411,6 @@ MonoBehaviour:
   _atkSpd: 2.7
   _speed: 3.5
   _def: 0
-  particleDamaged: {fileID: 0}
   damage: {fileID: 0}
   baseWeakness: 0
   baseRes: 0

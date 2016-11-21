@@ -42,7 +42,7 @@ public class CharacterControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GetComponent<PauseManager>().Paused();
+            FindObjectOfType<PauseManager>().Paused();
         }
     }
 
@@ -120,7 +120,7 @@ public class CharacterControl : MonoBehaviour
         if ((obj.gameObject.GetComponent<EndGoal>() != null))
         {
             Destroy(obj.gameObject);
-            GetComponent<EndGameManager>().WinGame();
+            FindObjectOfType<EndGameManager>().WinGame();
         }
     }
 

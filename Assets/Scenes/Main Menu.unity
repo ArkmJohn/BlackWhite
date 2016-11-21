@@ -391,10 +391,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &34432064
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,10 +656,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &55326470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2956,11 +2948,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 167495343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84db997bf2f31d94abaee9bf5a253361, type: 3}
+  m_Script: {fileID: 11500000, guid: 019ab0acbecd24e4ba0310f1d42f72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  isPLayCam: 0
+  isPlayCam: 0
+  isMoving: 0
+  speed: 30
 --- !u!4 &167495352 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010041339052, guid: a8350ed7f69bfd9439e4d3d7ef28b8e5,
@@ -3149,10 +3142,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &199786568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3527,10 +3516,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &276676947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3730,10 +3715,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &279488012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3967,10 +3948,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &305974373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4204,10 +4181,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &331536706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4305,10 +4278,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &335429746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4364,6 +4333,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000013819210676, guid: afa4c8232af43a04c9f5daffecda0873,
     type: 2}
   m_PrefabInternal: {fileID: 1246455510}
+--- !u!114 &336895907 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000012508742942, guid: afa4c8232af43a04c9f5daffecda0873,
+    type: 2}
+  m_PrefabInternal: {fileID: 1246455510}
+  m_Script: {fileID: 11500000, guid: 111b818dffd8a6342877d749b7993b4d, type: 3}
 --- !u!1 &346761831
 GameObject:
   m_ObjectHideFlags: 0
@@ -4558,10 +4533,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &362443913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4871,10 +4842,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &378806492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4972,10 +4939,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &381140307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5259,10 +5222,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &400829166
 GameObject:
   m_ObjectHideFlags: 0
@@ -5310,10 +5269,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &400829169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5411,10 +5366,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &402092716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8402,10 +8353,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &511059604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8644,10 +8591,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &581587558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8813,10 +8756,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &607729556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9259,10 +9198,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &655787661
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9574,11 +9509,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 677594355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84db997bf2f31d94abaee9bf5a253361, type: 3}
+  m_Script: {fileID: 11500000, guid: 019ab0acbecd24e4ba0310f1d42f72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  isPLayCam: 0
+  isPlayCam: 0
+  isMoving: 0
+  speed: 30
 --- !u!4 &677594364 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010041339052, guid: a8350ed7f69bfd9439e4d3d7ef28b8e5,
@@ -9631,10 +9567,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &683300618
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9782,10 +9714,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &696069745
 GameObject:
   m_ObjectHideFlags: 0
@@ -11067,10 +10995,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &908645023
 GameObject:
   m_ObjectHideFlags: 0
@@ -11804,10 +11728,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &993590091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12227,10 +12147,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &1043527833
 GameObject:
   m_ObjectHideFlags: 0
@@ -12724,10 +12640,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &1123974797
 GameObject:
   m_ObjectHideFlags: 0
@@ -13002,11 +12914,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1144680480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84db997bf2f31d94abaee9bf5a253361, type: 3}
+  m_Script: {fileID: 11500000, guid: 019ab0acbecd24e4ba0310f1d42f72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayCam: 0
+  isMoving: 0
   speed: 30
-  isPLayCam: 0
 --- !u!1 &1145394519
 GameObject:
   m_ObjectHideFlags: 0
@@ -13302,10 +13215,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &1164770919
 GameObject:
   m_ObjectHideFlags: 0
@@ -13403,10 +13312,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &1183629931
 GameObject:
   m_ObjectHideFlags: 0
@@ -13518,7 +13423,7 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 155030449
+  randomSeed: 746227512
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -15224,7 +15129,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!1 &1183819529
 GameObject:
   m_ObjectHideFlags: 0
@@ -15272,10 +15177,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1183819532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15803,6 +15704,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 224000013831141860, guid: afa4c8232af43a04c9f5daffecda0873,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -15947,17 +15853,17 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1281194481}
+      objectReference: {fileID: 1287678119}
     - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1287678119}
+      objectReference: {fileID: 1045759418}
     - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1045759418}
+      objectReference: {fileID: 336895907}
     - target: {fileID: 1000013819210676, guid: afa4c8232af43a04c9f5daffecda0873, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -16867,6 +16773,93 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1281194481}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangeCameraToThisPos
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: LoadGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012675244708, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012508742942, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: equipables.Array.data[3]
+      value: 
+      objectReference: {fileID: 1000012683244262, guid: b3d0c3ad08487cc458358c88a8fa9c02,
+        type: 2}
+    - target: {fileID: 114000012508742942, guid: afa4c8232af43a04c9f5daffecda0873,
+        type: 2}
+      propertyPath: equipables.Array.data[2]
+      value: 
+      objectReference: {fileID: 1000013934457058, guid: 3723cadca11526241b0291575a5d4da2,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afa4c8232af43a04c9f5daffecda0873, type: 2}
   m_IsPrefabParent: 0
@@ -17014,11 +17007,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1281194479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84db997bf2f31d94abaee9bf5a253361, type: 3}
+  m_Script: {fileID: 11500000, guid: 019ab0acbecd24e4ba0310f1d42f72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  isPLayCam: 1
+  isPlayCam: 1
+  isMoving: 0
+  speed: 30
 --- !u!1001 &1287678116
 Prefab:
   m_ObjectHideFlags: 0
@@ -17237,10 +17231,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &1307628111
 GameObject:
   m_ObjectHideFlags: 0
@@ -17288,10 +17278,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1307628114
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17889,10 +17875,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &1426090849
 GameObject:
   m_ObjectHideFlags: 0
@@ -17990,10 +17972,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &1427176783
 GameObject:
   m_ObjectHideFlags: 0
@@ -18245,10 +18223,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1466860521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18754,10 +18728,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1502941112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19055,10 +19025,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1519055347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19116,6 +19082,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000010267720524, guid: 605e56cd0080fc146b34fbd286bbb55b,
+        type: 2}
+      propertyPath: itemPrefabs.Array.size
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4000014293893148, guid: 605e56cd0080fc146b34fbd286bbb55b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 556.4951
@@ -19148,6 +19119,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010267720524, guid: 605e56cd0080fc146b34fbd286bbb55b,
+        type: 2}
+      propertyPath: itemPrefabs.Array.data[8]
+      value: 
+      objectReference: {fileID: 1000013894216332, guid: 8bc4bb64b36a12a4d951f2a434aeb536,
+        type: 2}
+    - target: {fileID: 114000010267720524, guid: 605e56cd0080fc146b34fbd286bbb55b,
+        type: 2}
+      propertyPath: itemPrefabs.Array.data[9]
+      value: 
+      objectReference: {fileID: 1000011813054664, guid: 61607f899f01b66459ecb49989db7f9b,
+        type: 2}
+    - target: {fileID: 114000010267720524, guid: 605e56cd0080fc146b34fbd286bbb55b,
+        type: 2}
+      propertyPath: itemPrefabs.Array.data[10]
+      value: 
+      objectReference: {fileID: 1000013934457058, guid: 3723cadca11526241b0291575a5d4da2,
+        type: 2}
+    - target: {fileID: 114000010267720524, guid: 605e56cd0080fc146b34fbd286bbb55b,
+        type: 2}
+      propertyPath: itemPrefabs.Array.data[11]
+      value: 
+      objectReference: {fileID: 1000012683244262, guid: b3d0c3ad08487cc458358c88a8fa9c02,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 605e56cd0080fc146b34fbd286bbb55b, type: 2}
   m_IsPrefabParent: 0
@@ -19668,10 +19663,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &1616563838
 GameObject:
   m_ObjectHideFlags: 0
@@ -19923,10 +19914,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1664565027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20224,10 +20211,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &1677131621
 GameObject:
   m_ObjectHideFlags: 0
@@ -20343,10 +20326,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1686321450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20630,10 +20609,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &1744537279
 GameObject:
   m_ObjectHideFlags: 0
@@ -20731,10 +20706,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!4 &1748749437
 Transform:
   m_ObjectHideFlags: 0
@@ -20939,10 +20910,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1779065966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21338,10 +21305,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1838095682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22476,10 +22439,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1969334060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22713,10 +22672,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1984213557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22814,10 +22769,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1987454026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22915,10 +22866,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &1987640648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25010,10 +24957,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!1 &2055728361
 GameObject:
   m_ObjectHideFlags: 0
@@ -25082,6 +25025,68 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2055728361}
   m_Mesh: {fileID: 4300232, guid: d727b722b88da3c4a90daea9e78f4cf7, type: 3}
+--- !u!1001 &2068579155
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012569458744, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012569458744, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012569458744, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012569458744, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012569458744, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012569458744, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012569458744, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012569458744, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011953374168, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.70707595
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011953374168, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.0065481802
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011953374168, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.7070771
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011953374168, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.0065481802
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013020441244, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2102248436
 GameObject:
   m_ObjectHideFlags: 0
@@ -25349,11 +25354,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2109636136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84db997bf2f31d94abaee9bf5a253361, type: 3}
+  m_Script: {fileID: 11500000, guid: 019ab0acbecd24e4ba0310f1d42f72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  isPLayCam: 0
+  isPlayCam: 0
+  isMoving: 0
+  speed: 30
 --- !u!4 &2109636146 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010041339052, guid: a8350ed7f69bfd9439e4d3d7ef28b8e5,
@@ -25406,10 +25412,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   finalXPos: -160
-  minY: -30
-  minZ: -30
-  maxY: 30
-  maxZ: 30
 --- !u!65 &2109771317
 BoxCollider:
   m_ObjectHideFlags: 0

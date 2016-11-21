@@ -61,16 +61,18 @@ public class GameManager : MonoBehaviour {
 
     public void AdvanceNextLevel()
     {
-        FinishLevel();
+        
         levelGen = FindObjectOfType<LevelGenerator>();
         levelGen.InitLevel();
         rooms = FindObjectOfType<Rooms>();
-        rooms.SpawnEnemiesO(GetEnemyCount(), enemyPrefabs, itemPrefabs);
+        rooms.SpawnEnemiesO(GetEnemyCount(), enemyPrefabs, itemPrefabs, actPlayerObj);
 
         Player playerScript = actPlayerObj.GetComponent<Player>();
         CharacterControl playerCharacter = actPlayerObj.GetComponent<CharacterControl>();
         actInventObj.transform.parent = null;
         actPlayerObj.transform.parent = null;
+        playerScript.gameObject.GetComponent<CameraManager>().switchCamPos(1);
+        rooms.SpawnEndGoal(endGoal);
 
     }
 

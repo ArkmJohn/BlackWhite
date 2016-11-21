@@ -5,16 +5,15 @@ using System.Collections;
 public class PauseManager : MonoBehaviour {
 
     Player p;
-    public GameObject camera, mainCamera;
+    public GameObject mainCanvas;
     public Text numVit, numEnd, numStr, numDex, numRes, numInt;
-	// Use this for initialization
-	void Start () {
-        p = GetComponent<Player>();
-	}
 	
 	// Update is called once per frame
 	void Update () {
-        UpdateText();
+        if(p == null)
+            p = GameObject.FindObjectOfType<CharacterControl>().GetComponent<Player>();
+        else
+            UpdateText();
 	}
 
     void UpdateText()
@@ -30,15 +29,15 @@ public class PauseManager : MonoBehaviour {
     {
         if (Time.timeScale != 0)
         {
-            mainCamera.SetActive(false);
-            camera.SetActive(true);
+            FindObjectOfType<CameraManager>().switchCamPos(2);
+            mainCanvas.SetActive(true);
             Time.timeScale = 0;
 
         }
         else
         {
-            mainCamera.SetActive(true);
-            camera.SetActive(false);
+            FindObjectOfType<CameraManager>().switchCamPos(1);
+            mainCanvas.SetActive(false);
             Time.timeScale = 1;
         }
     }

@@ -35,11 +35,16 @@ public class LevelGenerator : MonoBehaviour
     
     void Start()
     {
-        
+
         if (testing == true)
             InitLevel();
         else
-            FindObjectOfType<GameManager>().InitializeLevel();
+        {
+            if (FindObjectOfType<GameManager>().level == 1)
+                FindObjectOfType<GameManager>().InitializeLevel();
+            else
+                FindObjectOfType<GameManager>().AdvanceNextLevel();
+        }
     }
     
     public void InitLevel()
