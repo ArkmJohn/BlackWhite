@@ -80,9 +80,14 @@ public class CaveRoom : MonoBehaviour
         GameObject enemyClone = Instantiate(obj, randomPos, transform.rotation) as GameObject;
         GameObject itemClone = Instantiate(obj2, randPos2, transform.rotation) as GameObject;
         AvailablePositions.Remove(randomPos);
-        
+    }
 
+    public void PlaceObject(GameObject obj)
+    {
+        Vector3 randomPos = AvailablePositions[Random.Range(0, AvailablePositions.Count)];
 
+        obj.transform.position = randomPos;
+        AvailablePositions.Remove(randomPos);
     }
     void InitEnemy(GameObject enemy)
     {

@@ -46,12 +46,24 @@ public class GameManager : MonoBehaviour {
             playerScript.statistics[5]);
 
         GameObject inv = Instantiate(inventoryPrefab);
+        inv.GetComponentInChildren<Inventory>().CreateSlots();
         Inventory myInv = inv.GetComponentInChildren<Inventory>();
         playerPrefab.GetComponent<CharacterControl>().inventory = myInv;
         playerPrefab.GetComponent<CharacterControl>().SetHair(hairColorIndex - 1);
         rooms.SpawnEnemies(GetEnemyCount(), enemyPrefabs, playerPrefab, itemPrefabs, startWeaponPrefab);
         actInventObj = inv;
         rooms.SpawnEndGoal(endGoal);
+    }
+
+    public void SaveStat(Player myP)
+    {
+        Player gmPScript = GetComponent<Player>();
+        gmPScript.InStats(myP.statistics[2],
+            myP.statistics[0],
+            myP.statistics[3],
+            myP.statistics[1],
+            myP.statistics[4],
+            myP.statistics[5]);
     }
 
     int GetEnemyCount()
@@ -61,17 +73,18 @@ public class GameManager : MonoBehaviour {
 
     public void AdvanceNextLevel()
     {
-        FinishLevel();
+        //FinishLevel();
         levelGen = FindObjectOfType<LevelGenerator>();
         levelGen.InitLevel();
         rooms = FindObjectOfType<Rooms>();
-        rooms.SpawnEnemiesO(GetEnemyCount(), enemyPrefabs, itemPrefabs);
-
-        Player playerScript = actPlayerObj.GetComponent<Player>();
-        CharacterControl playerCharacter = actPlayerObj.GetComponent<CharacterControl>();
         actInventObj.transform.parent = null;
         actPlayerObj.transform.parent = null;
-
+        rooms.SpawnEnemiesO(GetEnemyCount(), enemyPrefabs, itemPrefabs, actPlayerObj);
+        //actInventObj.SetActive(false);
+        //actPlayerObj.SetActive(false);
+        FindObjectOfType<CameraManager>().switchCamPos(1);
+        //actInventObj.transform.position = Vector3.zero;
+        rooms.SpawnEndGoal(endGoal);
     }
 
     public void FinishLevel()

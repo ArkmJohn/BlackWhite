@@ -35,11 +35,17 @@ public class LevelGenerator : MonoBehaviour
     
     void Start()
     {
-        
+
         if (testing == true)
             InitLevel();
-        else
+        else if (FindObjectOfType<GameManager>().level == 1 && !testing)
             FindObjectOfType<GameManager>().InitializeLevel();
+        else if(!testing && FindObjectOfType<GameManager>().level != 1)
+        {
+            FindObjectOfType<GameManager>().AdvanceNextLevel();
+
+        }
+
     }
     
     public void InitLevel()
@@ -139,7 +145,6 @@ public class LevelGenerator : MonoBehaviour
             else // Adds the surviving room to a list
             {
                 survivingRooms.Add(new Room(roomRegion, map));
-                Debug.Log("Added a Room");
             }
         }
         survivingRooms.Sort();

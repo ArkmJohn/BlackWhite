@@ -57,12 +57,16 @@ public class Enemy : Character
 */
 			transform.rotation = Quaternion.LookRotation (rotation);
         }
-        else
+        else if(isDummy)
         {
             float Dist = Vector3.Distance(transform.position, FindObjectOfType<CharacterControl>().gameObject.transform.position);
-            if (Dist < 5)
+
+            //Debug.Log("Enemy is " + Dist + " to the player");
+            if (Dist <= 15)
             {
-                transform.position = Vector3.MoveTowards(transform.position, FindObjectOfType<CharacterControl>().gameObject.transform.position, _speed * Time.deltaTime);
+                Debug.Log("Chasing Player");
+                Vector3 target = new Vector3(FindObjectOfType<CharacterControl>().gameObject.transform.position.x, transform.position.y, FindObjectOfType<CharacterControl>().gameObject.transform.position.z);
+                transform.position = Vector3.MoveTowards(transform.position, target, _speed * Time.deltaTime);
             }
         }
     }

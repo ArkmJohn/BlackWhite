@@ -22,7 +22,6 @@ GameObject:
   - 33: {fileID: 33000011950791206}
   - 65: {fileID: 65000011124186106}
   - 23: {fileID: 23000013401270380}
-  - 54: {fileID: 54000010949653768}
   - 114: {fileID: 114000010247669562}
   - 114: {fileID: 114000011932924876}
   m_Layer: 0
@@ -149,21 +148,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011307236154}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54000010949653768
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011307236154}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &65000010757006622
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -196,17 +180,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011307236154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196914c2509dfd241aa1b8ec3f476c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 767c1e371fba1284db24a21d540049ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 10
   MaxHealth: 10
-  baseDmg: 0
+  baseDmg: 2
   _atkSpd: 0
-  _speed: 0
-  _def: 0
+  _speed: 2
+  _def: 5
+  particleDamaged: {fileID: 1000010499063188, guid: 62a1dbfd76f32d0459d40c5d42085fd8,
+    type: 2}
   damage: {fileID: 0}
-  baseWeakness: 0
+  baseWeakness: 2
   baseRes: 0
   secWeakness: 0
   secRes: 0
@@ -217,9 +203,11 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   linear: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  angular: 0
+  angular: {x: 0, y: 0, z: 0}
   maxAccel: 0
   isDummy: 1
+  isAvoidWall: 0
+  tempRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &114000011932924876
 MonoBehaviour:
   m_ObjectHideFlags: 1
