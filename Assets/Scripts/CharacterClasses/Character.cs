@@ -16,6 +16,7 @@ public class Character : MonoBehaviour {
 
     private bool isDead = false;
 
+    public GameObject particleDamaged;
     public Damage damage;
     public BDType baseWeakness;
     public BDType baseRes;
@@ -37,6 +38,7 @@ public class Character : MonoBehaviour {
 
         Health -= inc;
         Debug.Log(" Got hit with " + inc + " by " + attacker.gameObject.name);
+        Instantiate(particleDamaged, transform.position, transform.rotation);
         if (Health <= 0)
             gameObject.SetActive(false);
     }
