@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AvoidWallTest : MonoBehaviour
+public class AvoidWallTest : MonoBehaviour 
 {
 	RaycastHit hitInfo;
 

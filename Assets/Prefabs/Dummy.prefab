@@ -189,8 +189,6 @@ MonoBehaviour:
   _atkSpd: 0
   _speed: 2
   _def: 5
-  particleDamaged: {fileID: 1000010499063188, guid: 62a1dbfd76f32d0459d40c5d42085fd8,
-    type: 2}
   damage: {fileID: 0}
   baseWeakness: 2
   baseRes: 0

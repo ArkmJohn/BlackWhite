@@ -119,12 +119,8 @@ public class CharacterControl : MonoBehaviour
         }
         if ((obj.gameObject.GetComponent<EndGoal>() != null))
         {
-            //FindObjectOfType<GameManager>().inventoryPrefab = inventory.gameObject;
-            FindObjectOfType<GameManager>().SaveStat(this.GetComponent<Player>());
-            //FindObjectOfType<GameManager>().playerPrefab = gameObject;
             Destroy(obj.gameObject);
-            FindObjectOfType<CameraManager>().switchCamPos(4);
-            GameObject.FindObjectOfType<EndGameManager>().WinGame();
+            FindObjectOfType<EndGameManager>().WinGame();
         }
     }
 

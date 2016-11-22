@@ -3,43 +3,51 @@ using System.Collections;
 
 public class CameraPosition : MonoBehaviour {
 
-    [SerializeField]
-    private float speed = 100;
-    bool moving;
-    public bool isPLayCam;
+    public bool isPlayCam = false, isMoving = false;
+    public float speed = 30;
 
     public void ChangeCameraToThisPos()
     {
-        GameObject a = GameObject.FindGameObjectWithTag("MainCamera");
-        if (!isPLayCam)
-            moving = true;
-        else
-            SetCamPos();
+        isMoving = true;
     }
 
     void Update()
     {
-        if (moving == true)
+        if (isMoving)
         {
-            MoveCamera();
-            if (GameObject.FindGameObjectWithTag("MainCamera").transform.position == this.transform.position && GameObject.FindGameObjectWithTag("MainCamera").transform.rotation == this.transform.rotation)
-                moving = false;
+            if (!isPlayCam)
+                MoveCamera();
+            else
+                SetCamera();
+
+            if (IsInPosition())
+                isMoving = false;
         }
+    }
+
+    void SetCamera()
+    {
+        GameObject a = GameObject.FindGameObjectWithTag("MainCamera");
+
+        a.transform.position = this.transform.position;
+        a.transform.rotation = this.transform.rotation;
     }
 
     void MoveCamera()
     {
         GameObject a = GameObject.FindGameObjectWithTag("MainCamera");
-        //a.gameObject.transform.position = this.transform.position;
-        a.transform.position = Vector3.MoveTowards(a.transform.position, this.transform.position, Time.deltaTime * speed);
-        // a.transform.rotation = this.transform.rotation;
-        a.transform.rotation = Quaternion.RotateTowards(a.transform.rotation, this.transform.rotation, Time.deltaTime * speed * 5);
+
+        a.transform.position = Vector3.MoveTowards(a.transform.position, this.transform.position, speed * Time.deltaTime);
+        a.transform.rotation = Quaternion.RotateTowards (a.transform.rotation, this.transform.rotation, speed * 5 * Time.deltaTime);
     }
 
-    void SetCamPos()
+    bool IsInPosition()
     {
         GameObject a = GameObject.FindGameObjectWithTag("MainCamera");
-        a.gameObject.transform.position = this.transform.position;
-        a.transform.rotation = this.transform.rotation;
+        if (a.transform.position == this.transform.position && a.transform.rotation == this.transform.rotation)
+            return true;
+        else
+            return false;
+
     }
 }
