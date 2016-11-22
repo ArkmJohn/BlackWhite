@@ -28,7 +28,14 @@ public class Inventory : MonoBehaviour {
 
         set { blankSlots = value; }
     }
-    public void CreateSlots()
+
+    void Start()
+    {
+        CreateSlots();
+    }
+
+
+    private void CreateSlots()
     {
         blankSlots = slots - 1;
 

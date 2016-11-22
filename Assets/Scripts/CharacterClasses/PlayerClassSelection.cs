@@ -73,6 +73,5 @@ public class PlayerClassSelection : MonoBehaviour {
     {
         ButtonManager bm = FindObjectOfType<ButtonManager>();
         bm.LoadLevel("LevelScene");
-        //gm.InitializeLevel();
     }
 }
