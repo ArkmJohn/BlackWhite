@@ -1660,7 +1660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c86dc822856b008429e99423b7a1d548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1000010692390894}
+  mainCanvas: {fileID: 0}
   numVit: {fileID: 114000012200372662}
   numEnd: {fileID: 114000013034603054}
   numStr: {fileID: 114000012840885000}
