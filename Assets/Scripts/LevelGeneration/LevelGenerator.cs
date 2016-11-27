@@ -19,7 +19,7 @@ public class LevelGenerator : MonoBehaviour
     public string seed;
     public bool useRandomSeed, testing, hasGenerated = false, isTreeLevel = false;
 
-    public List<GameObject> emptyTiles = new List<GameObject>();
+    public List<GameObject> emptyTiles = new List<GameObject>(), aTilePos;
     public List<Vector3> availablePositions;
 
     [Range(0, 100)]
@@ -491,7 +491,10 @@ public class LevelGenerator : MonoBehaviour
         int neighbours = GetSurroundingWallCount(x, y);
         bool isWall = false;
         if (neighbours == 0)
+        {
+            aTilePos.Add(myTile);
             isWall = false;
+        }
         else
             isWall = true;
         myTile.AddComponent<Tile>();

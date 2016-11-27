@@ -34,7 +34,7 @@ public class Wander : Node
     {
         this.points = points;
         isUsingPoints = true;
-        time = 3;
+        time = 2;
     }
 
     public Wander()
@@ -66,14 +66,20 @@ public class Wander : Node
             targetPosition = findTarget();
         else
         {
-            myTime -= Time.deltaTime;
-			//Debug.Log ("myTime : " + myTime);
-            if (myTime <= 0)
-            {
-				Debug.Log ("Timer reached 0");
-                targetPosition = findTarget();
+            //         myTime -= Time.deltaTime;
+            ////Debug.Log ("myTime : " + myTime);
+            //         if (myTime <= 0)
+            //         {
+            //	Debug.Log ("Timer reached 0");
+            //             targetPosition = findTarget();
 
-                myTime = time;
+            //             myTime = time;
+            //         }
+            Debug.Log(targetPosition);
+            float myPos = Vector3.Distance(enemy.gameObject.transform.position, targetPosition);
+            if (myPos <= 2)
+            {
+                targetPosition = findTarget();
             }
         }
 
@@ -101,8 +107,10 @@ public class Wander : Node
         }
         else
         {
-            int index = UnityEngine.Random.Range(0, points.Count);
+            int index = 0; 
+            index = UnityEngine.Random.Range(0, points.Count);
             return points[index].transform.position;
+            
         }
 
 

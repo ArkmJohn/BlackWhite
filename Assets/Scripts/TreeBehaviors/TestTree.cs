@@ -60,7 +60,7 @@ public class TestTree : Tree
 		sequence3.addNode (new IsPlayerInRange (enemyTarget, 15f));
 
 		selector2.addNode (sequence3);
-		selector2.addNode (new Wander ());
+		selector2.addNode (new Wander (FindObjectOfType<LevelGenerator>().aTilePos));
 
 		brain = new Repeat(selector2);
 	}

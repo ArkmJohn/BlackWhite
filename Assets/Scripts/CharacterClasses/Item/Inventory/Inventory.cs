@@ -88,7 +88,6 @@ public class Inventory : MonoBehaviour {
                     newSlot.GetComponent<Slot>().UpdateSprite(deleteS, deleteSelectedS);
                     newSlot.GetComponent<Slot>().deleteSlot = true;
 
-                    Debug.Log("isDeleteSlot");
                 }
                 else
                     allSlots.Add(newSlot);
