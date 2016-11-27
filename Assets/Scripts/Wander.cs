@@ -47,7 +47,7 @@ public class Wander : Node
     {
         currentState = NodeStates.RUNNING;
         myTime = time;
-		wallObj = GameObject.Find("enemy").GetComponent<AvoidWallTest>();
+		
     }
 
     public override void reset()
@@ -59,6 +59,9 @@ public class Wander : Node
     {
 //		Debug.Log ("Target Position : " + targetPosition);
         me = enemy;
+        if(wallObj == null)
+            wallObj = me.gameObject.GetComponent<AvoidWallTest>();
+
         if (targetPosition == Vector3.zero)
             targetPosition = findTarget();
         else

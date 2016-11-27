@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45136696, g: 0.5012949, b: 0.57493955, a: 1}
+  m_IndirectSpecularColor: {r: 0.45136726, g: 0.50129503, b: 0.57493997, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -13423,7 +13423,7 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 746227512
+  randomSeed: -1564428546
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -17883,7 +17883,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -25167,22 +25167,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011953374168, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.7070759
+      value: 0.70707595
       objectReference: {fileID: 0}
     - target: {fileID: 4000011953374168, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.0065481793
+      value: -0.00654818
       objectReference: {fileID: 0}
     - target: {fileID: 4000011953374168, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.707077
+      value: 0.7070771
       objectReference: {fileID: 0}
     - target: {fileID: 4000011953374168, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.0065481793
+      value: -0.00654818
       objectReference: {fileID: 0}
     - target: {fileID: 1000013020441244, guid: e0a20292f7817e9438d6f9e5f222c205, type: 2}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000011762459102, guid: e0a20292f7817e9438d6f9e5f222c205,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

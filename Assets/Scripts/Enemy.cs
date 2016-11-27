@@ -57,7 +57,9 @@ public class Enemy : Character
         {
             Vector3 displacement = velocity * Time.deltaTime;
 
-            transform.Translate(displacement, Space.World);
+            Vector3 pos = new Vector3(displacement.x, 0, displacement.z);
+
+            transform.Translate(new Vector3(pos.x, 0, pos.z), Space.World);
 
 			/*float angle = Vector3.Angle (rotation, transform.position);
 			//Debug.Log ("Angle : "+angle);
