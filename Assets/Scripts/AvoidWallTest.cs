@@ -17,20 +17,17 @@ public class AvoidWallTest : MonoBehaviour
 	int layerMask;
 
 	Enemy me;
-//	Wander wanderObj;
 
 	public bool avoidWall;
-	//public bool isUpdate;
 
 	// Use this for initialization
 	void Start () 
 	{
 		me = GetComponent<Enemy> ();
-//		wanderObj = GetComponent<Wander>();
 		avoidForce = Vector3.zero;
 		oldLinear = Vector3.zero;
 		moveAhead = 2f;
-		layerMask = LayerMask.NameToLayer ("AI");
+		layerMask = LayerMask.NameToLayer ("WallAI");
 		maxEnemyDistance = 10f;
 		sphereCastRadius = 1f;
 		avoidWall = false;
@@ -89,13 +86,4 @@ public class AvoidWallTest : MonoBehaviour
 		Gizmos.DrawWireSphere (transform.position, sphereCastRadius);
 	}
 }
-
-
-/*// Calculate desired velocity
-m_DesiredVelocity = (avoidanceForce).normalized * SteeringCore.MaxSpeed;
-
-// Calculate steering force
-SteeringForce = m_DesiredVelocity - SteeringCore.Velocity;
-m_OldValidSteeringForce = SteeringForce;
-m_SteeringForceConservationTimer = 0;
-*/
+	

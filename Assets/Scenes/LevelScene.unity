@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692558, g: 0.49678743, b: 0.57508624, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -10963,7 +10963,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 231860224}
-  m_LocalRotation: {x: 0.3469664, y: 0.61612856, z: 0.61612856, w: -0.3469664}
+  m_LocalRotation: {x: 0.34696636, y: 0.6161285, z: 0.6161285, w: -0.34696636}
   m_LocalPosition: {x: 176.10834, y: -107.7, z: -31}
   m_LocalScale: {x: 14.924281, y: 14.924243, z: 14.924237}
   m_LocalEulerAnglesHint: {x: -89.961006, y: 0, z: 238.704}
@@ -30208,7 +30208,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 623856642}
-  m_LocalRotation: {x: 0.3469664, y: 0.61612856, z: 0.61612856, w: -0.3469664}
+  m_LocalRotation: {x: 0.34696636, y: 0.6161285, z: 0.6161285, w: -0.34696636}
   m_LocalPosition: {x: 176.10834, y: -107.92, z: -153.28607}
   m_LocalScale: {x: 14.924283, y: 14.924246, z: 14.924238}
   m_LocalEulerAnglesHint: {x: -89.961006, y: 0, z: 238.704}
@@ -49588,7 +49588,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1076555508}
-  m_LocalRotation: {x: -0.35458758, y: 0.61191213, z: 0.61149603, w: 0.35482925}
+  m_LocalRotation: {x: -0.3545876, y: 0.6119122, z: 0.6114961, w: 0.35482928}
   m_LocalPosition: {x: 23, y: -107.34, z: -154.2}
   m_LocalScale: {x: 56.576477, y: 56.576397, z: 56.576443}
   m_LocalEulerAnglesHint: {x: -89.941, y: 0, z: 119.756004}
@@ -50606,7 +50606,7 @@ MonoBehaviour:
   emptyTiles: []
   availablePositions: []
   enemyCount: 0
-  randomFillPercent: 45
+  randomFillPercent: 7
 --- !u!114 &1102878894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53941,7 +53941,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173280493}
-  m_LocalRotation: {x: -0.35458758, y: 0.61191213, z: 0.61149603, w: 0.35482925}
+  m_LocalRotation: {x: -0.3545876, y: 0.6119122, z: 0.6114961, w: 0.35482928}
   m_LocalPosition: {x: 23, y: -107.34, z: -28.3}
   m_LocalScale: {x: 56.576412, y: 56.576347, z: 56.576378}
   m_LocalEulerAnglesHint: {x: -89.941, y: 0, z: 119.756004}

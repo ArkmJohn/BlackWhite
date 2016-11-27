@@ -19,15 +19,17 @@ public class Enemy : Character
 
 	public Vector3 tempRotation;
 
+
     public void Init()
     {
+		myAITree = GetComponent<TestTree> ();
         routine.Start();
     }
 
     // This is where the enemy should put all its ai
     protected void Act()
     {
-        //myAITree.AIAct();
+        myAITree.AIAct();
         // Do some other stuff
 
         if (Health > 0)
@@ -43,6 +45,13 @@ public class Enemy : Character
 
     void Update()
 	{
+
+		if(target == null)
+		{
+		//	target = GameObject.Find ("Johnny Bravo 3.0(Clone)");
+			target = GameObject.FindGameObjectWithTag ("Player");
+			Debug.Log ("The target is : " + target);
+		}
 
         if (!isDummy)
         {
