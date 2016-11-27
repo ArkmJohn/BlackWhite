@@ -44,6 +44,7 @@ public class CharacterControl : MonoBehaviour
         {
             FindObjectOfType<PauseManager>().Paused();
         }
+
     }
 
     void FixedUpdate()
@@ -61,24 +62,31 @@ public class CharacterControl : MonoBehaviour
             vertical = -0.5f;
 
         anim.SetFloat("Speed", Input.GetAxis("Vertical"));
-
         float x = horizontal * turnSpeed * Time.deltaTime;
         float z = vertical * speed * Time.deltaTime;
-        transform.Translate(0, 0, z);
+        //transform.Translate(0, 0, z);
+
+        rb.AddForce(transform.rotation*( Vector3.forward* z*1500));
+        float speedLimit = 1;
+        if (rb.velocity.magnitude > speedLimit) {
+            Vector3 temp = rb.velocity.normalized*speedLimit;
+            temp.y = rb.velocity.y;
+            rb.velocity = temp;
+        }
 
         transform.Rotate(0, x, 0);
-        //if (vertical != 0)
-        //{
+       if (vertical != 0)
+       {
             
-        //    audioRelated.WalkingAudioScr();
-        //    audioRelated.playsound = true;
-        //}
-        //else
-        //{
+           audioRelated.WalkingAudioScr();
+           audioRelated.playsound = true;
+       }
+        else
+        {
             
-        //    audioRelated.WalkingAudioScrStop();
-        //    audioRelated.playsound = false;
-        //}
+          audioRelated.WalkingAudioScrStop();
+          audioRelated.playsound = false;
+       }
     }
 
 
