@@ -21,6 +21,7 @@ public class Character : MonoBehaviour {
     public BDType baseRes;
     public SDType secWeakness;
     public SDType secRes;
+    public GameObject damageParticle;
 
     void Start () {
         isDead = true;
@@ -34,6 +35,12 @@ public class Character : MonoBehaviour {
         float inc = attacker.damage.GetDamage(attacker, gameObject.GetComponent<Character>());
 
         inc -= _def;
+
+        Vector3 h = attacker.gameObject.transform.position - transform.position;
+        float dist = h.magnitude;
+        Vector3 direction = h / dist;
+
+        Instantiate(damageParticle, direction + transform.position, Quaternion.identity);
 
         Health -= inc;
         Debug.Log(" Got hit with " + inc + " by " + attacker.gameObject.name);

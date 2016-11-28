@@ -6,9 +6,10 @@ public abstract class Node
 	// ENUM States
 	public enum NodeStates
 	{
-		SUCCESS,
-		FAILURE,
-		RUNNING
+        RUNNING,
+        SUCCESS,
+		FAILURE
+		
 	}
 
 	// Variable that stores the node states

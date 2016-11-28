@@ -321,6 +321,8 @@ MonoBehaviour:
   baseRes: 0
   secWeakness: 0
   secRes: 0
+  damageParticle: {fileID: 1000010499063188, guid: 0139cd522791d8e4d9403c0df0201964,
+    type: 2}
   targetLocation: {x: 0, y: 0, z: 0}
   myAITree: {fileID: 0}
   target: {fileID: 0}

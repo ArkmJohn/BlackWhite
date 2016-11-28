@@ -22,14 +22,24 @@ public class Elements : Formation {
             for (float y = 0; y <= height; y++)
             {
                 if (!is2D)
-                    pos.Add(new Vector3(x, 0, y));
+                    pos.Add(new Vector3(x * distanceMultToEach + transform.position.x, 0, y * distanceMultToEach + transform.position.z));
                 else
-                    pos.Add(new Vector3(x, y));
+                    pos.Add(new Vector3(x + transform.position.x, y + transform.position.y) * distanceMultToEach);
+
+                Debug.Log("Created a pos");
             }
         }
 
         return pos;
     }
 
+    void OnDrawGizmos()
+    {
+
+        foreach (Vector3 a in FormationPosition())
+        {
+            Gizmos.DrawCube(a, Vector3.one);
+        }
+    }
 
 }
