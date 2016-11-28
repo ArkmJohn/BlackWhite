@@ -33,9 +33,9 @@ public class Inverter : Node
 	public override void act(Enemy enemy)
 	{
 		NodeList[0].act (enemy);
-		if (node.isFail () && node != null) {
+		if (NodeList[0].isFail ()) {
 			this.SuccessState ();
-		} else if (node.isSuccess () != null) {
+		} else if (NodeList[0].isSuccess ()) {
 			this.FailureState ();
 		} else
 			this.FailureState ();

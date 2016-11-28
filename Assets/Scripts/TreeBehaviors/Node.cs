@@ -49,20 +49,20 @@ public abstract class Node
 
 	public bool isSuccess()
 	{
-		Debug.Log ("In Node Script: " + this.GetType ().Name + " Has Succeeded");
+		//Debug.Log ("In Node Script: " + this.GetType ().Name + " Has Succeeded");
 
 		return currentState.Equals (NodeStates.SUCCESS);
 	}
 
 	public bool isFail()
 	{
-		Debug.Log ("In Node Script: " + this.GetType ().Name + " Has Failed");
+		//Debug.Log ("In Node Script: " + this.GetType ().Name + " Has Failed");
 		 return currentState.Equals (NodeStates.FAILURE);
 	}
 
 	public bool isRunning()
 	{
-		Debug.Log ("In Node Script: " + this.GetType ().Name);
+		//Debug.Log ("In Node Script: " + this.GetType ().Name);
 		 return currentState.Equals (NodeStates.RUNNING);
 	}
 }

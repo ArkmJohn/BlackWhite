@@ -32,7 +32,7 @@ public class Arrive : Node
 
     public override void act(Enemy enemy)
     {
-		Debug.Log ("In Arrive script");
+		//Debug.Log ("In Arrive script");
 
         me = enemy;
         targetPosition = me.target.gameObject.transform.position;
