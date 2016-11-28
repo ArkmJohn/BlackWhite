@@ -2,7 +2,8 @@
 using System.Collections;
 using System;
 
-public class Arrive : Node {
+public class Arrive : Node 
+{
 
     float targetRadius;
     float slowRadius;
@@ -31,7 +32,8 @@ public class Arrive : Node {
 
     public override void act(Enemy enemy)
     {
-        
+		Debug.Log ("In Arrive script");
+
         me = enemy;
         targetPosition = me.target.gameObject.transform.position;
 

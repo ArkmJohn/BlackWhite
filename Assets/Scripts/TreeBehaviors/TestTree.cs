@@ -46,10 +46,11 @@ public class TestTree : Tree
 		sequence3 = new Sequence ();
 		inverter1 = new Inverter ();
 
-		inverter1.addNode (new IsHealthLow());
-		inverter1.addNode (new Arrive ());
-		inverter1.addNode (new Attack ());
+		/*inverter1.addNode (new IsHealthLow());
+		sequence1.addNode (new Arrive ());
+		sequence1.addNode (new Attack ());
 		sequence1.addNode (inverter1);
+
 
 		sequence2.addNode (new IsHealthLow ());
 		sequence2.addNode (new Flee ());
@@ -58,9 +59,33 @@ public class TestTree : Tree
 		selector1.addNode (sequence1);
 
 		sequence3.addNode (new IsPlayerInRange (enemyTarget, 15f));
+		sequence3.addNode (selector1);
 
 		selector2.addNode (sequence3);
-		selector2.addNode (new Wander (FindObjectOfType<LevelGenerator>().aTilePos));
+		selector2.addNode (new Wander ());*/
+
+		selector1.addNode (sequence1);
+		selector1.addNode (new Wander ());
+
+		sequence1.addNode(new IsPlayerInRange (enemyTarget, 15f));
+		sequence1.addNode (selector2);
+
+		selector2.addNode (sequence2);
+		selector2.addNode (sequence3);
+
+		sequence2.addNode (new IsHealthLow ());
+		sequence2.addNode (new Flee ());
+
+		IsHealthLow a = new IsHealthLow ();
+
+		inverter1.addNode (a);
+		sequence3.addNode (new Arrive ());
+		sequence3.addNode (new Attack ());
+		sequence3.addNode (inverter1);
+
+
+		// TODO : To uncomment once tree is tested
+		//selector2.addNode (new Wander (FindObjectOfType<LevelGenerator>().aTilePos));
 
 		brain = new Repeat(selector2);
 	}

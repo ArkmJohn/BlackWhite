@@ -47,7 +47,7 @@ public class Wander : Node
     {
         currentState = NodeStates.RUNNING;
         myTime = time;
-		
+		Debug.Log ("In Wander Script");
     }
 
     public override void reset()
@@ -57,6 +57,8 @@ public class Wander : Node
 
     public override void act(Enemy enemy)
     {
+
+		Debug.Log ("In Wander Script");
 //		Debug.Log ("Target Position : " + targetPosition);
         me = enemy;
         if(wallObj == null)

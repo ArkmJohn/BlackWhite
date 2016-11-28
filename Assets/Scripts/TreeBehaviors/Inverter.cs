@@ -32,13 +32,12 @@ public class Inverter : Node
 
 	public override void act(Enemy enemy)
 	{
-		if(node.isFail())
-		{
-			SuccessState ();
-		}
-		else if (node.isSuccess())
-		{
-			FailureState ();
-		}
+		NodeList[0].act (enemy);
+		if (node.isFail () && node != null) {
+			this.SuccessState ();
+		} else if (node.isSuccess () != null) {
+			this.FailureState ();
+		} else
+			this.FailureState ();
 	}
 }

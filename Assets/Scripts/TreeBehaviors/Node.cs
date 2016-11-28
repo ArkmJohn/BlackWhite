@@ -6,10 +6,17 @@ public abstract class Node
 	// ENUM States
 	public enum NodeStates
 	{
+<<<<<<< Updated upstream
         RUNNING,
         SUCCESS,
 		FAILURE
 		
+=======
+		RUNNING,
+		SUCCESS,
+		FAILURE
+
+>>>>>>> Stashed changes
 	}
 
 	// Variable that stores the node states
@@ -50,16 +57,20 @@ public abstract class Node
 
 	public bool isSuccess()
 	{
+		Debug.Log ("In Node Script: " + this.GetType ().Name + " Has Succeeded");
+
 		return currentState.Equals (NodeStates.SUCCESS);
 	}
 
 	public bool isFail()
 	{
+		Debug.Log ("In Node Script: " + this.GetType ().Name + " Has Failed");
 		 return currentState.Equals (NodeStates.FAILURE);
 	}
 
 	public bool isRunning()
 	{
+		Debug.Log ("In Node Script: " + this.GetType ().Name);
 		 return currentState.Equals (NodeStates.RUNNING);
 	}
 }
