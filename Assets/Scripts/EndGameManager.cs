@@ -55,6 +55,7 @@ public class EndGameManager : MonoBehaviour {
     public void GoHome()
     {
         Time.timeScale = 1;
+        gm.EndGame();
         gm.gameObject.GetComponent<ButtonManager>().LoadLevel("Main Menu");
     }
 }

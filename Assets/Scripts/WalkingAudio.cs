@@ -10,7 +10,6 @@ public class WalkingAudio : MonoBehaviour {
     {
         if (playsound == false) {
             walkingsound.Play();
-            Debug.Log("walking !!!!!!!");
         }
         
     }
@@ -19,7 +18,6 @@ public class WalkingAudio : MonoBehaviour {
     {
         if (playsound == true) {
             walkingsound.Stop();
-            Debug.Log("walking stopped");
         }
     }
 

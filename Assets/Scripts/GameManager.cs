@@ -80,4 +80,9 @@ public class GameManager : MonoBehaviour {
     {
         level++; 
     }
+    public void EndGame()
+    {
+        Destroy(actInventObj);
+        Destroy(actPlayerObj);
+    }
 }

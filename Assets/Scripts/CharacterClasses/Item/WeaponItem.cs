@@ -10,14 +10,14 @@ public class WeaponItem : Item {
     public Character owner;
     public bool isEquiped;
 
-    // Swap Item from equip
+    
     public override void UseItem()
     {
         GameObject player = FindObjectOfType<CharacterControl>().gameObject;
-
+        // Sets the owner of this item
         player.GetComponent<Player>().EquipWeapon(gameObject);
         owner = player.GetComponent<Character>();
-        foreach (Collider a in GetComponentsInChildren<Collider>())
+        foreach (Collider a in GetComponentsInChildren<Collider>()) // Turns off all colliders for each of its children
         {
             a.enabled = false;
         }
@@ -25,7 +25,7 @@ public class WeaponItem : Item {
             Destroy(GetComponent<Rigidbody>());
 
         isEquiped = true;
-        FindObjectOfType<FloatUI>().UseIText("Used " + itemName);
+        FindObjectOfType<FloatUI>().UseIText("Used " + itemName); // Adds a float UI for the player
     }
 
     void OnTriggerEnter(Collider col)
@@ -33,7 +33,6 @@ public class WeaponItem : Item {
         
         if (atkTypeID == 0 && isUsed && isEquiped)
         {
-            Debug.Log("Arrow Collided!");
             if (col.gameObject.GetComponent<Character>())
                 col.gameObject.GetComponent<Character>().GetDamaged(owner);
 
@@ -41,7 +40,6 @@ public class WeaponItem : Item {
         }
         if (atkTypeID == 1 && isUsed && isEquiped)
         {
-            Debug.Log("Melee Weapon Collided!");
             if (col.gameObject.GetComponent<Character>())
                 col.gameObject.GetComponent<Character>().GetDamaged(owner);
         }
