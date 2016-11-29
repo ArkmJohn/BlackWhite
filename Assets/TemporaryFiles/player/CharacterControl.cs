@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput; //for MOBILE SUPPORT
 
 public class CharacterControl : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class CharacterControl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		anim = GetComponent<Animator>();
         audioRelated = GameObject.FindObjectOfType<WalkingAudio>();
         weaponHolder = gameObject.GetComponentInChildren<WeaponHolder>().gameObject;
         rb = GetComponent<Rigidbody>();
@@ -33,6 +35,7 @@ public class CharacterControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		#if UNITY_EDITOR
         //Walk();
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -44,24 +47,31 @@ public class CharacterControl : MonoBehaviour
         {
             FindObjectOfType<PauseManager>().Paused();
         }
-
+		#endif
     }
 
-    void FixedUpdate()
-    {
-        Walk();
-    }
+	void FixedUpdate()
+	{
+		#if UNITY_EDITOR
+			Walk(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+			WalkAnimate();
+		#elif !UNITY_EDITOR
+			Walk(CrossPlatformInputManager.GetAxis("Horizontal"),CrossPlatformInputManager.GetAxis("Vertical"));
+			WalkAnimateM();
+		#endif
+	}
 
-    void Walk()
-    {
-        
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+	void Walk (float horizontal, float vertical) 
+	{
+		Debug.Log(vertical);
+
+
 
         if (vertical <= -0.5f)
             vertical = -0.5f;
 
-        anim.SetFloat("Speed", Input.GetAxis("Vertical"));
+
+
         float x = horizontal * turnSpeed * Time.deltaTime;
         float z = vertical * speed * Time.deltaTime;
         //transform.Translate(0, 0, z);
@@ -77,25 +87,37 @@ public class CharacterControl : MonoBehaviour
         transform.Rotate(0, x, 0);
        if (vertical != 0)
        {
-            
+			//anim.SetFloat("Speed", vertical);    
            audioRelated.WalkingAudioScr();
            audioRelated.playsound = true;
        }
         else
         {
-            
+			
           audioRelated.WalkingAudioScrStop();
           audioRelated.playsound = false;
        }
     }
 
+	void WalkAnimate()
+	{
+		float vertical = Input.GetAxis("Vertical");
+		anim.SetFloat("Speed", vertical);   
+
+	}
+
+	void WalkAnimateM()
+	{
+		float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+		anim.SetFloat("Speed", vertical);   
+	}
 
     public void SetHair(int index)
     {
         hairPr.GetComponent<Renderer>().material = hair[index];
     }
 
-    void Punch()
+    public void Punch()
     {
         anim.SetLayerWeight(attackTypeID, 1);
         anim.SetTrigger("Attack");

@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Canvas : MonoBehaviour {
+public class ScaleCanvas : MonoBehaviour {
 
     private CanvasScaler canvasScaler;
 
