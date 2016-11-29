@@ -4,7 +4,7 @@ using System.Collections;
 public class Cloud : MonoBehaviour {
 
     public GameObject spawner;
-    public float minSpeed, maxSpeed, finalXPos = -160;
+    public float minSpeed, maxSpeed, finalXPos = -160, minY = -30, maxY = 30, minZ = -30, maxZ = 30;
     float speed;
 
 	// Use this for initialization
@@ -21,8 +21,8 @@ public class Cloud : MonoBehaviour {
 
     void Restart()
     {
-        float y = Random.Range(-30, 30);
-        float z = Random.Range(-30, 30);
+        float y = Random.Range(minY, maxY);
+        float z = Random.Range(minZ, maxZ);
 
         Vector3 newPosition = new Vector3(spawner.transform.position.x, spawner.transform.position.y + y, spawner.transform.position.z + z);
         transform.position = newPosition;

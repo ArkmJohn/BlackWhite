@@ -3,20 +3,29 @@ using System.Collections.Generic;
 
 public class Group : MonoBehaviour {
 
-    public List<Character> members;
-    public Character leader;
+    public List<Enemy> members;
+    public Enemy leader;
     public Node currentCommand;
 
-    public void InitGroup(Character me)
+    public void InitGroup(Enemy me)
     {
-        members = new List<Character>();
+        members = new List<Enemy>();
         leader = me;
-        members.Add(leader);
+        AddMember(leader);
     }
 
-    void AddMember(Character member)
+    public void Members(List<Enemy> newMembers)
     {
-        members.Add(member);
+        // Compare each member to each new member and if not there remove from group
+        // set the newmembers as the member
+        // Sets each member to this group
+
+    }
+
+    void AddMember(Enemy member)
+    {
+        
+        member.GetComponent<Enemy>().myGroup = this;
     }
     
 }

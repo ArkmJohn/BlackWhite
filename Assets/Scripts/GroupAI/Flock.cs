@@ -19,7 +19,7 @@ public class Flock : MonoBehaviour {
     void ApplyFlock(Group myGroup, Enemy e, Vector3 goal)
     {
         // List of Members
-        List<Character> coMemScr = new List<Character>();
+        List<Enemy> coMemScr = new List<Enemy>();
         coMemScr = myGroup.members;
         List<GameObject> coMembers = new List<GameObject>();
         for (int x = 0; x < coMemScr.Count; x++)

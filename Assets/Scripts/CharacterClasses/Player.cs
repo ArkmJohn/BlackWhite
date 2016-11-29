@@ -52,7 +52,7 @@ public class Player : Character {
 
         _atkSpd = 0.2f + (statistics[3] / 2);
 
-        _speed = (statistics[3] / 2) + 1;
+        _speed = (statistics[3] / 2) + 10;
         if(GetComponent<CharacterControl>() != null)
             GetComponent<CharacterControl>().speed = _speed;
 

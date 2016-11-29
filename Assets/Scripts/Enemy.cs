@@ -18,7 +18,7 @@ public class Enemy : Character
 	public bool isAvoidWall;
 
 	public Vector3 tempRotation;
-
+    public Group myGroup;
 
     public void Init()
     {

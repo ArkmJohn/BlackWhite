@@ -157,6 +157,10 @@ MonoBehaviour:
   - {fileID: 1000011813054664, guid: 61607f899f01b66459ecb49989db7f9b, type: 2}
   - {fileID: 1000013934457058, guid: 3723cadca11526241b0291575a5d4da2, type: 2}
   - {fileID: 1000012683244262, guid: b3d0c3ad08487cc458358c88a8fa9c02, type: 2}
+  - {fileID: 1000010487438692, guid: 8bc8082bf662612489c816cc5bffb675, type: 2}
+  - {fileID: 1000011040954498, guid: 786002fc616fba7489fd1fd1f00b0ca7, type: 2}
+  - {fileID: 1000011982441956, guid: 0e9d47581b5d0bd40a34ff0c44759f43, type: 2}
+  - {fileID: 1000014218243640, guid: aa55eac3dd5faa044a3eaca1ac473f25, type: 2}
   playerPrefab: {fileID: 1000013020441244, guid: e0a20292f7817e9438d6f9e5f222c205,
     type: 2}
   startWeaponPrefab: {fileID: 0}
@@ -192,6 +196,7 @@ MonoBehaviour:
   baseRes: 0
   secWeakness: 0
   secRes: 0
+  damageParticle: {fileID: 0}
   equipedWeapon: {fileID: 0}
   bowWeapon: {fileID: 0}
   spawnPoint: {fileID: 0}

@@ -103,6 +103,13 @@ public class CharacterControl : MonoBehaviour
 
     public void DisablePunch()
     {
+        if (GetComponent<Player>().equipedWeapon != null)
+        {
+            foreach (Collider a in GetComponent<Player>().equipedWeapon.GetComponentsInChildren<Collider>())
+            {
+                a.enabled = false;
+            }
+        }
         anim.SetLayerWeight(attackTypeID, 0);
     }
 

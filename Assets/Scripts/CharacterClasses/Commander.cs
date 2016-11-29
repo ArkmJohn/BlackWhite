@@ -9,7 +9,7 @@ public class Commander : Enemy {
 	void Start ()
     {
         myGroup = GetComponent<Group>();
-        myGroup.InitGroup(this.GetComponent<Character>());
+        myGroup.InitGroup(this.GetComponent<Enemy>());
 	}
 	
 	// Update is called once per frame
