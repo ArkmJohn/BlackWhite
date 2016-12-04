@@ -57,7 +57,8 @@ GameObject:
   - 4: {fileID: 4000011284572130}
   - 33: {fileID: 33000012036839052}
   - 23: {fileID: 23000011523492246}
-  m_Layer: 0
+  - 65: {fileID: 65000011029992040}
+  m_Layer: 11
   m_Name: corndog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,6 +331,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 10
   m_CollisionDetection: 0
+--- !u!65 &65000011029992040
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011671597876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6975829, y: 0.73557764, z: 1.4375916}
+  m_Center: {x: -0.004190331, y: -0.02299239, z: 0.16680759}
 --- !u!65 &65000011452597158
 BoxCollider:
   m_ObjectHideFlags: 1

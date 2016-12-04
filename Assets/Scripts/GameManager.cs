@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
+    public static bool isDebugging = true;
     public static GameManager instance = null;
     public LevelGenerator levelGen = null;
     public Rooms rooms = null;

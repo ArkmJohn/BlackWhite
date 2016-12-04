@@ -16,6 +16,8 @@ public class Enemy : Character
     public float maxAccel;
     public bool isDummy;
 	public bool isAvoidWall;
+    public bool isAttacking = false;
+    public GameObject attackCollider;
 
 	public Vector3 tempRotation;
     public Group myGroup;
@@ -40,7 +42,10 @@ public class Enemy : Character
 
     public void Tick()
     {
-        Act();
+        if (Health > 0)
+        {
+            routine.act(this);
+        }
     }
 
     void Update()
@@ -50,10 +55,10 @@ public class Enemy : Character
 		{
 		//	target = GameObject.Find ("Johnny Bravo 3.0(Clone)");
 			target = GameObject.FindGameObjectWithTag ("Player");
-			Debug.Log ("The target is : " + target);
+			//Debug.Log ("The target is : " + target);
 		}
 
-        if (!isDummy)
+        if (!isDummy && !isAttacking)
         {
             Vector3 displacement = velocity * Time.deltaTime;
 
@@ -67,14 +72,6 @@ public class Enemy : Character
 			angular = new Vector3 (0, angle, 0);
 */
 			transform.rotation = Quaternion.LookRotation (rotation);
-        }
-        else
-        {
-            float Dist = Vector3.Distance(transform.position, FindObjectOfType<CharacterControl>().gameObject.transform.position);
-            if (Dist < 5)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, FindObjectOfType<CharacterControl>().gameObject.transform.position, _speed * Time.deltaTime);
-            }
         }
     }
 
@@ -111,12 +108,22 @@ public class Enemy : Character
 	}*/
 
     // TODO: Set animations and stuff
-    public void AttackAnim()
-    { }
-    public void WalkAnim()
-    { }
-    public void StandAnim()
-    { }
-    public void DieAnim()
-    { }
+    public void AttackInFront()
+    {
+        isAttacking = true;
+        GetComponent<EnemyAnimatorController>().Attack();
+        //attackCollider.SetActive(true);
+        
+    }
+
+    public void ActivateAttackCollider()
+    {
+        attackCollider.SetActive(true);
+    }
+    public void StopAttack()
+    {
+        Debug.Log("WTF");
+        attackCollider.SetActive(false);
+        isAttacking = false;
+    }
 }

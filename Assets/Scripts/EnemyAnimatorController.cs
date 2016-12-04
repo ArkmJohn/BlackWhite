@@ -20,4 +20,9 @@ public class EnemyAnimatorController : MonoBehaviour {
             anim.SetFloat("Walking", 1);
         }
 	}
+
+    public void Attack()
+    {
+        anim.SetTrigger("Attack");
+    }
 }

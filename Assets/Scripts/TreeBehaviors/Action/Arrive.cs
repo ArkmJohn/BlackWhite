@@ -13,16 +13,19 @@ public class Arrive : Node
     Vector3 desiredVelocity;
     Enemy me;
 
-    public Arrive()
+    public Arrive(string myName)
     {
-        targetRadius = 1f;
+        targetRadius = 2f;
         slowRadius = 6;
+        this.myName = myName;
     }
 
-    public Arrive(float  targetR,float slowR)
+    public Arrive(float  targetR,float slowR, string myName)
     {
         targetRadius = targetR;
         slowRadius = slowR;
+        this.myName = myName;
+
     }
 
     public override void reset()
@@ -37,9 +40,15 @@ public class Arrive : Node
         me = enemy;
         targetPosition = me.target.gameObject.transform.position;
 
+        if (isNear(enemy))
+        {
+            SuccessState();
+            return;
+        }
+
         me.linear = CalculateDesiredVelocity(enemy.gameObject.transform.position);
         me.rotation = GetDir(enemy.gameObject.transform.position);
-        SuccessState();
+
     }
 
     Vector3 CalculateDesiredVelocity(Vector3 myPos)
@@ -88,5 +97,16 @@ public class Arrive : Node
         Vector3 myDir = Vector3.RotateTowards(me.gameObject.transform.forward, targetDir, stepTimes, 0.0f);
 
         return myDir;
+    }
+
+    bool isNear(Enemy me)
+    {
+        if (Vector3.Distance(targetPosition, me.transform.position) <= 2)
+        {
+            Debug.Log("Reached the target");
+            return true;
+        }
+        else
+            return false;
     }
 }

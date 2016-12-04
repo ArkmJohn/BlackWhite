@@ -3,16 +3,24 @@ using System.Collections;
 
 public class Attack : Node 
 {
-	// TODO : To attack player.
+    public Attack(string myName)
+    {
+        this.myName = myName;
 
-	public override void reset()
+    }
+
+    public override void reset()
 	{
 		Start ();
 	}
 
 	public override void act (Enemy enemy)
 	{
-		currentState = NodeStates.SUCCESS;
+        enemy.gameObject.transform.LookAt(enemy.target.gameObject.transform); 
+        enemy.AttackInFront();
+
+        if(!enemy.isAttacking)
+            SuccessState();
 	}
 
 }

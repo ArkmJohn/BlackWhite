@@ -30,11 +30,12 @@ public class Wander : Node
 
     }
 
-    public Wander(List<GameObject> points)
+    public Wander(List<GameObject> points , string myName)
     {
         this.points = points;
         isUsingPoints = true;
         time = 2;
+        this.myName = myName;
     }
 
     public Wander()
@@ -47,7 +48,7 @@ public class Wander : Node
     {
         currentState = NodeStates.RUNNING;
         myTime = time;
-		Debug.Log ("In Wander Script");
+		//Debug.Log ("In Wander Script");
     }
 
     public override void reset()
@@ -58,33 +59,38 @@ public class Wander : Node
     public override void act(Enemy enemy)
     {
 
-		Debug.Log ("In Wander Script");
+		//Debug.Log ("In Wander Script");
 //		Debug.Log ("Target Position : " + targetPosition);
         me = enemy;
         if(wallObj == null)
             wallObj = me.gameObject.GetComponent<AvoidWallTest>();
 
+        if (isNear(enemy))
+        {
+            targetPosition = findTarget();
+            return;
+        }
         if (targetPosition == Vector3.zero)
             targetPosition = findTarget();
-        else
-        {
-            //         myTime -= Time.deltaTime;
-            ////Debug.Log ("myTime : " + myTime);
-            //         if (myTime <= 0)
-            //         {
-            //	Debug.Log ("Timer reached 0");
-            //             targetPosition = findTarget();
+        //else
+        //{
+        //    //         myTime -= Time.deltaTime;
+        //    ////Debug.Log ("myTime : " + myTime);
+        //    //         if (myTime <= 0)
+        //    //         {
+        //    //	Debug.Log ("Timer reached 0");
+        //    //             targetPosition = findTarget();
 
-            //             myTime = time;
-            //         }
-            Debug.Log(targetPosition);
-            float myPos = Vector3.Distance(enemy.gameObject.transform.position, targetPosition);
-            if (myPos <= 2)
-            {
-                targetPosition = findTarget();
-            }
-        }
-
+        //    //             myTime = time;
+        //    //         }
+        //    //Debug.Log(targetPosition);
+        //    float myPos = Vector3.Distance(enemy.gameObject.transform.position, targetPosition);
+        //    if (myPos <= 2)
+        //    {
+        //        targetPosition = findTarget();
+        //    }
+        //}
+        //Debug.Log(targetPosition);
 		if(wallObj.avoidWall)
 		{
 			Debug.Log ("Avoid wall is true. Changing target position");
@@ -95,8 +101,12 @@ public class Wander : Node
 
         me.linear = CalculateDesiredVelocity(enemy.gameObject.transform.position);
 		me.angular = GetDir(enemy.gameObject.transform.position);
-
-        SuccessState();
+        if (isNear(enemy))
+        {
+            SuccessState();
+        }
+        else
+            FailureState();
     }
 
     Vector3 findTarget()
@@ -117,7 +127,17 @@ public class Wander : Node
 
 
     }
+    bool isNear(Enemy me)
+    {
+        if (Vector3.Distance(targetPosition, me.transform.position) <= 2)
+        {
+            Debug.Log("Im Near the target");
 
+            return true;
+        }
+        else
+            return false;
+    }
     Vector3 CalculateDesiredVelocity(Vector3 myPos)
     {
         Vector3 linear = Vector3.zero;

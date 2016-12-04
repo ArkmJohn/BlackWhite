@@ -42,7 +42,7 @@ public class AddToGroup : Node {
             }
         }
 
-        me.GetComponent<Group>().Members(potentialMembers);
+        //me.GetComponent<Group>().Members(potentialMembers);
 
     }
 

@@ -33,8 +33,9 @@ public class Character : MonoBehaviour {
     public void GetDamaged(Character attacker)
     {
         float inc = attacker.damage.GetDamage(attacker, gameObject.GetComponent<Character>());
-
+        Debug.Log("Inc is " + inc + " To begin");
         inc -= _def;
+        Debug.Log("Inc is " + inc + " minus defenses");
 
         Vector3 h = attacker.gameObject.transform.position - transform.position;
         float dist = h.magnitude;
@@ -43,14 +44,16 @@ public class Character : MonoBehaviour {
         Instantiate(damageParticle, direction + transform.position, Quaternion.identity);
 
         Health -= inc;
+        Debug.Log("Resulting health is " + Health);
+
         Debug.Log(" Got hit with " + inc + " by " + attacker.gameObject.name);
         if (Health <= 0)
-            gameObject.SetActive(false);
+            Death();
     }
 
-    public void Death()
+    public virtual void Death()
     {
-        
+        gameObject.SetActive(false);
 
     }
 }

@@ -35,19 +35,18 @@ public class CharacterControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		#if UNITY_EDITOR
         //Walk();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
             //GetComponent<Player>().Attack(GetComponent<Player>().range, GetComponent<Damage>());
             Punch();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Cancel"))
         {
             FindObjectOfType<PauseManager>().Paused();
         }
-		#endif
+		
     }
 
 	void FixedUpdate()
@@ -63,7 +62,7 @@ public class CharacterControl : MonoBehaviour
 
 	void Walk (float horizontal, float vertical) 
 	{
-		Debug.Log(vertical);
+		//Debug.Log(vertical);
 
 
 
@@ -149,7 +148,7 @@ public class CharacterControl : MonoBehaviour
                 //destroy item once collected
                 //Destroy(obj.gameObject);
                 obj.gameObject.GetComponent<Item>().isUsed = true;
-                obj.gameObject.transform.SetParent(gameObject.transform);
+                obj.gameObject.transform.SetParent(inventory.transform);
                 obj.gameObject.SetActive(false);
             }
 
@@ -158,6 +157,11 @@ public class CharacterControl : MonoBehaviour
         {
             Destroy(obj.gameObject);
             FindObjectOfType<EndGameManager>().WinGame();
+        }
+        if (obj.gameObject.layer == 13)
+        {
+            GetComponent<Character>().GetDamaged(obj.gameObject.GetComponentInParent<Character>());
+            obj.gameObject.SetActive(false);
         }
     }
 

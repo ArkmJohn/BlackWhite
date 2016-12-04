@@ -13,9 +13,10 @@ public class Tile : MonoBehaviour {
 
     public tileState myState = tileState.EMPTY;
     public int neighbourTileCount;
-    public bool isOuterWall, Trees, isTesting = false;
+    public bool isOuterWall, Trees, isTesting = false, showPathToTarget;
 
     public List<GameObject> neighbours = new List<GameObject>();
+    public GameObject targetNode;
     public float tileRad = 5;
     public LayerMask nodeLayerMask;
     public LayerMask collisionLayerMask;
@@ -106,6 +107,27 @@ public class Tile : MonoBehaviour {
                     Gizmos.DrawLine(transform.position, neighbor.transform.position);
                     Gizmos.DrawWireSphere(neighbor.transform.position, 0.25f);
                 }
+                Gizmos.color = Color.red;
+                Gizmos.DrawWireSphere(transform.position, tileRad);
+                if (showPathToTarget)
+                {
+                    Gizmos.color = Color.magenta;
+                    if (targetNode) // Finds the goal using dijkstras
+                    {
+                        GameObject current = gameObject;
+                        Stack<GameObject> path = FindPath();
+                        Gizmos.DrawSphere(path.Peek().transform.position, 3);
+                        foreach (GameObject obj in path)
+                        {
+                            Gizmos.color = Color.green;
+                            Gizmos.DrawWireSphere(obj.transform.position, 1.0f);
+
+                            Gizmos.DrawLine(current.transform.position, obj.transform.position);
+                            current = obj;
+                        }
+                    }
+
+                }
             }
         }
     }
@@ -152,4 +174,14 @@ public class Tile : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public Stack<GameObject> FindPath()
+    {
+        GameObject[] Tiles = GameObject.FindGameObjectsWithTag("TileAI");
+        Stack<GameObject> path = Dikstras.dijkstra(Tiles, gameObject, targetNode);
+
+        return path;
+        
+    }
+
 }

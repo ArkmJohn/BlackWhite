@@ -10,13 +10,15 @@ public class Sequence : Node
         get { return true; }
         set { }
     }
-    public Sequence()
+    public Sequence(string myName)
     {
         this.currentNode = null;
+        this.myName = myName;
+
     }
 
     private Node currentNode;
-    List<Node> NodeList = new List<Node>();
+    public List<Node> NodeList = new List<Node>();
     Queue<Node> NodeQueue = new Queue<Node>();
 
     public void addNode(Node Node)

@@ -73,7 +73,7 @@ public class Player : Character {
             equipedWeapon.GetComponent<WeaponItem>().owner = null;
             equipedWeapon.GetComponent<WeaponItem>().isEquiped = false;
             equipedWeapon.SetActive(false);
-            equipedWeapon.transform.SetParent(null);
+            //equipedWeapon.transform.SetParent(null);
             equipedWeapon = null;
         }
 
@@ -142,7 +142,9 @@ public class Player : Character {
             {
                 GameObject targetHit = hit.collider.gameObject;
                 if (targetHit.GetComponent<Character>() != null)
+                {
                     targetHit.GetComponent<Character>().GetDamaged(gameObject.GetComponent<Character>());
+                }
             }
         }
     }
@@ -182,5 +184,12 @@ public class Player : Character {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
         Gizmos.DrawLine(smokes, smokes + (transform.forward * range));
+    }
+    public override void Death()
+    {
+        GetComponent<Animator>().SetBool("IsDead", true);
+        FindObjectOfType<EndGameManager>().LoseGame();
+
+
     }
 }

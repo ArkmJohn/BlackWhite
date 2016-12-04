@@ -93,7 +93,8 @@ GameObject:
   - 4: {fileID: 4000013885154614}
   - 33: {fileID: 33000011241173260}
   - 23: {fileID: 23000010767577220}
-  m_Layer: 0
+  - 65: {fileID: 65000011873477058}
+  m_Layer: 11
   m_Name: box cutter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,6 +332,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 10
   m_CollisionDetection: 0
+--- !u!65 &65000011873477058
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012994995500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3251663, y: 1.1225619, z: 0.013197938}
+  m_Center: {x: -0.08153836, y: 0.1397525, z: -0.006598969}
 --- !u!65 &65000012309104906
 BoxCollider:
   m_ObjectHideFlags: 1

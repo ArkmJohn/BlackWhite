@@ -4,9 +4,7 @@ using System;
 
 public class IsPlayerInRange : Node
 {
-    GameObject targetObject;
-    Vector3 targetPosition;
-    Vector3 desiredVelocity;
+    float range;
     Enemy me;
 
 	public override void reset()
@@ -14,22 +12,33 @@ public class IsPlayerInRange : Node
 		Start();
 	}
 
-	public IsPlayerInRange(GameObject target, float range)
+	public IsPlayerInRange(float range, string myName)
 	{
-		targetObject = target;
+        this.myName = myName;
+        this.range = range;
 	}
 
 	public override void act(Enemy enemy)
 	{
-		if (isPlayerInRange(targetObject))
-			SuccessState();
-		else
-			FailureState();
+        me = enemy;
+        if (me.target != null)
+        {
+            if (isPlayerInRange(me.target))
+                SuccessState();
+            else
+                FailureState();
+        }
+        else
+            FailureState();
 	}
 
 	bool isPlayerInRange(GameObject target)
 	{
-		bool a = false;
-		return a;
+        if (Vector3.Distance(target.transform.position, me.transform.position) < range)
+        {
+            return true;
+        }
+        else
+            return false;
 	}
 }

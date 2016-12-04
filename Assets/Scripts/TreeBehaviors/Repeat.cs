@@ -9,14 +9,16 @@ public class Repeat : Node {
     private int times;
     private int originalTimes;
 
-    public Repeat(Node node)
+    public Repeat(Node node, string myName)
     {
         this.node = node;
         this.times = -1; // Infinite times
         this.originalTimes = times;
+        this.myName = myName;
+
     }
 
-    public Repeat(Node node, int times)
+    public Repeat(Node node, int times, string myName)
     {
         if (times < 1)
         {
@@ -26,6 +28,8 @@ public class Repeat : Node {
         this.node = node;
         this.times = times;
         this.originalTimes = times;
+        this.myName = myName;
+
     }
 
     public override void Start()
@@ -43,11 +47,11 @@ public class Repeat : Node {
     public override void act(Enemy enemy)
     {
         // Checks if the Node fails
-        if (node.isFail())
+        /*if (node.isFail())
         {
             FailureState();
         }
-        else if (node.isSuccess())
+        else*/ if (node.isSuccess() || node.isFail())
         {
 
             if (times == 0) // Finish the whole traversal

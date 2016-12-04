@@ -10,6 +10,7 @@ public class EndGameManager : MonoBehaviour {
     public GameManager gm;
     public ButtonManager bm;
     public CameraManager cm;
+
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
@@ -19,8 +20,9 @@ public class EndGameManager : MonoBehaviour {
 
     public void LoseGame()
     {
+        cm = FindObjectOfType<CameraManager>();
         // Stop Time
-        Time.timeScale = 0;
+        Time.timeScale = 0.1f;
 
         // Load Camera
         cm.switchCamPos(3);

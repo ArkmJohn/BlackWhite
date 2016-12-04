@@ -10,14 +10,16 @@ public class Selector : Node
         get { return true; }
         set { }
     }
-    public Selector()
+    public Selector(string myName)
     {
 		this.currentNode = null;
+        this.myName = myName;
+
     }
 
     public Node currentNode;
 	public List<Node> nodeList = new List<Node>();
-	public Queue<Node> nodeQueue = new Queue<Node>();
+	Queue<Node> nodeQueue = new Queue<Node>();
 
 	public void addNode(Node node)
     {
@@ -80,30 +82,6 @@ public class Selector : Node
         {
 			SuccessState();
         }
-
-        //// Checks if the nerve is successful and finish the sequence
-        //if (currentNerve.isSuccess() && nerveQueue.Count == 0)
-        //{
-        //    succeed();
-        //    //return;
-        //}
-        //// Checks if the nerve is successful and finish the sequence
-        //if (currentNerve.isFailure() && nerveQueue.Count == 0)
-        //{
-        //    fail();
-        //    //return;
-        //}
-
-        //// Moves the nerves forward
-        //if (nerveQueue.Count == 0)
-        //{
-        //    this.state = currentNerve.getState();
-        //}
-        //else
-        //{
-        //    currentNerve = nerveQueue.Dequeue();
-        //    currentNerve.start();
-        //}
 
     }
 }

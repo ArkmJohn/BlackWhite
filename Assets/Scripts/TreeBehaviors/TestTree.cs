@@ -9,6 +9,7 @@ public class TestTree : Tree
 	public Selector selector1, selector2;
 	public Sequence sequence1,sequence2, sequence3;
 	public Inverter inverter1;
+    public float Range = 5;
 
 	GameObject enemyTarget;
 
@@ -34,61 +35,67 @@ public class TestTree : Tree
 
 	void Update()
 	{
-		me.Tick();
+        if(!me.isAttacking)
+		    me.Tick();
 	}
 
 	public override void BuildTree()
 	{
-		selector1 = new Selector ();
-		selector2 = new Selector ();
-		sequence1 = new Sequence ();
-		sequence2 = new Sequence ();
-		sequence3 = new Sequence ();
+		selector1 = new Selector ("selector1");
+		selector2 = new Selector ("selector2");
+		sequence1 = new Sequence ("sequence1");
+		sequence2 = new Sequence ("sequence2");
+		sequence3 = new Sequence ("sequence3");
 		inverter1 = new Inverter ();
 
-		/*inverter1.addNode (new IsHealthLow());
-		sequence1.addNode (new Arrive ());
-		sequence1.addNode (new Attack ());
-		sequence1.addNode (inverter1);
+		//inverter1.addNode (a);z
+		sequence3.addNode (new Arrive ("Going SomeWhere"));
+		sequence3.addNode (new Attack ("Attacking Something"));
+        //sequence3.addNode (inverter1);
+        DebugNodes(sequence3, sequence3.NodeList);
+        Debug.Log("Created Sequence 3 with " + sequence3.NodeList.Count + " Nodes");
 
+        sequence2.addNode(new IsHealthLow("IsHealthLow?"));
+        sequence2.addNode(new Flee("Fleeing"));
+        DebugNodes(sequence2, sequence2.NodeList);
+        Debug.Log("Created Sequence 2 with " + sequence2.NodeList.Count + " Nodes");
 
-		sequence2.addNode (new IsHealthLow ());
-		sequence2.addNode (new Flee ());
+        //IsHealthLow a = new IsHealthLow ("IsHealthLow?");
+        selector2.addNode(sequence2);
+        selector2.addNode(sequence3);
+        DebugNodes(selector2, selector2.nodeList);
+        Debug.Log("Created Selector 2 with " + selector2.nodeList.Count + " Nodes");
 
-		selector1.addNode (sequence2);
-		selector1.addNode (sequence1);
+        sequence1.addNode(new IsPlayerInRange(Range, "Can I See The Player"));
+        sequence1.addNode(selector2);
+        DebugNodes(sequence1, sequence1.NodeList);
+        Debug.Log("Created Sequence 1 with " + sequence1.NodeList.Count + " Nodes");
 
-		sequence3.addNode (new IsPlayerInRange (enemyTarget, 15f));
-		sequence3.addNode (selector1);
+        selector1.addNode(sequence1);
+        selector1.addNode(new Wander(FindObjectOfType<LevelGenerator>().aTilePos, "Wander"));
+        DebugNodes(selector1, selector1.nodeList);
+        Debug.Log("Created Selector 1 with " + selector1.nodeList.Count + " Nodes");
 
-		selector2.addNode (sequence3);
-		selector2.addNode (new Wander ());*/
+        // TODO : To uncomment once tree is tested
+        //selector2.addNode (new Wander (FindObjectOfType<LevelGenerator>().aTilePos));
 
-		selector1.addNode (sequence1);
-		selector1.addNode (new Wander ());
-
-		sequence1.addNode(new IsPlayerInRange (enemyTarget, 15f));
-		sequence1.addNode (selector2);
-
-		selector2.addNode (sequence2);
-		selector2.addNode (sequence3);
-
-		sequence2.addNode (new IsHealthLow ());
-		sequence2.addNode (new Flee ());
-
-		IsHealthLow a = new IsHealthLow ();
-
-		inverter1.addNode (a);
-		sequence3.addNode (new Arrive ());
-		sequence3.addNode (new Attack ());
-		sequence3.addNode (inverter1);
-
-
-		// TODO : To uncomment once tree is tested
-		//selector2.addNode (new Wander (FindObjectOfType<LevelGenerator>().aTilePos));
-
-		brain = new Repeat(selector2);
+        brain = new Repeat(selector1, "Repeating");
 	}
 
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, Range);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 2);
+
+    }
+
+    void DebugNodes(Node parentNode,List<Node> nodes)
+    {
+        foreach (Node a in nodes)
+        {
+            //Debug.Log("Added " + a.myName + " to " + parentNode.myName);
+        }
+    }
 
 }

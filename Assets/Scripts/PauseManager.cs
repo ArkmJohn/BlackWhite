@@ -5,7 +5,7 @@ using System.Collections;
 public class PauseManager : MonoBehaviour {
 
     Player p;
-    public GameObject mainCanvas;
+    public GameObject mainCanvas, pauseButton;
     public Text numVit, numEnd, numStr, numDex, numRes, numInt;
 	
 	// Update is called once per frame
@@ -30,6 +30,7 @@ public class PauseManager : MonoBehaviour {
         if (Time.timeScale != 0)
         {
             FindObjectOfType<CameraManager>().switchCamPos(2);
+            pauseButton.SetActive(false);
             mainCanvas.SetActive(true);
             Time.timeScale = 0;
 
@@ -37,6 +38,7 @@ public class PauseManager : MonoBehaviour {
         else
         {
             FindObjectOfType<CameraManager>().switchCamPos(1);
+            pauseButton.SetActive(true);
             mainCanvas.SetActive(false);
             Time.timeScale = 1;
         }

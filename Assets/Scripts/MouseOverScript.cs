@@ -31,7 +31,7 @@ public class MouseOverScript : MonoBehaviour {
             TextInfo = slotScr.currentItemA.GetComponent<Item>().flavorText;
             HelpText.text = TextInfo;
         }
-        Debug.Log("MouseEnter");
+        //Debug.Log("MouseEnter");
 
     }
 
@@ -39,7 +39,7 @@ public class MouseOverScript : MonoBehaviour {
     {
 
         HelpText.text = " ";
-        Debug.Log("MouseExit");
+        //Debug.Log("MouseExit");
 
     }
 }

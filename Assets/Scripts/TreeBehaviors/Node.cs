@@ -6,10 +6,14 @@ public abstract class Node
 	// ENUM States
 	public enum NodeStates
 	{
-		RUNNING,
-		SUCCESS,
-		FAILURE
+        FAILURE,
+
+        RUNNING,
+		SUCCESS
+		
 	}
+    
+    public string myName;
 
 	// Variable that stores the node states
 	protected NodeStates currentState;
@@ -38,31 +42,31 @@ public abstract class Node
 	// If the state is a failure, set the value of currentState to failure
 	protected void FailureState()
 	{
+        
 		currentState = NodeStates.FAILURE;
 	}
 
 	// If the state is a running, set the value of currentState to running
 	protected void RunningState()
 	{
-		currentState = NodeStates.RUNNING;
+        currentState = NodeStates.RUNNING;
 	}
 
 	public bool isSuccess()
 	{
-		//Debug.Log ("In Node Script: " + this.GetType ().Name + " Has Succeeded");
-
+		//Debug.Log ("In Node Script: " + myName + " Has Succeeded");
 		return currentState.Equals (NodeStates.SUCCESS);
 	}
 
 	public bool isFail()
 	{
-		//Debug.Log ("In Node Script: " + this.GetType ().Name + " Has Failed");
+		//Debug.Log ("In Node Script: " + myName + " Has Failed");
 		 return currentState.Equals (NodeStates.FAILURE);
 	}
 
 	public bool isRunning()
 	{
-		//Debug.Log ("In Node Script: " + this.GetType ().Name);
+		 //Debug.Log ("In Node Script: " + myName);
 		 return currentState.Equals (NodeStates.RUNNING);
 	}
 }

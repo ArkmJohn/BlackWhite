@@ -3,8 +3,13 @@ using System.Collections;
 
 public class IsHealthLow : Node 
 {
-	// Resetting the node
-	public override void reset()
+    public IsHealthLow(string myName)
+    {
+        this.myName = myName;
+
+    }
+    // Resetting the node
+    public override void reset()
 	{
 		Start();
 	}

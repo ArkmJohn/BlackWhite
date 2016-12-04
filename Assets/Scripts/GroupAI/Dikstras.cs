@@ -14,7 +14,6 @@ public class Dikstras : MonoBehaviour {
         {
             dist[v] = Mathf.Infinity; // Sets value of each object to infinity
             previous[v] = null;
-
             Q.Add(v); // adds the set of all nodes in the Q
         }
 

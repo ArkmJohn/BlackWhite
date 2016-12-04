@@ -5,6 +5,29 @@ using System.Collections;
 public class FloatUI : MonoBehaviour {
 
     public GameObject iTextHolder, damageTextHolder, statTextHolder, iTextPrefab, dmgTexPrefab, statTextPrefab;
+    public Player me;
+    public Image HealthFiller;
+    public Text healthText;
+
+    void Update()
+    {
+        if (FindObjectOfType<CharacterControl>() != null)
+        {
+            if (me == null)
+            {
+                me = FindObjectOfType<CharacterControl>().GetComponent<Player>();
+            }
+            else
+                handleHealth(me.Health, me.MaxHealth);
+        }
+    }
+
+    public void handleHealth(float Health, float maxHealth)
+    {
+        float myHealthFillAmount = Health / maxHealth;
+        HealthFiller.fillAmount = myHealthFillAmount;
+        healthText.text = Health + " / " + maxHealth;
+    }
 
     public void UseIText(string input)
     {
@@ -14,7 +37,7 @@ public class FloatUI : MonoBehaviour {
         iText.transform.localEulerAngles = Vector3.zero;
         iText.transform.localScale = Vector3.one;
         //iText.transform.position = Vector3.zero;
-        iText.GetComponent<Text>().text = input;
+        iText.GetComponentInChildren<Text>().text = input;
     }
 
     public void UseDamageText(string input)
@@ -24,7 +47,7 @@ public class FloatUI : MonoBehaviour {
         dmgText.transform.localPosition = Vector3.zero;
         dmgText.transform.localEulerAngles = Vector3.zero;
         dmgText.transform.localScale = Vector3.one;
-        dmgText.GetComponent<Text>().text = input;
+        dmgText.GetComponentInChildren<Text>().text = input;
     }
 
     public void UseStatText(string input)
@@ -34,6 +57,7 @@ public class FloatUI : MonoBehaviour {
         statText.transform.localPosition = Vector3.zero;
         statText.transform.localEulerAngles = Vector3.zero;
         statText.transform.localScale = Vector3.one;
-        statText.GetComponent<Text>().text = input;
+        statText.GetComponentInChildren<Text>().text = input;
+
     }
 }
