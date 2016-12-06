@@ -54,7 +54,7 @@ public class Group : MonoBehaviour {
                     {
                         shadows[i].transform.position = positions[i];
                         Vector3 x = new Vector3(shadows[i].transform.position.x, members[i].transform.position.y, shadows[i].transform.position.z);
-                        //members[i].GetComponent<GroupMemberAI>().GoToPosition(shadows[i]);
+                        members[i].GetComponent<GroupMemberAI>().GoToPosition(shadows[i]);
                         
                     }
                 }
@@ -71,9 +71,9 @@ public class Group : MonoBehaviour {
     {
        for(int i = 0; i < members.Count ; i++)
         {
-            //Debug.Log(members[i].gameObject.name + " is " + i + " on the list");
+            // Debug.Log(members[i].gameObject.name + " is " + i + " on the list");
         }
-        //SetCommand("Squadron");
+        SetCommand("Squadron");
     }
 
     void AddMember(Enemy member)

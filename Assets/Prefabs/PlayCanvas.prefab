@@ -1994,6 +1994,7 @@ MonoBehaviour:
   EndWCanvas: {fileID: 1000013028368474}
   EndLCanvas: {fileID: 1000011666429912}
   inventory: {fileID: 0}
+  healthCanvas: {fileID: 1000012672690742}
   level: {fileID: 114000012482574334}
   gm: {fileID: 0}
   bm: {fileID: 0}

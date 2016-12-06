@@ -5,7 +5,7 @@ using System.Collections;
 public class EndGameManager : MonoBehaviour {
 
     public GameObject EndWCanvas, EndLCanvas;
-    public GameObject inventory;
+    public GameObject inventory, healthCanvas;
     public Text level;
     public GameManager gm;
     public ButtonManager bm;
@@ -20,7 +20,11 @@ public class EndGameManager : MonoBehaviour {
 
     public void LoseGame()
     {
+        FindObjectOfType<CharacterControl>().DieAnimate();
         cm = FindObjectOfType<CameraManager>();
+        healthCanvas.SetActive(false);
+        if (LevelEndManager.killEnemies != null)
+            LevelEndManager.killEnemies();
         // Stop Time
         Time.timeScale = 0.1f;
 
@@ -31,13 +35,21 @@ public class EndGameManager : MonoBehaviour {
         EndLCanvas.SetActive(true);
     }
 
+    void DisableCanvas()
+    {
+        GameObject.FindGameObjectWithTag("InventoryCanvas").SetActive(false);
+        GetComponent<PauseManager>().pauseButton.SetActive(false);
+    }
     public void WinGame()
     {
         gm.actPlayerObj.transform.SetParent(gm.transform);
         gm.actInventObj.transform.SetParent(gm.transform);
-
+        if(LevelEndManager.killEnemies != null)
+            LevelEndManager.killEnemies();
+       
+        healthCanvas.SetActive(false);
         // Stop The Time
-        Time.timeScale = 0;
+        Time.timeScale = 0.1f;
 
         // Turn On panel
         EndWCanvas.SetActive(true);
@@ -51,6 +63,7 @@ public class EndGameManager : MonoBehaviour {
     {
         Time.timeScale = 1;
         bm.LoadLevel("LevelScene");
+        GameObject.FindGameObjectWithTag("InventoryCanvas").SetActive(true);
         //gm.AdvanceNextLevel();
     }
 

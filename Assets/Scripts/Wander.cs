@@ -121,7 +121,7 @@ public class Wander : Node
         {
             int index = 0; 
             index = UnityEngine.Random.Range(0, points.Count);
-            return points[index].transform.position;
+            return new Vector3(points[index].transform.position.x, me.transform.position.y, points[index].transform.position.z) ;
             
         }
 

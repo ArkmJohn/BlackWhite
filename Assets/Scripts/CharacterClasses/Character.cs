@@ -30,7 +30,7 @@ public class Character : MonoBehaviour {
 	}
 
 
-    public void GetDamaged(Character attacker)
+    public virtual void GetDamaged(Character attacker)
     {
         float inc = attacker.damage.GetDamage(attacker, gameObject.GetComponent<Character>());
         Debug.Log("Inc is " + inc + " To begin");
@@ -44,9 +44,14 @@ public class Character : MonoBehaviour {
         Instantiate(damageParticle, direction + transform.position, Quaternion.identity);
 
         Health -= inc;
-        Debug.Log("Resulting health is " + Health);
+        Debug.Log("Resulting health is " + Health );
 
         Debug.Log(" Got hit with " + inc + " by " + attacker.gameObject.name);
+        CheckIfDead();
+    }
+
+    public virtual void CheckIfDead()
+    {
         if (Health <= 0)
             Death();
     }
