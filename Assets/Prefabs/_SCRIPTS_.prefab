@@ -220,8 +220,8 @@ MonoBehaviour:
   levelGen: {fileID: 0}
   rooms: {fileID: 0}
   enemyPrefabs:
-  - {fileID: 1000011141073246, guid: 5c898d9d91f33b04d9c00aa206619db6, type: 2}
   - {fileID: 1000010794835380, guid: a444d9f197275ea45b66212917594f47, type: 2}
+  - {fileID: 1000011141073246, guid: 5c898d9d91f33b04d9c00aa206619db6, type: 2}
   - {fileID: 1000012916772900, guid: 51f0424d9a1c5f743b12cd6d0d5bfbde, type: 2}
   itemPrefabs:
   - {fileID: 1000013880049804, guid: 4b33ead1eabb35b4e9c5aa487645b882, type: 2}
@@ -310,8 +310,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45314de1c8f9ad409056665f213b19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSound: {fileID: 243000012084384062, guid: 7a816dd57959a954cacaa287e59813dc,
-    type: 2}
-  musicSound: {fileID: 243000011013339324, guid: 7a816dd57959a954cacaa287e59813dc,
-    type: 2}
   myMixer: {fileID: 24100000, guid: 7a816dd57959a954cacaa287e59813dc, type: 2}

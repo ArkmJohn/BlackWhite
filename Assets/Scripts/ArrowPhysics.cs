@@ -6,6 +6,7 @@ public class ArrowPhysics : MonoBehaviour {
     //public Quaternion myRotation = Quaternion.Euler(0, 0, 0);
     private Rigidbody rb;
     private float myRotation = 5f;
+    private Vector3[] curvingUnit;
 
     void Start()
     {
