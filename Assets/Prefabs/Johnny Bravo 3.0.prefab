@@ -1767,7 +1767,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011864997954}
-  m_LocalRotation: {x: 0.7070759, y: -0.006548165, z: 0.707077, w: -0.006548165}
+  m_LocalRotation: {x: 0.7070759, y: -0.0065481644, z: 0.707077, w: -0.0065481644}
   m_LocalPosition: {x: 0.33317393, y: -0.6270763, z: 1.6259227}
   m_LocalScale: {x: 0.10710244, y: 0.10710244, z: 0.10710244}
   m_LocalEulerAnglesHint: {x: 0.0000008537736, y: 89.9999, z: -178.93878}
@@ -2398,7 +2398,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b37e87a5862693a42820722cdb3bcdcd, type: 2}
+  - {fileID: 2100000, guid: 6a98e82d83f9c004d9a222d0de5f75cc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -3168,12 +3168,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417b308941d87384e9f3d7180253160e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 22
-  MaxHealth: 22
-  baseDmg: 10
+  Health: 20
+  MaxHealth: 20
+  baseDmg: 8
   _atkSpd: 4.2
   _speed: 14
-  _def: 3.5
+  _def: 4.5
   damage: {fileID: 0}
   baseWeakness: 0
   baseRes: 0
@@ -3185,13 +3185,13 @@ MonoBehaviour:
   bowWeapon: {fileID: 1000013472071006}
   spawnPoint: {fileID: 1000010226106928}
   statistics:
-  - 12
-  - 8
+  - 10
   - 10
   - 8
-  - 7
+  - 8
+  - 9
   - 5
-  _stam: 13
+  _stam: 15
   range: 2
 --- !u!114 &114000014164951808
 MonoBehaviour:
