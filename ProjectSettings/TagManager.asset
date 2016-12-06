@@ -8,6 +8,7 @@ TagManager:
   - HelpText
   - Text
   - Camera Position
+  - SCRIPTS
   layers:
   - Default
   - TransparentFX

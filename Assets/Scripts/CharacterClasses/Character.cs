@@ -22,11 +22,13 @@ public class Character : MonoBehaviour {
     public SDType secWeakness;
     public SDType secRes;
     public GameObject damageParticle;
+    private AudioSource SoundEffect;
 
     void Start () {
         isDead = true;
         Health = MaxHealth;
         damage = GetComponent<Damage>();
+        SoundEffect = GameObject.Find("_SCRIPTS_").GetComponent<AudioSource>();
 	}
 
 
@@ -44,6 +46,8 @@ public class Character : MonoBehaviour {
         Instantiate(damageParticle, direction + transform.position, Quaternion.identity);
 
         Health -= inc;
+
+        SoundEffect.Play();
         Debug.Log("Resulting health is " + Health);
 
         Debug.Log(" Got hit with " + inc + " by " + attacker.gameObject.name);
