@@ -14,15 +14,17 @@ public class IsHealthLow : Node
 		Start();
 	}
 
-	// Checking the enemy health
-	public override void act(Enemy enemy)
-	{
-		// If health is less then set to success state
-		if(enemy.Health < (enemy.MaxHealth/2))
-			SuccessState ();
-		else
-			// If enemy health is more then set to failure state
-			FailureState();
-	}
+    // Checking the enemy health
+    public override void act(Enemy enemy)
+    {
+        // If health is less then set to success state
+        if (enemy.Health < (enemy.MaxHealth / 2))
+            SuccessState();
+        else
+        {
+            // If enemy health is more then set to failure state
+            FailureState();
+        }
+    }
 
 }

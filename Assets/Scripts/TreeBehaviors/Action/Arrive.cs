@@ -38,14 +38,19 @@ public class Arrive : Node
 		//Debug.Log ("In Arrive script");
 
         me = enemy;
-        targetPosition = me.target.gameObject.transform.position;
+        targetPosition = new Vector3(me.target.gameObject.transform.position.x, me.transform.position.y, me.target.gameObject.transform.position.z);
+
 
         if (isNear(enemy))
         {
             SuccessState();
             return;
         }
-
+        else if (enemy.Health <= enemy.MaxHealth / 2)
+        {
+            FailureState();
+            return;
+        }
         me.linear = CalculateDesiredVelocity(enemy.gameObject.transform.position);
         me.rotation = GetDir(enemy.gameObject.transform.position);
 
@@ -95,7 +100,7 @@ public class Arrive : Node
         Vector3 targetDir = targetPosition - myPos;
         float stepTimes = me._speed * Time.deltaTime + 2;
         Vector3 myDir = Vector3.RotateTowards(me.gameObject.transform.forward, targetDir, stepTimes, 0.0f);
-
+        //Vector3 newDir = new Vector3(0, myDir.y, 0);
         return myDir;
     }
 

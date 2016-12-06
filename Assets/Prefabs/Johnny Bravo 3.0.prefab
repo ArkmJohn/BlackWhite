@@ -905,6 +905,8 @@ GameObject:
   - 114: {fileID: 114000011384037648}
   - 114: {fileID: 114000010340234916}
   - 82: {fileID: 82000011762459102}
+  - 82: {fileID: 82000010370675892}
+  - 114: {fileID: 114000010913108606}
   m_Layer: 12
   m_Name: Johnny Bravo 3.0
   m_TagString: Player
@@ -1765,7 +1767,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011864997954}
-  m_LocalRotation: {x: 0.7070759, y: -0.0065481607, z: 0.707077, w: -0.0065481607}
+  m_LocalRotation: {x: 0.7070759, y: -0.006548165, z: 0.707077, w: -0.006548165}
   m_LocalPosition: {x: 0.33317393, y: -0.6270763, z: 1.6259227}
   m_LocalScale: {x: 0.10710244, y: 0.10710244, z: 0.10710244}
   m_LocalEulerAnglesHint: {x: 0.0000008537736, y: 89.9999, z: -178.93878}
@@ -2396,7 +2398,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6a98e82d83f9c004d9a222d0de5f75cc, type: 2}
+  - {fileID: 2100000, guid: b37e87a5862693a42820722cdb3bcdcd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -2623,6 +2625,80 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013417462232}
   m_Enabled: 1
+--- !u!82 &82000010370675892
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013020441244}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!82 &82000011762459102
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2910,6 +2986,19 @@ MonoBehaviour:
   isPlayCam: 1
   isMoving: 0
   speed: 30
+--- !u!114 &114000010913108606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013020441244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e41c0b31972c6948af0e5a3fcf653d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingsound: {fileID: 82000011762459102}
+  playsound: 0
 --- !u!114 &114000011044130144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3079,12 +3168,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417b308941d87384e9f3d7180253160e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 20
-  MaxHealth: 20
-  baseDmg: 8
+  Health: 22
+  MaxHealth: 22
+  baseDmg: 10
   _atkSpd: 4.2
   _speed: 14
-  _def: 4.5
+  _def: 3.5
   damage: {fileID: 0}
   baseWeakness: 0
   baseRes: 0
@@ -3096,13 +3185,13 @@ MonoBehaviour:
   bowWeapon: {fileID: 1000013472071006}
   spawnPoint: {fileID: 1000010226106928}
   statistics:
-  - 10
+  - 12
+  - 8
   - 10
   - 8
-  - 8
-  - 9
+  - 7
   - 5
-  _stam: 15
+  _stam: 13
   range: 2
 --- !u!114 &114000014164951808
 MonoBehaviour:

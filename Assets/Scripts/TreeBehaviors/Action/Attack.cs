@@ -16,10 +16,8 @@ public class Attack : Node
 
 	public override void act (Enemy enemy)
 	{
-        enemy.gameObject.transform.LookAt(enemy.target.gameObject.transform); 
+        enemy.gameObject.transform.LookAt(new Vector3(enemy.target.gameObject.transform.position.x, enemy.transform.position.y, enemy.target.gameObject.transform.position.z)); 
         enemy.AttackInFront();
-
-        if(!enemy.isAttacking)
             SuccessState();
 	}
 

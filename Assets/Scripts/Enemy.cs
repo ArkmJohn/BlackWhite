@@ -26,6 +26,7 @@ public class Enemy : Character
     {
 		myAITree = GetComponent<TestTree> ();
         routine.Start();
+        LevelEndManager.killEnemies += Death;
     }
 
     // This is where the enemy should put all its ai
@@ -47,7 +48,11 @@ public class Enemy : Character
             routine.act(this);
         }
     }
-
+    public override void Death()
+    {
+        LevelEndManager.killEnemies -= Death;
+        base.Death();
+    }
     void Update()
 	{
 
@@ -55,7 +60,7 @@ public class Enemy : Character
 		{
 		//	target = GameObject.Find ("Johnny Bravo 3.0(Clone)");
 			target = GameObject.FindGameObjectWithTag ("Player");
-			//Debug.Log ("The target is : " + target);
+			Debug.Log ("The target is : " + target);
 		}
 
         if (!isDummy && !isAttacking)
@@ -66,15 +71,24 @@ public class Enemy : Character
 
             transform.Translate(new Vector3(pos.x, 0, pos.z), Space.World);
 
-			/*float angle = Vector3.Angle (rotation, transform.position);
+            /*float angle = Vector3.Angle (rotation, transform.position);
 			//Debug.Log ("Angle : "+angle);
 			transform.eulerAngles = new Vector3(0 , angle, 0);
 			angular = new Vector3 (0, angle, 0);
 */
-			transform.rotation = Quaternion.LookRotation (rotation);
+            transform.rotation = Quaternion.LookRotation (rotation);
+            //transform.rotation = Quaternion.Euler(0, transform.rotation.y, 0);
+            //transform.rotation = Quaternion.Euler(rotation);
         }
     }
-
+    public override void GetDamaged(Character attacker)
+    {
+        base.GetDamaged(attacker);
+    }
+    public override void CheckIfDead()
+    {
+        base.CheckIfDead();
+    }
     public void LateUpdate()
     {
         if (!isDummy)
@@ -110,10 +124,12 @@ public class Enemy : Character
     // TODO: Set animations and stuff
     public void AttackInFront()
     {
-        isAttacking = true;
-        GetComponent<EnemyAnimatorController>().Attack();
-        //attackCollider.SetActive(true);
-        
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            GetComponent<EnemyAnimatorController>().Attack();
+            //attackCollider.SetActive(true);
+        }
     }
 
     public void ActivateAttackCollider()
@@ -122,7 +138,7 @@ public class Enemy : Character
     }
     public void StopAttack()
     {
-        Debug.Log("WTF");
+        Debug.Log("Ello");
         attackCollider.SetActive(false);
         isAttacking = false;
     }

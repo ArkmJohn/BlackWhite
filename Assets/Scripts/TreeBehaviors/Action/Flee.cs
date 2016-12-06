@@ -23,8 +23,8 @@ public class Flee : Node {
     {
         // Updates the current required variables
         me = enemy;
-        targetPosition = me.target.gameObject.transform.position;
-
+        targetPosition = new Vector3(me.target.gameObject.transform.position.x,me.transform.position.y, me.target.gameObject.transform.position.z);
+        
         if (!isNear(enemy))
         {
             SuccessState();
@@ -57,7 +57,7 @@ public class Flee : Node {
 
     bool isNear(Enemy me)
     {
-        if (Vector3.Distance(targetPosition, me.transform.position) <= 5)
+        if (Vector3.Distance(targetPosition, me.transform.position) <= 6)
         {
             Debug.Log("Too near to the target");
             return true;

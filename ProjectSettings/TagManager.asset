@@ -8,7 +8,7 @@ TagManager:
   - HelpText
   - Text
   - Camera Position
-  - SCRIPTS
+  - InventoryCanvas
   layers:
   - Default
   - TransparentFX

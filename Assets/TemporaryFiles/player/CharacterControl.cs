@@ -4,7 +4,6 @@ using UnityStandardAssets.CrossPlatformInput; //for MOBILE SUPPORT
 
 public class CharacterControl : MonoBehaviour
 {
-
     public float speed = 5, turnSpeed = 35;
     public Animator anim;
     public Inventory inventory;
@@ -122,6 +121,10 @@ public class CharacterControl : MonoBehaviour
         anim.SetTrigger("Attack");
     }
 
+    public void DieAnimate()
+    {
+        anim.SetTrigger("IsDead");
+    }
     public void DisablePunch()
     {
         if (GetComponent<Player>().equipedWeapon != null)
@@ -171,4 +174,6 @@ public class CharacterControl : MonoBehaviour
         Vector3 randPos = availablePositions[Random.Range(0, availablePositions.Length)].transform.position;
         transform.position = Vector3.Lerp(transform.position, new Vector3(randPos.x, 5, randPos.z), 20 * Time.deltaTime);
     }
+
+
 }

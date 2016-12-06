@@ -41,8 +41,33 @@ public class GroupMemberAI : Enemy {
         }
         else if (isNear(movePos.transform.position))
             movePos = newTarget();
+        Debug.Log(movePos.transform.position);
 
-        GoToPosition(movePos);
+        if (isUsingNodes)
+        {
+            if (GetComponent<TileController>().currentTile != null)
+            {
+                GameObject pos = null;
+                if (path == null)
+                {
+                    path = FindPath(movePos);
+                    if(path != null)
+                        pos = path.Pop();
+
+                }
+                if (pos != null)
+                {
+                    Debug.Log(pos.transform.position);
+                    Vector3 newDir = new Vector3(pos.transform.position.x, transform.position.y, pos.transform.position.z);
+                    transform.position = Vector3.MoveTowards(transform.position, newDir, _speed * Time.deltaTime);
+                    if (isNear(pos.transform.position))
+                    {
+                        gameObject.GetComponent<TileController>().Tile();
+                        path = FindPath(movePos);
+                    }
+                }
+            }
+        }
     }
 
 
@@ -75,20 +100,23 @@ public class GroupMemberAI : Enemy {
             //Debug.Log(FindObjectOfType<LevelGenerator>().aTilePos.Count + GetComponent<TileController>().currentTile.name);
             if (GetComponent<TileController>().currentTile != null)
             {
-
+                GameObject pos = null;
                 if (path == null)
                 {
                     path = FindPath(target);
+                    if (path != null)
+                        pos = path.Pop();
+
                 }
-
-                Debug.Log(path.Count + gameObject.name);
-                GameObject pos = path.Pop();
-                transform.position = Vector3.MoveTowards(transform.position, pos.transform.position, _speed * Time.deltaTime);
-
-                if(isNear(pos.transform.position))
+                if (pos != null)
                 {
-                    gameObject.GetComponent<TileController>().Tile();
-                    path = FindPath(target);
+                    Vector3 newDir = new Vector3(pos.transform.position.x, transform.position.y, pos.transform.position.z);
+                    transform.position = Vector3.MoveTowards(transform.position, newDir, _speed * Time.deltaTime);
+                    //if (isNear(pos.transform.position))
+                    //{
+                    //    gameObject.GetComponent<TileController>().Tile();
+                    //    path = FindPath(target);
+                    //}
                 }
             }
 
@@ -111,7 +139,10 @@ public class GroupMemberAI : Enemy {
 
     Stack<GameObject> FindPath(GameObject target)
     {
-        return Dikstras.dijkstra(FindObjectOfType<LevelGenerator>().aTilePos.ToArray(), GetComponent<TileController>().currentTile, target);
+        if (FindObjectOfType<LevelGenerator>().aTilePos.Count != 0)
+            return Dikstras.dijkstra(FindObjectOfType<LevelGenerator>().aTilePos.ToArray(), GetComponent<TileController>().currentTile, target);
+        else
+            return null;
     }
 
     void Rotate(Vector3 nextPos)

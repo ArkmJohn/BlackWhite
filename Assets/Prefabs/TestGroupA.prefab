@@ -158,6 +158,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011589064700}
+  - 114: {fileID: 114000011990751874}
   m_Layer: 0
   m_Name: TestGroupA
   m_TagString: Untagged
@@ -229,7 +230,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010926609278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90.79744, y: 4.808977, z: 17.448702}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -243,7 +244,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013698443952}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 84.79744, y: 4.808977, z: 17.448702}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -309,7 +310,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013357325858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -86.79744, y: -4.808977, z: -17.448702}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -327,7 +328,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010499265332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 86.79744, y: 4.808977, z: 17.448702}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -354,7 +355,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012908513970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 82.79744, y: 4.808977, z: 17.448702}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -368,7 +369,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010641792650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 88.79744, y: 4.808977, z: 17.448702}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -918,7 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca76f7acb70e074e8ef48b82a0b2445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFormation: 0
+  myFormation: 1
   members:
   - {fileID: 114000012044111008}
   - {fileID: 114000012335059440}
@@ -927,6 +928,17 @@ MonoBehaviour:
   - {fileID: 114000012235607770}
   leader: {fileID: 114000012044111008}
   shadows: []
+--- !u!114 &114000011990751874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013357325858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137a8eaead2fca94685aa97c111aa247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012044111008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -945,7 +957,7 @@ MonoBehaviour:
   _speed: 5
   _def: 0
   damage: {fileID: 0}
-  baseWeakness: 1
+  baseWeakness: 2
   baseRes: 0
   secWeakness: 0
   secRes: 0
@@ -997,7 +1009,7 @@ MonoBehaviour:
   _speed: 3
   _def: 0
   damage: {fileID: 0}
-  baseWeakness: 1
+  baseWeakness: 2
   baseRes: 0
   secWeakness: 0
   secRes: 0
@@ -1011,14 +1023,14 @@ MonoBehaviour:
   rotation: {x: 0, y: 0, z: 0}
   angular: {x: 0, y: 0, z: 0}
   maxAccel: 0
-  isDummy: 0
+  isDummy: 1
   isAvoidWall: 0
   isAttacking: 0
   attackCollider: {fileID: 0}
   tempRotation: {x: 0, y: 0, z: 0}
   myGroup: {fileID: 0}
   isGroupLeader: 0
-  isUsingNodes: 1
+  isUsingNodes: 0
 --- !u!114 &114000012335059440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1037,7 +1049,7 @@ MonoBehaviour:
   _speed: 3
   _def: 0
   damage: {fileID: 0}
-  baseWeakness: 1
+  baseWeakness: 2
   baseRes: 0
   secWeakness: 0
   secRes: 0
@@ -1051,14 +1063,14 @@ MonoBehaviour:
   rotation: {x: 0, y: 0, z: 0}
   angular: {x: 0, y: 0, z: 0}
   maxAccel: 0
-  isDummy: 0
+  isDummy: 1
   isAvoidWall: 0
   isAttacking: 0
   attackCollider: {fileID: 0}
   tempRotation: {x: 0, y: 0, z: 0}
   myGroup: {fileID: 0}
   isGroupLeader: 0
-  isUsingNodes: 1
+  isUsingNodes: 0
 --- !u!114 &114000013016290134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1103,7 +1115,7 @@ MonoBehaviour:
   _speed: 3
   _def: 0
   damage: {fileID: 0}
-  baseWeakness: 1
+  baseWeakness: 2
   baseRes: 0
   secWeakness: 0
   secRes: 0
@@ -1117,14 +1129,14 @@ MonoBehaviour:
   rotation: {x: 0, y: 0, z: 0}
   angular: {x: 0, y: 0, z: 0}
   maxAccel: 0
-  isDummy: 0
+  isDummy: 1
   isAvoidWall: 0
   isAttacking: 0
   attackCollider: {fileID: 0}
   tempRotation: {x: 0, y: 0, z: 0}
   myGroup: {fileID: 0}
   isGroupLeader: 0
-  isUsingNodes: 1
+  isUsingNodes: 0
 --- !u!114 &114000013410321688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1155,7 +1167,7 @@ MonoBehaviour:
   _speed: 3
   _def: 0
   damage: {fileID: 0}
-  baseWeakness: 1
+  baseWeakness: 2
   baseRes: 0
   secWeakness: 0
   secRes: 0
@@ -1169,14 +1181,14 @@ MonoBehaviour:
   rotation: {x: 0, y: 0, z: 0}
   angular: {x: 0, y: 0, z: 0}
   maxAccel: 0
-  isDummy: 0
+  isDummy: 1
   isAvoidWall: 0
   isAttacking: 0
   attackCollider: {fileID: 0}
   tempRotation: {x: 0, y: 0, z: 0}
   myGroup: {fileID: 0}
   isGroupLeader: 0
-  isUsingNodes: 1
+  isUsingNodes: 0
 --- !u!114 &114000013936466702
 MonoBehaviour:
   m_ObjectHideFlags: 1

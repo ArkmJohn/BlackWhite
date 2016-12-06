@@ -36,6 +36,10 @@ public class Player : Character {
     public void changeStat(int statID, float statVal)
     {
         statistics[statID] += statVal;
+        if (statID == 0)
+        {
+            Health += statVal;
+        }
         setBaseStat();
     }
 
