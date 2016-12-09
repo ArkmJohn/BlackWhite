@@ -72,12 +72,11 @@ public class TestTree : Tree
         Debug.Log("Created Sequence 1 with " + sequence1.NodeList.Count + " Nodes");
 
         selector1.addNode(sequence1);
+		//selector1.addNode (new Wander ());
+		// TODO : Uncomment for the main level scene.
         selector1.addNode(new Wander(FindObjectOfType<LevelGenerator>().aTilePos, "Wander"));
         DebugNodes(selector1, selector1.nodeList);
         Debug.Log("Created Selector 1 with " + selector1.nodeList.Count + " Nodes");
-
-        // TODO : To uncomment once tree is tested
-        //selector2.addNode (new Wander (FindObjectOfType<LevelGenerator>().aTilePos));
 
         brain = new Repeat(selector1, "Repeating");
 	}

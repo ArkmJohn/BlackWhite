@@ -22,7 +22,7 @@ GameObject:
   - 33: {fileID: 33000010890611962}
   - 23: {fileID: 23000013690058728}
   - 65: {fileID: 65000011735888152}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - 33: {fileID: 33000012396331254}
   - 23: {fileID: 23000013032564862}
   - 65: {fileID: 65000010960097056}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010740469112}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Tree626
   m_TagString: Untagged
   m_Icon: {fileID: 0}

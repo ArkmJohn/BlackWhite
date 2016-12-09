@@ -180,20 +180,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011307236154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 767c1e371fba1284db24a21d540049ec, type: 3}
+  m_Script: {fileID: 11500000, guid: f1ddd0955b5f6dc4c9c9cc6fcbe3594c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
-  MaxHealth: 10
-  baseDmg: 2
+  Health: 0
+  MaxHealth: 0
+  baseDmg: 0
   _atkSpd: 0
-  _speed: 2
-  _def: 5
+  _speed: 0
+  _def: 0
   damage: {fileID: 0}
-  baseWeakness: 2
+  baseWeakness: 0
   baseRes: 0
   secWeakness: 0
   secRes: 0
+  damageParticle: {fileID: 0}
   targetLocation: {x: 0, y: 0, z: 0}
   myAITree: {fileID: 0}
   target: {fileID: 0}
@@ -203,9 +204,12 @@ MonoBehaviour:
   rotation: {x: 0, y: 0, z: 0}
   angular: {x: 0, y: 0, z: 0}
   maxAccel: 0
-  isDummy: 1
+  isDummy: 0
   isAvoidWall: 0
+  isAttacking: 0
+  attackCollider: {fileID: 0}
   tempRotation: {x: 0, y: 0, z: 0}
+  myGroup: {fileID: 0}
 --- !u!114 &114000011932924876
 MonoBehaviour:
   m_ObjectHideFlags: 1

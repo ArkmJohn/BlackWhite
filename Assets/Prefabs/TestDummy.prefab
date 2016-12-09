@@ -934,7 +934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   me: {fileID: 114000014053444818}
-  target: {fileID: 0}
+  Range: 5
 --- !u!114 &114000014053444818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -943,31 +943,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013836393154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196914c2509dfd241aa1b8ec3f476c28, type: 3}
+  m_Script: {fileID: 11500000, guid: f1ddd0955b5f6dc4c9c9cc6fcbe3594c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
-  MaxHealth: 10
-  baseDmg: 5
-  _atkSpd: 1
-  _speed: 5
+  Health: 0
+  MaxHealth: 0
+  baseDmg: 0
+  _atkSpd: 0
+  _speed: 0
   _def: 0
-  damage: {fileID: 114000014060058898}
+  damage: {fileID: 0}
   baseWeakness: 0
   baseRes: 0
   secWeakness: 0
   secRes: 0
+  damageParticle: {fileID: 0}
   targetLocation: {x: 0, y: 0, z: 0}
-  myAITree: {fileID: 114000010526176948}
+  myAITree: {fileID: 0}
   target: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   linear: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  angular: 0
-  maxAccel: 24
+  angular: {x: 0, y: 0, z: 0}
+  maxAccel: 0
   isDummy: 0
-  myNode: {fileID: 0}
+  isAvoidWall: 0
+  isAttacking: 0
+  attackCollider: {fileID: 0}
+  tempRotation: {x: 0, y: 0, z: 0}
+  myGroup: {fileID: 0}
 --- !u!114 &114000014060058898
 MonoBehaviour:
   m_ObjectHideFlags: 1

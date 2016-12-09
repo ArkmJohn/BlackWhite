@@ -76,8 +76,9 @@ public class Enemy : Character
 			transform.eulerAngles = new Vector3(0 , angle, 0);
 			angular = new Vector3 (0, angle, 0);
 */
-            transform.rotation = Quaternion.LookRotation (rotation);
-            //transform.rotation = Quaternion.Euler(0, transform.rotation.y, 0);
+            //transform.rotation = Quaternion.LookRotation (rotation);
+			transform.LookAt (transform.position + velocity);
+			//transform.rotation = Quaternion.Euler(0, transform.rotation.y, 0);
             //transform.rotation = Quaternion.Euler(rotation);
         }
     }
