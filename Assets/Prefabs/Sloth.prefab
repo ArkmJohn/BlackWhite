@@ -5492,18 +5492,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ddd0955b5f6dc4c9c9cc6fcbe3594c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
-  MaxHealth: 0
-  baseDmg: 0
+  Health: 25
+  MaxHealth: 25
+  baseDmg: 10
   _atkSpd: 0
-  _speed: 0
-  _def: 0
+  _speed: 3
+  _def: 2
   damage: {fileID: 0}
-  baseWeakness: 0
+  baseWeakness: 3
   baseRes: 0
   secWeakness: 0
   secRes: 0
-  damageParticle: {fileID: 0}
+  damageParticle: {fileID: 1000010499063188, guid: 0139cd522791d8e4d9403c0df0201964,
+    type: 2}
   targetLocation: {x: 0, y: 0, z: 0}
   myAITree: {fileID: 0}
   target: {fileID: 0}
@@ -5512,7 +5513,7 @@ MonoBehaviour:
   linear: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
   angular: {x: 0, y: 0, z: 0}
-  maxAccel: 0
+  maxAccel: 24
   isDummy: 0
   isAvoidWall: 0
   isAttacking: 0
