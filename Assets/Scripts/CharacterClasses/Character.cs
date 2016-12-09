@@ -34,7 +34,7 @@ public class Character : MonoBehaviour {
 
     public virtual void GetDamaged(Character attacker)
     {
-        float inc = attacker.damage.GetDamage(attacker, gameObject.GetComponent<Character>());
+		float inc = Mathf.Abs(attacker.damage.GetDamage(attacker, gameObject.GetComponent<Character>()));
         Debug.Log("Inc is " + inc + " To begin");
         inc -= _def;
         Debug.Log("Inc is " + inc + " minus defenses");
